@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{tikz,bm}
+\newcommand\C[1]{\tikz[remember picture]{\node(#1)[inner sep=0pt]{\sffamily#1};}}
+\begin{document}
+
+\begin{tabular}{@{}*7{c@{}}}
+\C{$\overbrace{lihi}$}, &$2\cdot$\C{li}hi&\C{C}& $\bm\sim$ &\C{X}&\C{Y}&\C{Z}
+\end{tabular}
+
+\begin{tikzpicture}[overlay,remember picture,>=latex,shorten >=1pt,shorten <=1pt,very thin]
+\draw[<->] ($\overbrace{lihi}$) --++(0,-10pt) -| (X);
+\draw[->] (li) --++(0,-12pt) -| (Y);
+\draw[->] (C) --++(0,-14pt) -| (Z);
+\end{tikzpicture}
+
+\end{document}

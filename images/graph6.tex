@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage{tkz-graph}
+\usepackage{pgf}
+\usepackage{tikz}
+\usetikzlibrary{arrows,graphs,matrix,positioning, arrows.meta, automata}
+
+\begin{document}
+
+\begin{tikzpicture}[>={Stealth[length=2.5mm, width=1.6mm]},
+    node distance=2cm, scale=1]
+\tikzstyle{every state}=[draw=none]
+
+\node[state] (1) at (0,0) {$I_0$};
+\node[state, above right of=1] (2) {$I_1$};
+\node[state, right of=2] (3) {$I_2$};
+\node[state, below right of=3] (4) {$I_3$};
+\node[state, below left of=4] (5) {$I_4$};
+\node[state, left of=5] (6) {$I_5$};
+
+\path (1) edge [->] (2);
+\path (1) edge [->] (4);
+\path[->,min distance=1cm] (2)edge[in=60,out=120,above] (2);
+\path (2) edge [->] (3);
+\path (3) edge [->] (4);
+\path (4) edge [->] (5);
+\path (5) edge [->] (6);
+\path (1.320) edge [->] (6.130);
+\path (1.300) edge [<-] (6.150);
+
+
+\end{tikzpicture}
+
+
+
+\end{document} 

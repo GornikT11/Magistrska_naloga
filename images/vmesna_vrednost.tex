@@ -1,0 +1,43 @@
+\documentclass[margin=1cm,varwidth]{standalone}
+  \usepackage{amsfonts,amsmath,amssymb}
+  \usepackage[slovene]{babel}
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  
+\usepackage{tikz, verbatim, subcaption}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows.meta, calc, positioning, automata}
+
+
+
+\begin{document}
+
+\newcommand*\hight{0.85}
+
+\begin{tikzpicture}
+\begin{axis}[
+width=6cm,height=6cm,
+minor tick num=1,
+axis y line=middle,
+axis x line=middle,
+xlabel=$x$,ylabel=$T_{\hight}(x)$,
+every axis x label/.style={
+    at={(ticklabel* cs:1.05)},
+    anchor=west,
+},
+every axis y label/.style={
+    at={(ticklabel* cs:1.05)},
+    anchor=south,
+},
+xmin=-0.2,
+xmax=5,
+ymin=-5,
+ymax=5
+]
+	\addplot[blue,mark=none,
+		 domain=1:4,samples=200] 
+		{0.8*(x-1.5)*(x-2)*(x-2.5)-1*(x-2)*(x-2)-0.5};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}

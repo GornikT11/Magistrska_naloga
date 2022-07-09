@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\tikzset{point/.style={circle,draw=black,inner sep=0pt,minimum size=3pt}}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows,graphs,matrix,positioning, arrows.meta, automata}
+
+\begin{document}
+
+\begin{tikzpicture}[>={Stealth[length=2mm, width=1mm]}]
+    \begin{scope}
+    \clip (-3,-2) rectangle (3,4);
+    \draw[smooth,domain=-1.65:2.45] plot (\x,{0.3*(\x)*(\x+0.4)*(\x+0.8)-0.6*(\x+0.4)*(\x+0.4)+0.8});
+    \end{scope}
+    \node[point,fill=black] (a) at (-1.65,-2/3) {};
+    \node[point,fill=black] (b) at (2.45,8.125/3) {};
+    \draw[fill=black] (1.8, 1) circle (0.05) node[below=2.5pt] {$c$};
+    \coordinate (origin) at (-2.5,1);
+    \coordinate (topright) at (3.5,3.5);
+    \coordinate (bottomleft) at (-3,-2);
+    \draw[thick] (-1.65, 0.95) -- (-1.65, 1.05);
+    \draw[thick] (2.45, 0.95) -- (2.45, 1.05);
+    \draw[thick] (-2.55,0 |-b) -- (-2.45,0 |-b);
+    \draw[thick] (-2.55,0 |-a) -- (-2.45,0 |-a);
+    
+    \draw[->] (origin -| bottomleft) -- (origin -| topright) node[below] {$x$};
+    \draw[->] (bottomleft -| origin) -- (topright -| origin) node[above] {$f(x)$};
+    \draw[dotted,thick] (a) -- (a|-origin) node[above] {$a$};
+    \draw[dotted,thick] (b) -- (b|-origin) node[below] {$b$};
+     \draw[dotted,thick] (a) -- (origin |-a) node[left] {$f(a)$};
+     \draw[dotted,thick] (b) -- (origin |-b) node[left] {$f(b)$};
+\end{tikzpicture}
+\end{document}

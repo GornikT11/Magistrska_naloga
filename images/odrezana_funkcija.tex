@@ -109,12 +109,28 @@ every axis y label/.style={
 xmin=0,
 xmax=1.1,
 ymin=0,
-ymax=1.1
+ymax=1.1 
 ]
+
 	\addplot[blue,mark=none,
 		 domain=-0:1,samples=200] 
 		{min(\hight, 1-max(2*min(\hight, 1-max(2*min(\hight, 1-max(2*min(\hight, 1-max(2*x-1, 1-2*x))-1, 1-2*min(\hight, 1-max(2*x-1, 1-2*x))))-1, 1-2*min(\hight, 1-max(2*min(\hight, 1-max(2*x-1, 1-2*x))-1, 1-2*min(\hight, 1-max(2*x-1, 1-2*x))))))-1, 1-2*min(\hight, 1-max(2*min(\hight, 1-max(2*min(\hight, 1-max(2*x-1, 1-2*x))-1, 1-2*min(\hight, 1-max(2*x-1, 1-2*x))))-1, 1-2*min(\hight, 1-max(2*min(\hight, 1-max(2*x-1, 1-2*x))-1, 1-2*min(\hight, 1-max(2*x-1, 1-2*x))))))))};
 \end{axis}
 \end{tikzpicture}
+
+\begin{tikzpicture}[scale=2,
+                    declare function={f(\t)=1/(\t-1)+1;},
+                    declare function={f2(\t)=f(f(\t)));}]
+  \draw [help lines] (0,0) grid (5,5);
+  \draw[->] (-0.2,0) -- (5.2,0) node[right] {$x$};
+  \draw[->] (0,-0.2) -- (0,5.2) node[above] {$y$};
+  \draw [blue, 
+         thick]
+            plot [domain=1.3:5, samples=100, smooth] (\x,{f(\x)}); 
+   \draw [red, 
+          thick]
+            plot [domain=1.3:5, samples=100, smooth] (\x,{f2(\x)}); 
+\end{tikzpicture}  
+
 
 \end{document}
