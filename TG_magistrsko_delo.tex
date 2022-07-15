@@ -6,22 +6,22 @@
 % \documentclass[isrm2]{fmfdelo}
 
 % naslednje ukaze ustrezno napolnite
-\avtor{Ime Priimek}
+\avtor{Tom Gornik}
 
-\naslov{Naslov dela}
-\title{Angleški prevod slovenskega naslova dela}
+\naslov{Izrek Šarkovskega}
+\title{Sharkovsky theorem}
 
 % navedite ime mentorja s polnim nazivom: doc.~dr.~Ime Priimek,
 % izr.~prof.~dr.~Ime Priimek, prof.~dr.~Ime Priimek
 % uporabite le tisti ukaz/ukaze, ki je/so za vas ustrezni
-\mentor{}
+\mentor{izr. prof. dr. Aleš Vavpetič}
 % \mentorica{}
 % \somentor{}
 % \somentorica{}
 % \mentorja{}{}
 % \mentorici{}{}
 
-\letnica{} % leto diplome
+\letnica{2022} % leto diplome
 
 %  V povzetku na kratko opišite vsebinske rezultate dela. Sem ne sodi razlaga organizacije dela --
 %  v katerem poglavju/razdelku je kaj, pač pa le opis vsebine.
@@ -106,7 +106,7 @@ katerem razdelku.
 \section{definicije in formulacija izreka}
 Naj bo $I\subseteq \R$ povezana podmnožica realnih števil. Takim množicam bomo rekli intervali. Interval ne rabi biti zaprt ali omejen in lahko v nekaterih primerih predstavlja kar celotno množico realnih števil. Naj bo $f:I \to I$ zvezna funkcija, ki slika interval $I$ nazaj vase. Ker funkcija $f$ slika interval $I$ nazaj vase, si jo lahko predstavljamo kot diskreten dinamični sistem. S $f^n$ bomo označevali kompozitum:
 $$f^n = \underbrace{f \circ f \circ \cdots \circ f}_{n \text{ ponovitev } f},$$
-kjer $f^0$ predstavlja identično funkcijo. Lahko si izberemo neko točko $x_0$ iz intervala $I$ in s pomočjo iteracij funkcije $f$ definiramo zaporedje s splošnim členom $x_n = f^n(x_0)$. Točke v tem zaporedju lahko ponazorimo v koordinatnem sistemu tako, da začnemo na abscisni osi pri počki $x_0$. Potujemo navpično do grafa funkcije $f$ in se premaknemo v vodoravni smeri do simetrale lihih kvadrantov. Ta točka nam pove kje leži točka $x_1$, saj ima obe koordinati enaki $x_1$. Sedaj se zopet premaknemo navpično do grafa funkcije $f$ in nato vodoravno do simetrale lihih kvadrantov. Pridemo do točke, ki ima obe koordinati enaki $x_2$. Postopek lahko nadaljujemo. V primeru na sliki~\ref{fig:iteracije} vidimo, da se točka $x_3$ slika spet v točko $x_0$. To pomeni, da ima zaporedje samo 4 različne člene, ki se ponavljajo.
+kjer $f^0$ predstavlja identično funkcijo. Lahko si izberemo neko točko $x_0$ iz intervala $I$ in s pomočjo iteracij funkcije $f$ definiramo zaporedje s splošnim členom $x_n = f^n(x_0)$. Točke v tem zaporedju lahko ponazorimo v koordinatnem sistemu tako, da začnemo na abscisni osi pri točki $x_0$. Potujemo navpično do grafa funkcije $f$ in se premaknemo v vodoravni smeri do simetrale lihih kvadrantov. Ta točka nam pove, kje leži točka $x_1$, saj ima obe koordinati enaki $x_1$. Sedaj se zopet premaknemo navpično do grafa funkcije $f$ in nato vodoravno do simetrale lihih kvadrantov. Pridemo do točke, ki ima obe koordinati enaki $x_2$. Postopek lahko nadaljujemo. Postopek je skiciran na sliki~\ref{fig:iteracije}. Na tem primeru vidimo, da se točka $x_3$ slika v točko $x_0$. To pomeni, da ima zaporedje samo 4 različne člene, ki se ponavljajo.
 
 \begin{figure}[h]
   \centering
@@ -116,9 +116,9 @@ kjer $f^0$ predstavlja identično funkcijo. Lahko si izberemo neko točko $x_0$ 
   \label{fig:iteracije}
 \end{figure}
 
-V takem dinamičnem sistemu ena iteracija funkcije predstavlja en diskreten korak v času, točka $x_0 \in I$ pa začetni položaj točke v sistemu. Množici, ki vsebuje vse člene zaporedja $\left( x_n \right)_{n=0}^{\infty}$ bomo rekli $f$-orbita točke $x_0$ ali samo orbita točke $x_0$. Z matematičnimi simboli jo lahko zapišemo tako:
+V takem dinamičnem sistemu ena iteracija funkcije predstavlja en diskreten korak v času, točka $x_0 \in I$ pa začetni položaj točke v sistemu. Množici, ki vsebuje vse člene zaporedja $\left( x_n \right)_{n=0}^{\infty}$ bomo rekli \emph{$f$-orbita točke $x_0$} ali samo orbita točke $x_0$. Z matematičnimi simboli jo lahko zapišemo tako:
 $$\{ \mathcal{O} := f^m(x_0) ; m \in \N \}.$$
-Izrek Šarkovskega preučuje take točke $x_0 \in I$, ki se po nekaj iteracijah s funkcijo $f$ slikajo nazaj vase. Takim točkam rečemo periodične točke. Perioda točke $x_0$ je najmanjše tako naravno število $n$, za katerega je $f^n(x_0) = x_0$. Ekvivalentno lahko sklepamo, da je orbita periodične točke $x_0$ končna množica, število različnih elementov v orbiti pa je enako najmanjši periodi točke $x_0$. Fiksna točka je periodična točka s periodo 1, torej taka točka $x_0$, za katero je $f(x_0) = x_0$. Če obstaja periodična točka s periodo $m$, rečemo tudi, da ima funkcija $f$ periodo $m$.
+Izrek Šarkovskega preučuje take točke $x_0 \in I$, ki se po nekaj iteracijah s funkcijo $f$ slikajo nazaj vase. Takim točkam rečemo \emph{periodične točke}. \emph{Perioda točke} $x_0$ je tako naravno število $m$, za katero je $f^m(x_0) = x_0$. Najmanjše naravno število $n$, za katerega je $f^n(x_0)=x_0$ je najmanjša perioda točke $x_0$. Ekvivalentno lahko sklepamo, da je orbita periodične točke $x_0$ končna množica, število različnih elementov v orbiti pa je enako najmanjši periodi točke $x_0$. \emph{Negibna točka} (včasih ji rečemo tudi fiksna točka) je periodična točka s periodo 1, torej taka točka $x_0$, za katero je $f(x_0) = x_0$. Če obstaja periodična točka s periodo $n$, rečemo tudi, da ima funkcija $f$ periodo $n$.
 
 Pri danem dinamičnem sistemu se lahko vprašamo, katere periode lahko ima funkcija. Šarkovski si je postavil prav to vprašanje in prišel do ureditve množice naravnih števil, ki pove, katere periode lahko ima funkcija.
 
@@ -127,22 +127,96 @@ Pri danem dinamičnem sistemu se lahko vprašamo, katere periode lahko ima funkc
 \begin{definicija}
 Množico naravnih števil lahko uredimo na naslednji način:
 $$3 \triangleleft 5 \triangleleft 7 \triangleleft \cdots \triangleleft 2\cdot 3 \triangleleft 2\cdot 5 \triangleleft 2\cdot 7 \triangleleft \cdots \triangleleft 2^2\cdot 3 \triangleleft 2^2\cdot 5 \triangleleft 2^2\cdot 7 \triangleleft \cdots \triangleleft 2^3 \triangleleft 2^2 \triangleleft 2 \triangleleft 1.$$
-Ureditev, imenujemo jo ureditev Šarkovskega, določa relacijo $\triangleleft$. Naravni števili $m$ in $n$ sta v relaciji $m\triangleleft n$ natanko tedaj, ko $m$ leži levo od $n$ ali je $m=n$. Prepričajmo se, da je relacija $\triangleleft$ relacija linearne urejenosti. Opazimo, da je ureditev sestavljena tako, da najprej po vrsti naštejemo liha števila večja od 1, nato dodamo ta števila po vrsti pomnožena z 2. Sledijo liha števila večja od 1 pomnožena z $2^2$ itn. Na koncu so zapisane potence števila 2 v padajočem vrstnem redu. Zaradi vrstnega reda števil pomislimo, da lahko vsako naravno število zapišemo kot produkt potence števila 2 in nekega lihega števila. To pomeni, da lahko poljubni naravni števili $m$ in $n$ zapišemo na naslednji način: 
-$$m= 2^k(2m_1 +1)\text{ in } n= 2^l(2n_1 +1),$$
+Ureditev, imenujemo jo ureditev Šarkovskega, določa relacijo $\triangleleft$. Naravni števili $m$ in $n$ sta v relaciji $m\triangleleft n$ natanko tedaj, ko $m$ leži levo od $n$ ali je $m=n$. Opazimo, da je ureditev sestavljena tako, da najprej po vrsti naštejemo liha števila večja od 1, nato dodamo ta števila po vrsti pomnožena z 2. Sledijo liha števila večja od 1 pomnožena z $2^2$ itn. Na koncu so zapisane potence števila 2 v padajočem vrstnem redu. Zaradi vrstnega reda števil pomislimo, da lahko vsako naravno število zapišemo kot produkt potence števila 2 in nekega lihega števila. To pomeni, da lahko poljubni naravni števili $m$ in $n$ zapišemo na naslednji način: 
+\begin{equation}
+m= 2^k(2m_1 +1)\text{ in } n= 2^l(2n_1 +1), \label{eq:zapis}
+\end{equation}
  kjer so števila $m_1, n_1, k, l \in \N_0$. Števili sta v relaciji $m \triangleleft n$, če je:
-\begin{enumerate}
-\item $k<l$ in $m_1 \neq 0$ in $n_1 \neq 0$ ali
-\item $k=l$ in $0<m_1 \leq n_1$ ali
-\item $k \geq l$ in $m_1 = n_1=0$ ali
-\item $m_1>0$ in $n_1 =0$.
+\begin{enumerate}[label={(R\arabic*)}]
+\item $k<l$ in $m_1 \neq 0$ in $n_1 \neq 0$ ali \label{rel1}
+\item $k=l$ in $0<m_1 \leq n_1$ ali \label{rel2}
+\item $k \geq l$ in $m_1 = n_1=0$ ali \label{rel3}
+\item $m_1>0$ in $n_1 =0$. \label{rel4}
 \end{enumerate}
-Lahko je preveriti, da je tako definirana relacija refleksivna, antisimetrična, tranzitivna in sovisna.
-S pomočjo zapisa relacije se enostavno prepričamo v naslednjo pomembno lastnost relacije:
-$$\text{za } m, n \in \N: m \triangleleft n \Leftrightarrow 2m \triangleleft 2n.$$
-
 \end{definicija}
 
+\begin{trditev}
+Relacija $\triangleleft$, ki smo jo definirali, je relacija linearne urejenosti.
+\end{trditev}
+\begin{proof}
+Za dokaz potrebujemo tri poljubna naravna števila:
+\begin{itemize}
+\item $m= 2^k(2m_1 +1)$,
+\item $n= 2^l(2n_1 +1)$ in
+\item $s=2^h(2s_1+1$.
+\end{itemize}
+Dokazati moramo refleksivnost, antisimetričnost, tranzitivnost in sovisnost relacije.
+Refleksivnost: če je število $m$ liho, točka~\ref{rel3} zagotavlja, da je $m \triangleleft m$. Če je število $m$ sodo, pa relacija $m \triangleleft m$ sledi iz točke~\ref{rel2}.
 
+Antisimetričnost: denimo, da za števili $m$ in $n$vveljata relaciji $m \triangleleft n$ in $n \triangleleft m$. Pogoja~\ref{rel1} in~\ref{rel4} za relacijo $m \triangleleft n$ sta v protislovju z vsemi pogoji relacije $n \triangleleft m$. Edina možnost, ki zadosti vsem potrebnim pogojem relacij je $k=l$ in $m_1 = n_1$. Torej je $m=n$.
+
+Tranzitivnost: obravnavamo števila $m$,  $n$ in $s$, ki zadoščajo relacijam $m \triangleleft n$ in $n \triangleleft s$. Radi bi videli sta števili $m$ in $s$ v relaciji $m \triangleleft s$. Ker imamo 4 pogoje za relacijo $m \triangleleft n$ in 4 pogoje za relacijo $n \triangleleft s$, moramo obravnavati 16 možnih kombinacij. Vse kombinacije pogojev za relacije so zapisane v tabeli~\ref{table:1}. V drugem stolšcu so zapisani pogoji, ki jih dobimo iz relacije $m \triangleleft n$, v tretjem stoplcu so pogoji, ki jih preberemo iz relacije $n \triangleleft s$. V četrti stolpec smo zapisali pogoj, ki sledi iz pogojev v drugem in tretjem stolpcu. Opazimo, da v devetih primerih pogoja ne moreta biti izpolnjena istočasno, zato pridemo do protislovja. V ostalih primerih, pa dobimo enega od pogojev za relacijo $m \triangleleft s$, zato sta števili $m$ in $s$ v relaciji $m \triangleleft s$.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{||c | l | l | l||} 
+ \hline
+ Col1 & $m \triangleleft n$ & $n \triangleleft s$ & $\Rightarrow$ \\ [0.5ex] 
+ \hline\hline
+ 1 & $k<l$ in $m_1, n_1 \neq 0$ & $l<h$ in $n_1, s_1 \neq 0$ & $k<h$ in $m_1, s_1 \neq 0$ \\ 
+ 2 & $k<l$ in $m_1, n_1 \neq 0$ & $l=h$ in $0<n_1 \leq s_1$ & $k<h$ in $m_1, s_1 \neq 0$ \\
+ 3 & $k<l$ in $m_1, n_1 \neq 0$ & $l \geq h$ in $n_1 = s_1 = 0$ & protislovje \\
+ 4 & $k<l$ in $m_1, n_1 \neq 0$ & $n_1 = 0$, $s_1 > 0$ & $m_1 = 0$, $s_1 > 0$ \\
+ 5 & $k=l$ in $0<m_1 \leq n_1$ & $l<h$ in $n_1, s_1 \neq 0$ & protislovje \\ 
+ 6 & $k=l$ in $0<m_1 \leq n_1$ & $l=h$ in $0<n_1, s_1$ & $k=h$ in $0<m_1 \leq s_1$ \\
+ 7 & $k=l$ in $0<m_1 \leq n_1$ & $l \geq h$ in $n_1 = s_1 = 0$ & protislovje \\
+ 8 & $k=l$ in $0<m_1 \leq n_1$ & $k<l$ in $n_1 = 0$, $s_1 > 0$ & $m_1 = 0$, $s_1 > 0$ \\
+ 9 & $k \geq l$ in $m_1 = n_1 = 0$ & $l<h$ in $n_1, s_1 \neq 0$ & protislovje \\ 
+ 10 & $k \geq l$ in $m_1 = n_1 = 0$ & $l=h$ in $0<n_1, s_1$ & protislovje \\
+ 11 & $k \geq l$ in $m_1 = n_1 = 0$ & $l \geq h$ in $n_1 = s_1 = 0$ & $k \geq h$ in $m_1 = s_1 = 0$ \\
+ 12 & $k \geq l$ in $m_1 = n_1 = 0$ & $k<l$ in $n_1 = 0$, $s_1 > 0$ & protislovje \\
+ 12 & $m_1 = 0$, $n_1 > 0$ & $l<h$ in $n_1, s_1 \neq 0$ & protislovje \\ 
+ 14 & $m_1 = 0$, $n_1 > 0$ & $l=h$ in $0<n_1, s_1$ & protislovje \\
+ 15 & $m_1 = 0$, $n_1 > 0$ & $l \geq h$ in $n_1 = s_1 = 0$ & $m_1 = 0$, $s_1 > 0$ \\
+ 16 & $m_1 = 0$, $n_1 > 0$ & $k<l$ in $n_1 = 0$, $s_1 > 0$ & protislovje \\[1ex] 
+ \hline
+\end{tabular}
+\caption{Vseh 16 možnosti.}
+\label{table:1}
+\end{table}
+
+Sovisnost: prepričati se moramo, da za vsaki dve naravni števili $m, n$ velja $m \triangleleft n$ ali $n \triangleleft m$. Torej velja en od pogojev:
+\begin{enumerate}[label={(\roman*)}]
+\item $k<l$ in $m_1 \neq 0$ in $n_1 \neq 0$ ali \label{sov1}
+\item $k=l$ in $0<m_1 \leq n_1$ ali \label{sov2}
+\item $k \geq l$ in $m_1 = n_1=0$ ali \label{sov3}
+\item $m_1>0$ in $n_1 =0$. \label{sov4}
+\end{enumerate}
+ali 
+\begin{enumerate}[label={(\roman*)}]
+\setcounter{enumi}{4}
+\item $l<k$ in $m_1 \neq 0$ in $n_1 \neq 0$ ali \label{sov5}
+\item $l=k$ in $0<n_1 \leq m_1$ ali \label{sov6}
+\item $l \geq k$ in $m_1 = n_1=0$ ali \label{sov7}
+\item $n_1>0$ in $m_1 =0$. \label{sov8}
+\end{enumerate}
+Denimo, da števili $m$ in $n$ nista v relaciji. Iz~\ref{sov4} in~\ref{sov8} ugotovimo, da mora biti $m_1 = n_1 = 0$ ali $m_1, n_1 \neq 0$. Ker števili ne ustrezata pogoju~\ref{sov3} niti pogoju~\ref{sov7} ugotovimo, da morata biti števili $m_1$ in $n_1$ različni od 0. Iz pogojev~\ref{sov1} in~\ref{sov5} sklepamo, da mora biti $k=l$. Sedaj pa števili zagotovo zadoščata enemu od pogojev~\ref{sov2} ali~\ref{sov6}. To je preotislovje s predpostavko, da števili $m$ in $n$ nista v relaciji. Torej res za vsaki dve naravni števili $m, n$ velja relacija $m \triangleleft n$ ali relacija $n \triangleleft m$. 
+\end{proof}
+
+Relacija $\triangleleft$ ima še eno zanimivo in za dokaz izreka Šarkovskega zelo pomembno lastnost.
+\begin{trditev}
+Števili $m$ in $n$ sta v relaciji $m \triangleleft n$ natanko tedaj, ko sta velja relacija $2m \triangleleft 2n$. Zapisano z matematičnimi simboli:
+$$\text{za } \forall m, n \in \N: m \triangleleft n \Leftrightarrow 2m \triangleleft 2n.$$
+\end{trditev}
+\begin{dokaz}
+Zapišimo števili $m$ in $n$ kot produkt potence števila 2 in nekega lihega števila:
+$$m= 2^k(2m_1 +1)\text{ in } n= 2^l(2n_1 +1).$$
+Če števili pomnožimo z 2, dobimo:
+$$m= 2^{k+1}(2m_1 +1)\text{ in } n= 2^{l+1}(2n_1 +1).$$
+Sedaj lahko preverimo, da so pogoji za relacijo $m \triangleleft n$ in relacijo $2m \triangleleft 2n$ ekvivalentni. To je očitno takoj, ko opazimo, da se števili $m_1$ in $n_1$ nista spremenili. Neenačbi $k<l$ in $k+1<l+1$ pa sta ekvivalentni. Podobno ugotovimo za neenačbi $k \geq l$ in $k+1 \geq l+1$ in enačbi $k=l$ in $k+1 = l+1$.
+\end{dokaz}
+
+Sedaj smo definirali vse potrebne pojme in spoznali tudi ureditev Šarkovskega. Čas je, da si poglejdamo na kakšen način ureditev Šarkovskega določa periode funkcije.
 
 \begin{izrek}[The Sharkovsky forcing theorem]\label{izr:forcing}
 Če ima $f : I \to I$ točko periode $m$ in velja $ m \triangleleft l$, potem obstaja tudi točka periode $l$.
@@ -151,7 +225,7 @@ Izrek pove, da je množica period zvezne funkcije na intervalu $I$ rep ureditve 
 Naslednji izrek je neke vrste obrat zgornjega izreka.
 
 \begin{izrek}[The Sharkovsky realization theorem]\label{izr:realization}
-Za vsak rep $\mathcal{T}$ v zaporedju Šarkovskega obstaja taka funkcija, katere množica period je enaka $\mathcal{T}$.
+Za vsak rep $\mathcal{T}$ v zaporedju Šarkovskega obstaja taka funkcija $f$, katere množica period je enaka $\mathcal{T}$.
 \end{izrek}
 
 Izrek Šarkovskega je unija izreka~\ref{izr:forcing} in izreka~\ref{izr:realization}. Podmnožica naravnih števil je množica period zvezne funkcije $f:I \to I$, če in samo če je množica rep ureditve Šarkovskega. Nasledja poglavja so namenjena pripravi na dokaz izreka~\ref{izr:forcing}, v poglavju~\ref{sec:realizacija} pa je predstavljen dokaz izreka~\ref{izr:realization}.
@@ -171,10 +245,10 @@ Funkcija $f$, ki je zvezna na intervalu $[a, b]$ in je na krajiščih intervala 
 \end{figure}
 
 \begin{proof}
-Naj bo funkcija $f:[a, b] \to [a, b]$ zvezna in naj bo $f(a)\cdot f(b) < 0$. Brez izgube splošnosti lahko predpostavimo, da je $f(a) < 0 < f(b)$. Ničlo funkcije $f$ bomo iskali s pomočjo deljenja intervalov oziroma z bisekcijo. Izračunamo razpolovišče $p_0=\frac{a+b}{2}$ intervala $[a, b]$.Če je $f(p)=0$, smo ničlo že našli, sicer razmišljamo tako: če je $f(p_0) >0$, označimo $[a_1, b_1] =  [a, p_0]$, sicer označimo $[a_1, b_1] =  [p_0, b]$. Nato izračunamo razpolovišče $p_1$ intervala $[a_1, b_1]$. Če je $f(p)=0$ postopek ustavimo, saj smo ničlo našlio, v nasprotnem primeru pogledamo predznak $f(p_1)$. Če je $f(p_1) >0$, označimo $[a_2, b_2] =  [a_1, p_1]$, sicer označimo $[a_2, b_2] =  [p_1, b_1]$. Postopek nadaljujemo dokler ne najdemo ničle $p_i$ funkcije $f$. Če ničle ne najdemo, dobimo neskončno zaporedje vloženih intervalov 
+Naj bo funkcija $f:[a, b] \to [a, b]$ zvezna in naj bo $f(a)\cdot f(b) < 0$. Brez izgube splošnosti lahko predpostavimo, da je $f(a) < 0 < f(b)$. Ničlo funkcije $f$ bomo iskali s pomočjo deljenja intervalov oziroma z bisekcijo. Izračunamo razpolovišče $p_0=\frac{a+b}{2}$ intervala $[a, b]$.Če je $f(p_0)=0$, smo ničlo že našli, sicer razmišljamo tako: če je $f(p_0) >0$, označimo $[a_1, b_1] =  [a, p_0]$, sicer označimo $[a_1, b_1] =  [p_0, b]$. Nato izračunamo razpolovišče $p_1$ intervala $[a_1, b_1]$. Če je $f(p_1)=0$ postopek ustavimo, saj smo ničlo našlio, v nasprotnem primeru pogledamo predznak $f(p_1)$. Če je $f(p_1) >0$, označimo $[a_2, b_2] =  [a_1, p_1]$, drugače označimo $[a_2, b_2] =  [p_1, b_1]$. Postopek nadaljujemo dokler ne najdemo ničle $p_i$ funkcije $f$. Če ničle ne najdemo, dobimo neskončno zaporedje vloženih intervalov 
 $$ [a, b] \supset [a_1, b_1] \supset [a_2, b_2] \supset \cdots$$
 Lahko se prepričamo, da je $b_n - a_n = \frac{b-a}{2^n}$ in $f(a_n)<0<f(b_n)$ za vsak $n\in \N$. Števila $a_n$ tvorijo naraščajoče zaporedje, števila $b_n$ pa padajoče zaporedje.  Limiti $\lim\limits_{n \to \infty} a_n$ in $\lim\limits_{n \to \infty} b_n$ sta enaki, saj je 
-$\lim\limits_{n \to \infty} b_n - \lim\limits_{n \to \infty} a_n = \lim\limits_{n \to \infty} (b_n - a_n) =0$. Označimo $c = \lim\limits_{n \to \infty} a_n = \lim\limits_{n \to \infty} b_n$. Potem je 
+$\lim\limits_{n \to \infty} b_n - \lim\limits_{n \to \infty} a_n = \lim\limits_{n \to \infty} (b_n - a_n) =0$. Označimo $c = \lim\limits_{n \to \infty} a_n = \lim\limits_{n \to \infty} b_n$. Točka $c$ je večja od vseh členov zaporedja $\left(a_n \right)_{n=1}^{\infty}$ in manjša od vseh členov zaporedja $\left(b_n \right)_{n=1}^{\infty}$, zato je za vsak $n \in \N$ vsebovana v intervalu $[a_n, b_n]$. Torej velja:
 $\bigcap\limits_{n=1}^{\infty} [a_n, b_n] = \{c\}$. 
 Ker je funkcija zvezna je 
 $\lim\limits_{n \to \infty} f(a_n) = f(\lim\limits_{n \to \infty} a_n) = f(c)$
@@ -198,10 +272,10 @@ $g(b_1) = f(b_1) - b_1 = b - b_1 < 0$. Podobno je
 $g(a_1) = f(a_1) - a_1 = a - a_1 > 0$.
 Zvezna funkcija $g$ je na krajiščih intervala $[a, b]$ različno predznačena. Po izreku~\ref{izr:iovv} obstaja točka $c \in [a, b]$, pri kateri je $g(c)=0$, torej je $f(c) = c$.
 \end{proof}
-Pri iteracijah funkcije lahko opazujemo, kako se premika točka. To smo počeli na sliki. Lahko pa opazujemo, kako se s $f$ slikajo celi intervali. Na ta način lahko dobimo zaporedje relacij pokritja npr. $I_0 \to I_1 \to I_2 \to \cdots $. Enako kot pri periodičnih točkah lahko lahko pri zaporedu relacij pokritja po nekaj korakih zopet pridemo do prvotnega intervala. Dobimo naslednje zaporedje relacij pokritja $I_0 \to I_1 \to \cdots \to I_n \to I_0$. Če je začetni interval enak končnemu intervalu, zaporedju intervalov in pripadajočim relacijam pokritja pravimo zanka intervalov ali samo zanka.
+Pri iteracijah funkcije lahko opazujemo, kako se premika točka. To smo počeli na sliki~\ref{fig:iteracije}. Lahko pa opazujemo, kako se s $f$ slikajo celi intervali. Na ta način dobimo zaporedje relacij pokritja npr. $I_0 \to I_1 \to I_2 \to \cdots $. Enako kot pri periodičnih točkah lahko pri zaporedu relacij pokritja po nekaj korakih zopet pridemo do prvotnega intervala. Dobimo naslednje zaporedje relacij pokritja $I_0 \to I_1 \to \cdots \to I_n \to I_0$. Če je začetni interval enak končnemu intervalu, zaporedju intervalov in pripadajočim relacijam pokritja pravimo \emph{zanka intervalov} ali samo zanka. Od tu naprej bo interval predstavljal zaprto, omejeno in povezano podmnožico realnih števil.
 
 \begin{lema}\label{lem:zanka}
-Če so intervali $I_0, \dots, I_{n-1}$ zaprti omejeni intervali za katere veljajo naslednje relacije pokritosti: $I_0 \to \dots \to I_{n-1} \to I_0$, potem obstaja taka točka $x$, za katero je $f^{i}(x) \in J_i$ za $0 \leq i < n$ in $f^n(x)=x$. Pravimo, da točka $x$ sledi zanki.
+Če so intervali $I_0, \dots, I_{n-1}$ intervali, za katere veljajo naslednje relacije pokritosti: $I_0 \to I_1 \to \dots \to I_{n-1} \to I_0$, potem obstaja taka točka $c \in I_0$, za katero je $f^{i}(x) \in I_i$ za $0 \leq i < n$ in $f^n(c)=c$. Pravimo, da točka $c$ sledi zanki.
 \end{lema}
 
 \begin{proof}
@@ -213,33 +287,41 @@ Pri iteracijah funkcije lahko opazujemo, kako se premika točka. To smo počeli 
   \caption[Primer vektorske slike.]{Slika prikazuje, kako poiščemo interval $K$.}
   \label{fig:bezje}
 \end{figure}
-Interval $K$ poiščemo tako, da iz preseka funkcije $f$ s pravokotnikom $I \times J$ izberemo povezan del grafa, ki povezuje spodni in zgornji del pravokotnika. Tak del zagotovo obstaja, saj je $J \subset f(I)$. Projekcijo tega dela na interval $I$ označimo s $K$. Torej, obstaja tak interval $K_{n-1} \subset J_{n-1}$, da je $K_{n-1} \rightarrowtail J_0$. Velja relacija pokritosti $J_{n-2} \to K_{n-1}$, zato obstaja tak interval $K_{n-2} \subset J_{n-2}$, da je $K_{n-2} \rightarrowtail K_{n-1}$. S postopkom nadaljujemo in dobimo naslednje relacije:
-$$K_0 \rightarrowtail K_1 \rightarrowtail \cdots \rightarrowtail K_{n-1} \rightarrowtail J_0.$$
-Za vsako točko $x \in K_0$ in za vsak $i \in [0, n)$ velja $f^i(x) \in K_i \subset J_i$ in $f^n(x) \in J_0$. Ker je $K_0 \subset J_0 = f^n(K_0)$, lahko s pomočjo leme~\ref{lem:1zanka} sklepamo, da ima $f^n$ fiksno točko na intervalu $K_0$.
+Interval $K$ poiščemo tako, da iz preseka funkcije $f$ s pravokotnikom $I \times J$ izberemo povezan del grafa, ki povezuje spodni in zgornji del pravokotnika. Tak del zagotovo obstaja, saj je $J \subset f(I)$. Projekcijo tega dela na interval $I$ označimo s $K$. To znanje uporabimo na zanki intervalov $I_0 \to \dots \to I_{n-1} \to I_0$. Ker velja relacija pokritja $I_{n-1} \to I_0$, vemo, da obstaja tak interval $K_{n-1} \subset I_{n-1}$, da je $K_{n-1} \rightarrowtail I_0$. Velja relacija pokritosti $I_{n-2} \to K_{n-1}$, zato obstaja tak interval $K_{n-2} \subset I_{n-2}$, da je $K_{n-2} \rightarrowtail K_{n-1}$. S postopkom nadaljujemo in dobimo naslednje relacije:
+$$K_0 \rightarrowtail K_1 \rightarrowtail \cdots \rightarrowtail K_{n-1} \rightarrowtail I_0.$$
+Za vsako točko $x \in K_0$ in za vsak $i \in [0, n)$ velja $f^i(x) \in K_i \subset I_i$ in $f^n(x) \in I_0$. Ker je $K_0 \subset I_0 = f^n(K_0)$, lahko s pomočjo leme~\ref{lem:1zanka} sklepamo, da ima $f^n$ fiksno točko $c$ na intervalu $K_0$. Točka $c$ sledi zanki $I_0 \to \dots \to I_{n-1} \to I_0$.
 \end{proof}
 
-Obravnavajmo zvezno funkcijo $f(x) = x^2$ na intervalu $[0, 1]$. Na tem intervalu sta samo dve točki, ki sledita $2$-zanki. To sta točki $0$ in $1$, ki imata periodo 1.
-Zato se z obstojem periodičnih točk pa se za enkrat še ne moremo zadovoljiti. Radi bi vedeli, da je perioda točke enaka dolžini zanke in ne kakšen pravi delitelj dolžine.
+Obravnavajmo zvezno funkcijo $f(x) = x^2$ na intervalu $[0, 1]$. Na tem intervalu sta samo dve točki, ki sledita $2$-zanki. To sta točki $0$ in $1$, ki imata najmanjšo periodo 1.
+Zato se z obstojem periodičnih točk za enkrat še ne moremo zadovoljiti. Radi bi vedeli, da je najmanjša perioda točke enaka dolžini zanke in ne kakšen pravi delitelj dolžine.
 
 \begin{definicija}\label{def:element}
-Zanka intervalov $I_0 \to \cdots \to I_{n-1} \to I_0$ je elementarna, če ima vsaka točka, ki sledi zanki, periodo $n$.
+Zanka intervalov $I_0 \to I_1 \to \cdots \to I_{n-1} \to I_0$ je elementarna, če ima vsaka točka, ki sledi zanki, najmanjšo periodo $n$.
 \end{definicija}
 
 \begin{posledica}
-Vsaka elementarna zanka intervalov $I_0 \to \dots \to I_{n-1} \to I_0$ vsebuje točko $a$, ki sledi zanki in ima periodo $n$.
+Vsaka elementarna zanka intervalov $I_0 \to I_1 \to \dots \to I_{n-1} \to I_0$ vsebuje točko $x_0$, ki sledi zanki in ima najmanjšo periodo $n$.
 \end{posledica}
 
-Zaradi zgornje posledice bi bilo dobro, če bi poznali kakšen dober kriterij za prepoznavanje elementarnih zank. Najlažji kriterij je število intervalov v zanki. Če nastopa samo en interval, dobimo $I_0 \to I_0$. Z uporabo leme~\ref{lem:1zanka} ugotovimo, da je zanka elementarna. Naslednja lema poda še en kriterij za prepoznavanje elementarnih zank:
+Zaradi zgornje posledice bi bilo dobro, če bi poznali kakšen dober kriterij za prepoznavanje elementarnih zank. Najlažji kriterij je število intervalov v zanki. Če nastopa samo en interval, dobimo zanko $I_0 \to I_0$. Z uporabo leme~\ref{lem:1zanka} ugotovimo, da je zanka elementarna. Naslednja lema poda še en kriterij za prepoznavanje elementarnih zank:
 
 \begin{lema}\label{lem:element}
-Zanka intervalov $I_0 \to \cdots \to I_{n-1} \to I_0$ je elementarna, če ji ne sledi nobena robna točka intervala $I_0$ in je notranjost intervala $\interior(I_0)$ disjunktna z intervali $I_1, \dots, I_{n-1}$. Torej, $\interior(I_0) \cap \bigcup_{i=1}^{n-1}I_i = \emptyset$.
+Zanka intervalov $I_0 \to I_1 \to \cdots \to I_{n-1} \to I_0$ je elementarna, če ji ne sledi nobena robna točka intervala $I_0$ in je notranjost intervala $\interior(I_0)$ disjunktna z intervali $I_1, I_2,  \dots, I_{n-1}$. Torej, $\interior(I_0) \cap \bigcup_{i=1}^{n-1}I_i = \emptyset$.
 \end{lema}
 \begin{proof}
-Točka $x_0$, ki sledi zanki ne more biti robna točka intervala $I_0$. Torej je $x_0 \in \interior(I_0)$. Za vsak $i=1, \dots, n-1$ je $x_0 \neq f^i(x_0)$, saj je $f^i(x_0) \in I_i$, intervala $I_0$ in $I_i$ pa sta disjunktna. Ker točka $x_0$ sledi zanki je $f^n(x_0)=x_0$. Točka $x_0$ ima periodo $n$.
+Točka $x_0$, ki sledi zanki ne more biti robna točka intervala $I_0$. Torej je $x_0 \in \interior(I_0)$. Za vsak $i=1, \dots, n-1$ je $x_0 \neq f^i(x_0)$, saj je $f^i(x_0) \in I_i$, notranjost intervala $I_0$ pa je disjunktna z intervalom $I_i$. Ker točka $x_0$ sledi zanki, je $f^n(x_0)=x_0$. Točka $x_0$ ima najmanjšo periodo $n$.
 \end{proof}
 
+\begin{definicija}
+Zaprt in omejen interval, katerega krajišči pripadata ciklu $\mathcal{O}$ imenujemo $\mathcal{O}$-interval. 
+\end{definicija}
+V nadaljevanju bomo zgornje leme uporabili na $\mathcal{O}$-intervalih. Tako bomo poenostavili obravnavo periodičnih točk funkcije $f$, saj bomo uporabili samo informacije, ki jih lahko pridobimo iz delovanja funkcije $f$ na ciklu $\mathcal{O}$. Zato bodo naši sklepi veljali za vse zvezne funkcije s ciklom $\mathcal{O}$. Relaciji pokritja $I \to J$ rečemo $\mathcal{O}$-vsiljena, če interval $J$ leži v $\mathcal{O}$-intervalu $M$ katerega krajišči sta skrajno leva in skrajno desna točka množice $f(I \cap \mathcal{O})$. Ker je funkcija $f$ zvezna, lahko s pomočjo izreka~\ref{izr:iovv} ugotovimo, da je množica $f(I)$ interval. Velja $J \subset M \subset f(I)$. V nadaljevanju dela bodo vse relacije pokritja $\mathcal{O}$-vsiljene. Zanka intervalov $I_0 \to I_1 \to \cdots \to I_{n-1} \to I_0$, v kateri vsaka puščica predstavlja $\mathcal{O}$-vsiljeno relacijo pokritja, se imenuje $\mathcal{O}$-vsiljena zanka $\mathcal{O}$-intervalov.
+
+V nadaljevanju bodo vse relacije pokritja, o katerih bomo govorili, $\mathcal{O}$-vsiljene, zato bodo vse relacije pokritja, ki jih bomo označili s simbolom `'$\to$'', predstavljale $\mathcal{O}$-vsiljene relacije pokritja.
+
+
 \section{Primeri}%################ POGLAVJE S PRIMERI
-V tem poglavju si bomo zaradi lažjega razumevanja pogledali nekaj posebnih primerov. Najprej si bomo pogledali najbolj znan poseben primer izreka Šarkovskega. V naslednjih dveh primerih bomo postopek iz prvega primera razširili na daljše cikle. V zadnjem primeru bomo nakazali indukcijski korak, ki ga bomo uporabili v dokazu izreka.
+V tem poglavju si bomo zaradi lažjega razumevanja pogledali nekaj posebnih primerov. Najprej si bomo pogledali najbolj znan poseben primer izreka Šarkovskega. V naslednjih dveh primerih bomo postopek iz prvega primera razširili na daljše cikle. V zadnjem primeru bomo nakazali kako lahko iz periodičnih točk funkcije $f^2$ ugotovimo katere periode ima funkcija $f$, kar igra pomembno vlogo pri dokazu izreka~\ref{izr:forcing}.
 
 \begin{primer}[3-cikel]\label{primer1}
 Perioda 3 implicira obstoj vseh ostalih period. Točka lahko tvori $3$-cikel na dva različna načina, ki sta v resnici zrcalna podoba drug drugega. Slika prikazuje oba primera. 
@@ -252,14 +334,16 @@ Perioda 3 implicira obstoj vseh ostalih period. Točka lahko tvori $3$-cikel na 
 \end{figure}
 Črtkane puščice nakazujejo, kam se s funkcijo $f$ slikajo točke. Velja: 
 $$x_1 = f(x_0), x_2 = f(x_1) \text{ in } x_0 = f(x_2).$$
-V obeh primerih smo z $I_1$ označili $\mathcal{O}$-interval s krajišči $x_0$ in $x_1$, z $I_0$ pa $\mathcal{O}$-interval s krajišči $x_0$ in $x_2$. Krajišči intervala $I_1$ se slikata v skrajno levo in skrajno desno točko cikla, zato imamo $\mathcal{O}$-vsiljeni pokritji $I_1 \to I_1$ in $I_1 \to I_0$. Krajišči intervala $I_0$ se slikata v krajišči intervala $I_1$, zato je tudi pokritje $I_0 \to I_1$ $\mathcal{O}$-vsiljeno. Ugotovljena pokritja lahko strnemo v diagram $\sara I_1 \leftrightarrows I_0$. Iz relacije pokritosti $I_1 \to I_1$ in leme~\ref{lem:1zanka} sklepamo, da interval $I_1$ vsebuje negibno točko. Krajišči intervala $I_1$ ne morejo slediti zanki $I_1 \to I_0 \to I_1$, saj sta periodični točki s periodo 3. Točke, ki sledijo zanki, pa imajo periodo 1 ali 2. Ker je notranjost intervala $I_0$ disjunktna z intervalom $I_1$, lahko s pomočjo leme~\ref{lem:element} sklepamo, da je zanka 
-$$I_0 \to \overbrace{I_1 \to I_1 \to \cdots \to I_1}^{l-1 \text{ ponovitev intervala } I_0} \to I_0$$
-elementarna za $l > 3$.
+V obeh primerih smo z $I_1$ označili $\mathcal{O}$-interval s krajišči $x_0$ in $x_1$, z $I_0$ pa $\mathcal{O}$-interval s krajišči $x_0$ in $x_2$. Krajišči intervala $I_1$ se slikata v skrajno levo in skrajno desno točko cikla, zato imamo $\mathcal{O}$-vsiljeni pokritji $I_1 \to I_1$ in $I_1 \to I_0$. Krajišči intervala $I_0$ se slikata v krajišči intervala $I_1$, zato je tudi pokritje $I_0 \to I_1$ $\mathcal{O}$-vsiljeno. Ugotovljena pokritja lahko strnemo v diagram $\sara I_1 \leftrightarrows I_0$. Iz relacije pokritosti $I_1 \to I_1$ in leme~\ref{lem:1zanka} sklepamo, da interval $I_1$ vsebuje negibno točko. Krajišči intervala $I_0$ ne morejo slediti zanki $I_0 \to I_1 \to I_0$, saj sta periodični točki s periodo 3. Točke, ki sledijo zanki, pa imajo periodo 1 ali 2. Ker je notranjost intervala $I_0$ disjunktna z intervalom $I_1$, lahko s pomočjo leme~\ref{lem:element} sklepamo, da je zanka elementarna. Torej lahko v intervalu $I_0$ poiščemo točko s periodo 2. Za dokaz obstoja točke s periodo $l\geq 4$ si poglejmo zanko
+\begin{equation}
+I_0 \to \overbrace{I_1 \to I_1 \to \cdots \to I_1}^{l-1 \text{ ponovitev intervala } I_0} \to I_0. \label{eq:lzanka}
+\end{equation}
+V tej zanki nastopajo vsaj 3 kopije intervala $I_1$, v katerem ležita samo dve točki $\mathcal{O}$-intervala. Ker imajo točke iz cikla $\mathcal{O}$ najmanjšo periodo 3, v intervalu $I_1$ ne morejo ležati trije zaporedni členi iz cikla $\mathcal{O}$, torej tudi tri zaporedne iteracije funkcije $f$ na krajiščih intervala $I_0$ ne morejo ležati v intervalu $I_1$. To pomeni, da krajišči intervala $I_0$ ne moreta slediti zanki. Že prej smo ugotovili, da je notranjost intervala $I_0$ disjunktna z intervalom $I_1$, zato je zanka~\eqref{eq:lzanka} elementarna zanka dolžine $l$. Zato ima funkcija $f$ periodo $l$ za vsak $l \geq 4$. Pokazali smo, da je vsako naravno število perioda funkcije $f$.
 \end{primer}
 
 
 \begin{primer}[7-cikel] \label{primer2}
-Sedaj bomo obravnavali 7-cikel $\mathcal{O}$ in $\mathcal{O}$-intervale prikazane na sliki.
+Sedaj bomo obravnavali 7-cikel $\mathcal{O}$ in $\mathcal{O}$-intervale prikazane na sliki~\ref{fig:7cikel}.
 \begin{figure}[h]
   \centering
   \includegraphics{images/sedemcikel.pdf}
@@ -267,13 +351,13 @@ Sedaj bomo obravnavali 7-cikel $\mathcal{O}$ in $\mathcal{O}$-intervale prikazan
   \caption[Primer vektorske slike.]{Primer 7-cikla.}
   \label{fig:7cikel}
 \end{figure}
- Podobno kot pri prejšnjem primeru označimo $x_i = f^i(x_0)$ in $I_1 = [x_0, x_1]$ in tako naprej, kot prikazuje slika. Za to izbiro intervalov dobimo naslednje $\mathcal{O}$-vsiljene relacije pokritosti:
+ Podobno kot pri prejšnjem primeru označimo točke $x_i = f^i(x_0)$ ter intervale $I_1 = [x_0, x_1]$, $I_2 = [x_1, x_2]$  in tako naprej kot prikazuje slika~\ref{fig:7cikel}. Za to izbiro intervalov dobimo naslednje $\mathcal{O}$-vsiljene relacije pokritosti:
 \begin{enumerate}
 \item $I_1 \to I_1$
 \item $I_1 \to I_2 \to I_3 \to I_4 \to I_5 \to I_0$
 \item $I_0 \to I_1$, $I_0 \to I_3$ in $I_0 \to I_5$
 \end{enumerate}
-Zgornje relacije pokritosti lahko prikažemo z diagramom, kot ga prikazuje slika:
+Zgornje relacije pokritosti lahko prikažemo z diagramom, ki ga prikazuje slika~\ref{fig:6kotnik}.
 \begin{figure}[h]
   \centering
   \includegraphics{images/graph6.pdf}
@@ -284,16 +368,16 @@ Zgornje relacije pokritosti lahko prikažemo z diagramom, kot ga prikazuje slika
 Iz grafa preberemo naslednje zanke.
 \begin{enumerate}
 \item $I_1 \to I_1$
-\item $I_0 \to I_5 \to I_1$
-\item $I_0 \to I_3 \to I_4 \to I_5 \to I_0$
-\item $I_0 \to I_1 \to I_2 \to I_3 \to I_4 \to I_5 \to I_0$
-\item $I_0 \to \underbrace{I_1 \to I_1 \to \cdots  \to I_1}_{l \text{ ponovitev intervala } I_1} \to I_2 \to I_3 \to I_4 \to I_5 \to I_0$, kjer je $l\geq 3$.
+\item $I_0 \to I_5 \to I_1$ \label{7cikelz2}
+\item $I_0 \to I_3 \to I_4 \to I_5 \to I_0$ \label{7cikelz3}
+\item $I_0 \to I_1 \to I_2 \to I_3 \to I_4 \to I_5 \to I_0$ \label{7cikelz4}
+\item $I_0 \to \underbrace{I_1 \to I_1 \to \cdots  \to I_1}_{l \text{ ponovitev intervala } I_1} \to I_2 \to I_3 \to I_4 \to I_5 \to I_0$, kjer je $l\geq 3$. \label{7cikelz5}
 \end{enumerate}
-Zanka $I_1 \to I_1$ je elementarna, saj je elementarna vsaka zanka dolžine 1. Pri ostalih zankah pa lahko ugotovimo, da za vsak $j \in \{1, 2, \dots, 5\}$ velja $\interior(I_0) \cap I_j = \emptyset$. Nobena robna točka intervala $I_0$ ne more slediti zanki, saj je perioda robnih točk 7, perioda točke ki sledi intervalu pa različna od 7. S tem razmislekom so izpolnjeni pogoji leme~\ref{lem:element}, zato lahko sklepamo, da so zanke elementarne. Torej lahko na podlagi prisotnosti tega cikla sklepamo, da so prisotne vse periode $l$, za katere je $l \triangleleft 7$
+Zanka $I_1 \to I_1$ je elementarna, saj je elementarna vsaka zanka dolžine 1. Pri ostalih zankah lahko najprej ugotovimo, da za vsak $j \in \{1, 2, \dots, 5\}$ velja $\interior(I_0) \cap I_j = \emptyset$. Pri zankah~\ref{7cikelz2},~\ref{7cikelz3} in~\ref{7cikelz4} nobena robna točka intervala $I_0$ ne more slediti zanki, saj je najmanjša perioda robnih točk 7, perioda točk, ki sledijo zankam~\ref{7cikelz2},~\ref{7cikelz3} in~\ref{7cikelz4} pa je manjša ali enaka 6. Podobno kot v primeru~\ref{primer1} ugotovimo, da nobene tri zaporedne iteracije funkcije $f$ na točkah cikla $\mathcal{O}$ ne ležijo v intervalu $I_1$, zato v tem intervalu tudi ne morejo ležati tri zaporedne iteracije funkcije $f$ na robnih točkah intervala $I_0$. To pomeni, da krajišči intervala $I_0$ ne sledita zanki~\ref{7cikelz5}. S tem razmislekom so izpolnjeni pogoji leme~\ref{lem:element}, zato lahko sklepamo, da so zanke elementarne. Torej lahko na podlagi prisotnosti 7-cikla na sliki~\ref{fig:7cikel} sklepamo, da so prisotne vse periode $l$, za katere je $l \triangleleft 7$
 \end{primer}
 
 \begin{primer}[9-cikel] \label{primer3}
-Slika prikazuje 9-cikel $\mathcal{O}$ neke funkcije, za katerega smo izbrali 6 $\mathcal{O}$-intervalov $I_0, I_1, \dots, I_5$, za katere je $\interior(I_0) \cap I_j = \emptyset$ za $0\leq j \leq 5$
+Predpostavimo, da ima funkcija $f$ 9-cikel $\mathcal{O}$, ki je prikazan na sliki~\ref{fig:9cikel}. 
 \begin{figure}[h]
   \centering
   \includegraphics{images/devetcikel.pdf}
@@ -301,7 +385,9 @@ Slika prikazuje 9-cikel $\mathcal{O}$ neke funkcije, za katerega smo izbrali 6 $
   \caption[Primer vektorske slike.]{Primer 9-cikla.}
   \label{fig:9cikel}
 \end{figure}
+Opazimo lahko, da smo določili šest $\mathcal{O}$-intervalov $I_0, I_1, \dots, I_5$, za katere velja, da je notranjost intervala $I_0$ disjunktna z ostalimi intervali. Torej za $j=1, 2, \dots, 5$ velja: $\interior{(I_0)} \cap I_j \neq \emptyset$. Za tako izbrane intervale dobimo enake relacije pokritja kot v primeru~\ref{primer1} in lahko s pomočjo enakih sklepov ugotovimo prisotnost enakih elementarnih zank in posledično periodičnih točk s periodami 1, 2, 4, 6 in vse periode večje od 7.
 
+Zaporedje števil $x_0, x_1, \dots, x_6$ smo določili tako, da se spiralno oddaljujejo od centra $c:=\frac{x_0+x_1}{2}$, kar je prikazano na sliki~\ref{fig:spiral}. S tako izbiro točk pa v zaporedju ne nastopajo vse točke cikla $\mathcal{O}$ in tudi ne velja enakost $f(x_i) = x_{i+1}$ za vsak $i = 1, 2, \dots, 5$ kot je to veljalo v primeru~\ref{primer2}
 \begin{figure}[h]
   \centering
   \includegraphics{images/spiral.pdf}
@@ -310,6 +396,10 @@ Slika prikazuje 9-cikel $\mathcal{O}$ neke funkcije, za katerega smo izbrali 6 $
   \label{fig:spiral}
 \end{figure}
 
+V poglavju~\ref{konssz} je predstavljen algoritem za izbiro zaporedja točk $x_0, x_1, \dots, x_6$. Glavna ideja algoritma je, da za naslednji člen zaporedja ne izberemo vedno sliko prejšnjega člena na način: $x_{i+1} = f(x_i)$, vendar včasih izberemo točko, ki je bližje centru $c$. Točko $x_{i+1}$, ki je bližje centra $c$ kot točka $f(x_i)$ izberemo, če je slika $f(x_{i+1})$ bolj oddaljena od centra kot točka $f(f(x_i))$. Postopka izbire naslednje točke na sliki~\ref{fig:iteracije} in na sliki~\ref{fig:spiral} sta podobna. V obeh primerih se pomikamo navpično do grafa funkcije in nato vodoravno do simetrale lihih kvadrantov. Sprememba se zgodi na sliki~\ref{fig:spiral}, ko lahko izberemo še neizbrano točko tako, da se v vodoravni smeri pomaknemo proti centru $c$, v navpični smeri pa stran od centra $c$. To se na sliki~\ref{fig:spiral} zgodi dvakrat in je prikazano s krivimi puščicami. 
+Postopek se ustavi, ko pridemo do točke $x_j$, katere slika $f(x_j)$ je na isti strani centra $c$ kot točka sama. V primeru na sliki~\ref{fig:spiral} je to točka $x_6$.
+
+V poglavju~\ref{stefan_zap} si bomo natančno pogledali kakšne lastnosti mora imeti zaporedje točk $x_0, x_1, \dots, x_{n-1}$, ki predstavlja krajišča intervalov $I_0, I_1, \dots, I_{n-1}$.
 
 \end{primer}
 
@@ -338,7 +428,7 @@ $I_1 \xrightarrow{f^2} I_1$, $I_1 \xrightarrow{f^2} I_0$ in $I_0 \xrightarrow{f^
 \end{figure}
 \end{primer}
 
-\section{Štefanovo zaporedje}
+\section{Štefanovo zaporedje} \label{stefan_zap}
 \begin{definicija}
 Naj bo $p$ najbolj desna točka intervala $\mathcal{O}$, za katero je $f(p) > p$ in $q\in \mathcal{O}$ prva točka desno od p. Center $c$ cikla $\mathcal{O}$ definiramo kot $c=\frac{p+q}{2}$. Za vsako točko $x \in \mathcal{O}$ označimo množico točk iz cikla $\mathcal{O}$, ki ležijo v zaprtem intervalu omejenem z $x$ in $c$, z $\mathcal{O}_x$. Natančneje, $\mathcal{O}_x = \mathcal{O} \cap [x, p]$, če je $x \leq p$ in  $\mathcal{O}_x = \mathcal{O} \cap [q, x]$, če je $x \geq q$. Pravimo, da točka $x \in \mathcal{O}$ menja strani, če točka $c$ leži med točkama $x$ in $f(x)$.
 \end{definicija}
@@ -400,7 +490,7 @@ Ker že vemo, da $f(I_0)$ vsebuje točki $x_0$ in $x_1$, preostane za dokazati �
 
 
 \begin{proof}[Dokaz trditve~\ref{trd:zap-cikel}]
-Naj veljajo predpostavke v trditvi~\ref{trd:zap-cikel}. Radi bi pokazali, da ima funkcija $f$ za vsako naravno število $l\triangleleft m$ točko periode $l$. Dokaz bomo razdelili na tri točke.
+Naj veljajo predpostavke v trditvi~\ref{trd:zap-cikel}. Radi bi pokazali, da ima funkcija $f$ za vsako naravno število $l\triangleleft m$ točko periode $l$. Dokaz bomo razdelili na tri dele. Najprej bomo dokazali izrek za liha števila manjša od $m$, potem za soda števila manjša od $n$ in na koncu še za vsa števila večja od $n$.
 
 Edino liho število $l$ manjše od $m$, za katerega lahko velja $l\triangleleft m$ je število 1. Za $l=1$ uporabimo zanko l1, ki je zanka dolžine 1 in zato elementarna. Torej obstaja točka periode 1 v intervalu $I_1$.
 
@@ -414,12 +504,13 @@ $$I_0\to\underbrace{I_1 \to I_1 \to \cdots  \to I_1}_{l - n +1 \text{ ponovitev 
 \end{proof}
 
 %#############  KONSTRUKCIJA ŠTEFANOVEGA ZAPOREDJA ##############
-\section{Konstrukcija Štefanovega zaporedja}
+\section{Konstrukcija Štefanovega zaporedja} \label{konssz}
 \begin{trditev}
-Cikel, ki vsebuje vsaj eno točko, vsebuje Štefanovo zaporedje, razen če vsaka točka menja stran.
+Cikel, ki vsebuje vsaj dve točki, vsebuje Štefanovo zaporedje, če vsaj ena točka ne menja strani.
 \end{trditev}
 \begin{proof}
-Naj bo $m$ naravno število večje od $2$ in naj bo $\mathcal{O}$ cikel sestavljen iz $m$ različnih točk. $\mathcal{S}$ 
+Naj bo $m$ naravno število večje ali enako $2$ in naj bo $\mathcal{O}$ cikel sestavljen iz $m$ različnih točk. Naj bo množica $\mathcal{M}$ največji tak $\mathcal{O}$-interval, ki vsebuje točki $p$ in $q$, da vsaka točka cikla $\mathcal{O}$, ki je vsebovana v $\mathcal{M}$ menja stran. To pomeni, da za poljubno točko $x \in \mathcal{M} \cap \mathcal{O}$ vse točke iz množice $\mathcal{O}_x$ menjajo stran. Če želimo konstruirati Štefanovo zaporedje, bomo Definiramo množico $\mathcal{S} \subset \mathcal{O}$, ki vsebuje vse kandidate za 
+
 
 \begin{figure}[h]
   \centering
