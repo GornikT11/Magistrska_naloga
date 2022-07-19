@@ -35,7 +35,7 @@ ymin=0,
 ymax=1.1
 ]
 	\addplot[blue,mark=none,
-		 domain=-0:1,samples=200] 
+		 domain=-0:1,samples=400] 
 		{1-max(2*x-1, 1-2*x)};
 \end{axis}
 \end{tikzpicture}
@@ -61,7 +61,7 @@ ymin=0,
 ymax=1.1
 ]
 	\addplot[blue,mark=none,
-		 domain=-0:1,samples=200] 
+		 domain=-0:1,samples=400] 
 		{1-max(2*(1-max(2*x-1, 1-2*x))-1, 1-2*(1-max(2*x-1, 1-2*x)))};
 \end{axis}
 \end{tikzpicture}
@@ -87,7 +87,7 @@ ymin=0,
 ymax=1.1
 ]
 	\addplot[blue,mark=none,
-		 domain=-0:1,samples=200] 
+		 domain=-0:1,samples=500] 
 		{1-max(2*(1-max(2*(1-max(2*x-1, 1-2*x))-1, 1-2*(1-max(2*x-1, 1-2*x))))-1, 1-2*(1-max(2*(1-max(2*x-1, 1-2*x))-1, 1-2*(1-max(2*x-1, 1-2*x)))))};
 \end{axis}
 \end{tikzpicture}
@@ -112,7 +112,7 @@ ymin=0,
 ymax=1.1
 ]
 	\addplot[blue,mark=none,
-		 domain=-0:1,samples=200] 
+		 domain=-0:1,samples=800] 
 		{1-max(2*(1-max(2*(1-max(2*(1-max(2*x-1, 1-2*x))-1, 1-2*(1-max(2*x-1, 1-2*x))))-1, 1-2*(1-max(2*(1-max(2*x-1, 1-2*x))-1, 1-2*(1-max(2*x-1, 1-2*x))))))-1, 1-2*(1-max(2*(1-max(2*(1-max(2*x-1, 1-2*x))-1, 1-2*(1-max(2*x-1, 1-2*x))))-1, 1-2*(1-max(2*(1-max(2*x-1, 1-2*x))-1, 1-2*(1-max(2*x-1, 1-2*x)))))))};
 \end{axis}
 \end{tikzpicture}
