@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}[x=4cm]
+    \draw (0,-1) -- (0,1);
+   % \draw[->] (0,-1) -- (0,1.1) node[above] {$\sin (1/x)$};
+  \draw[domain=0.03:1,samples=5000, smooth] plot (\x, {sin((1/\x)r)});
+\end{tikzpicture}
+
+\end{document}
