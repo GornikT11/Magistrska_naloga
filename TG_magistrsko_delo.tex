@@ -21,7 +21,7 @@
 % \mentorja{}{}
 % \mentorici{}{}
 
-\letnica{2022} % leto diplome
+\letnica{2023} % leto diplome
 
 %  V povzetku na kratko opišite vsebinske rezultate dela. Sem ne sodi razlaga organizacije dela --
 %  v katerem poglavju/razdelku je kaj, pač pa le opis vsebine.
@@ -105,9 +105,9 @@ katerem razdelku.
 
 %#############  DEFINICIJE IN FORMULACIJA IZREKA ##############
 \section{Definicije in formulacija izreka}
-Naj bo $I\subseteq \R$ povezana podmnožica realnih števil. Takim množicam bomo rekli intervali. Interval ne rabi biti zaprt ali omejen in lahko v nekaterih primerih predstavlja kar celotno množico realnih števil. Naj bo $f:I \to I$ zvezna funkcija, ki slika interval $I$ nazaj vase. Ker funkcija $f$ slika interval $I$ nazaj vase, si jo lahko predstavljamo kot diskreten dinamični sistem. S $f^n$ bomo označevali kompozitum:
+Naj bo $I\subseteq \R$ povezana podmnožica realnih števil. Takim množicam bomo rekli intervali. Interval ne rabi biti zaprt ali omejen in lahko v nekaterih primerih predstavlja kar celotno množico realnih števil. Naj bo $f:I \to I$ zvezna funkcija, ki slika interval $I$ nazaj vase. Za naravno število $n$ bomo s $f^n$ označevali kompozitum:
 $$f^n = \underbrace{f \circ f \circ \cdots \circ f}_{n \text{ ponovitev } f},$$
-kjer $f^0$ predstavlja identično funkcijo. Lahko si izberemo neko točko $x_0$ iz intervala $I$ in s pomočjo iteracij funkcije $f$ definiramo zaporedje s splošnim členom $x_n = f^n(x_0)$. Točke v tem zaporedju lahko ponazorimo v koordinatnem sistemu tako, da začnemo na abscisni osi pri točki $x_0$. Potujemo navpično do grafa funkcije $f$ in se premaknemo v vodoravni smeri do simetrale lihih kvadrantov. Ta točka nam pove, kje leži točka $x_1$, saj ima obe koordinati enaki $x_1$. Sedaj se zopet premaknemo navpično do grafa funkcije $f$ in nato vodoravno do simetrale lihih kvadrantov. Pridemo do točke, ki ima obe koordinati enaki $x_2$. Postopek (skiciran je na sliki~\ref{fig:iteracije}) lahko nadaljujemo. V primeru na sliki~\ref{fig:iteracije} vidimo, da se točka $x_3$ slika v točko $x_0$. To pomeni, da ima zaporedje samo 4 različne člene, ki se ponavljajo.
+kjer $f^0$ predstavlja identično funkcijo. Lahko si izberemo neko točko $x_0$ iz intervala $I$ in s pomočjo iteracij funkcije $f$ definiramo zaporedje s splošnim členom $x_n = f^n(x_0)$. Točke v tem zaporedju lahko ponazorimo v koordinatnem sistemu tako, da začnemo na abscisni osi pri točki $x_0$. Potujemo navpično do grafa funkcije $f$ in se premaknemo v vodoravni smeri do simetrale lihih kvadrantov. Ta točka ima obe koordinati enaki $x_1$. Sedaj se zopet premaknemo navpično do grafa funkcije $f$ in nato vodoravno do simetrale lihih kvadrantov. Pridemo do točke, ki ima obe koordinati enaki $x_2$. Postopek (skiciran je na sliki~\ref{fig:iteracije}) lahko nadaljujemo v neskončnost. V primeru na sliki~\ref{fig:iteracije} vidimo, da se točka $x_3$ slika v točko $x_0$. To pomeni, da ima zaporedje samo 4 različne člene, ki se ponavljajo.
 
 \begin{figure}[h]
   \centering
@@ -119,7 +119,7 @@ kjer $f^0$ predstavlja identično funkcijo. Lahko si izberemo neko točko $x_0$ 
 
 V takem dinamičnem sistemu ena iteracija funkcije predstavlja en diskreten korak v času, točka $x_0 \in I$ pa začetni položaj točke v sistemu. Množici, ki vsebuje vse člene zaporedja $\left( x_n \right)_{n=0}^{\infty}$ bomo rekli \emph{$f$-orbita točke $x_0$} ali samo orbita točke $x_0$. Z matematičnimi simboli jo lahko zapišemo tako:
 $$\{ \mathcal{O} := f^m(x_0) ; m \in \N \}.$$
-Izrek Šarkovskega preučuje take točke $x_0 \in I$, ki se po nekaj iteracijah s funkcijo $f$ slikajo nazaj vase. Takim točkam rečemo \emph{periodične točke}. \emph{Perioda točke} $x_0$ je najmanjše tako naravno število $m$, za katero je $f^m(x_0) = x_0$. Ekvivalentno lahko sklepamo, da je orbita periodične točke $x_0$ končna množica, število različnih elementov v orbiti pa je enako periodi točke $x_0$. Predvsem, ko želimo povdariti, da govorimo o periodični točki $x_0$, bomo $f$-orbito točke $x_0$ imenovali tudi cikel točke $x_0$. Cikel dolžine $m$ bomo krajše zapisali $m$-cikel. \emph{Negibna točka} (včasih ji rečemo tudi fiksna točka) je periodična točka s periodo 1, torej taka točka $x_0$, za katero je $f(x_0) = x_0$. Če obstaja periodična točka s periodo $n$, rečemo tudi, da ima funkcija $f$ periodo $n$.
+Preučevali bomo take točke $x_0 \in I$, ki se po nekaj iteracijah s funkcijo $f$ slikajo nazaj vase. Takim točkam rečemo \emph{periodične točke}. \emph{Perioda točke} $x_0$ je najmanjše tako naravno število $m$, za katero je $f^m(x_0) = x_0$. Ekvivalentno lahko sklepamo, da je orbita periodične točke $x_0$ končna množica, število različnih elementov v orbiti pa je enako periodi točke $x_0$. Predvsem, ko želimo povdariti, da govorimo o periodični točki $x_0$, bomo $f$-orbito točke $x_0$ imenovali tudi cikel točke $x_0$. Cikel dolžine $m$ bomo krajše zapisali $m$-cikel. \emph{Negibna točka} (včasih ji rečemo tudi fiksna točka) je periodična točka s periodo 1, torej taka točka $x_0$, za katero je $f(x_0) = x_0$. Če obstaja periodična točka s periodo $n$, rečemo tudi, da ima funkcija $f$ periodo $n$.
 
 Pri danem dinamičnem sistemu se lahko vprašamo, katere periode lahko ima funkcija. Šarkovski si je postavil prav to vprašanje in prišel do ureditve množice naravnih števil, ki pove, katere periode lahko ima funkcija.
 
@@ -134,7 +134,7 @@ Naj bo $M$ množica. Relacija $(M,\leq)$ definirana na množici $M$ je relacija 
 \item antisimetričnost:  $\forall a, b \in : a \leq b \text{ in } b \leq a \Rightarrow a = b$,
 \item tranzitivnost: $\forall a, b, c \in M : a \leq b \text{ in } b \leq c \Rightarrow a \leq c$.
 \end{itemize}
-Relacija $(M,\leq)$ je linearna urejenost, če je relacija delne urejenosti, ki je sovisna. To pomeni, da sta vsaka dva elementa v relaciji $\leq$. Natančneje: za vsak elementa $a, b \in M$ velja $a \leq b$ ali $b \leq a$.
+Relacija $(M,\leq)$ je linearna urejenost, če je relacija delne urejenosti, ki je sovisna. To pomeni, da sta vsaka dva elementa v relaciji $\leq$. Natančneje: za vsaka elementa $a, b \in M$ velja $a \leq b$ ali $b \leq a$.
 Stroga linearna urejenost je relacija $(M, <)$, ki je tranzitivna, sovisna in irefleksivna. Irefleksivnot pomeni, da ne obstaja element $a \in M$, za katerega je $a<a$.
 \end{definicija}
 
@@ -158,24 +158,24 @@ m= 2^k(2m_1 +1)\text{ in } n= 2^l(2n_1 +1), \label{eq:zapis}
 Relacija $(\N, \triangleright)$, ki smo jo definirali, je relacija linearne urejenosti.
 \end{trditev}
 \begin{proof}
-Za dokaz potrebujemo tri poljubna naravna števila:
+Za dokaz potrebujemo tri poljubna naravna števila, ki jih zapišemo na zgoraj opisan način:
 \begin{itemize}
 \item $m= 2^k(2m_1 +1)$,
 \item $n= 2^l(2n_1 +1)$ in
-\item $s=2^h(2s_1+1$.
+\item $s=2^h(2s_1+1)$.
 \end{itemize}
 Dokazati moramo refleksivnost, antisimetričnost, tranzitivnost in sovisnost relacije.
-Refleksivnost: če je število $m$ liho, točka~\ref{rel3} zagotavlja, da je $m \triangleright m$. Če je število $m$ sodo, pa relacija $m \triangleright m$ sledi iz točke~\ref{rel2}.
+Refleksivnost: če je število $m$ potenca števila $2$, točka~\ref{rel3} zagotavlja, da je $m \triangleright m$. Če število $m$ ni potenca števila $2$, pa relacija $m \triangleright m$ sledi iz točke~\ref{rel2}.
 
 Antisimetričnost: denimo, da za števili $m$ in $n$ veljata relaciji $m \triangleright n$ in $n \triangleright m$. Pogoja~\ref{rel1} in~\ref{rel4} za relacijo $m \triangleright n$ sta v protislovju z vsemi pogoji relacije $n \triangleright m$. Edina možnost, ki zadosti vsem potrebnim pogojem relacij je $k=l$ in $m_1 = n_1$. Torej je $m=n$.
 
-Tranzitivnost: obravnavamo števila $m$,  $n$ in $s$, ki zadoščajo relacijam $m \triangleright n$ in $n \triangleright s$. Radi bi videli sta števili $m$ in $s$ v relaciji $m \triangleright s$. Ker imamo 4 pogoje za relacijo $m \triangleright n$ in 4 pogoje za relacijo $n \triangleright s$, moramo obravnavati 16 možnih kombinacij. Vse kombinacije pogojev za relacije so zapisane v tabeli~\ref{table:1}. V drugem stolpcu so zapisani pogoji, ki jih dobimo iz relacije $m \triangleright n$, v tretjem stoplcu so pogoji, ki jih preberemo iz relacije $n \triangleright s$. V četrti stolpec smo zapisali pogoj, ki sledi iz pogojev v drugem in tretjem stolpcu. Opazimo, da v devetih primerih pogoja ne moreta biti izpolnjena istočasno, zato pridemo do protislovja. V ostalih primerih, pa dobimo enega od pogojev za relacijo $m \triangleright s$, zato sta števili $m$ in $s$ v relaciji $m \triangleright s$.
+Tranzitivnost: obravnavamo števila $m$,  $n$ in $s$, ki zadoščajo relacijam $m \triangleright n$ in $n \triangleright s$. Radi bi videli sta števili $m$ in $s$ v relaciji $m \triangleright s$. Ker imamo 4 pogoje za relacijo $m \triangleright n$ in 4 pogoje za relacijo $n \triangleright s$, moramo obravnavati 16 možnih kombinacij. Vse kombinacije pogojev za relacije so zapisane v tabeli~\ref{table:1}. V drugem stolpcu so zapisani pogoji, ki jih dobimo iz relacije $m \triangleright n$, v tretjem stoplcu so pogoji, ki jih preberemo iz relacije $n \triangleright s$. V četrtem stolpcu je zapisan pogoj, ki sledi iz pogojev v drugem in tretjem stolpcu. Opazimo, da v devetih primerih pogoja ne moreta biti izpolnjena istočasno, zato pridemo do protislovja. V ostalih primerih, pa dobimo enega od pogojev za relacijo $m \triangleright s$, zato sta števili $m$ in $s$ v relaciji $m \triangleright s$.
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h!]
 \centering
 \begin{tabular}{||c | l | l | l||} 
  \hline
- Col1 & $m \triangleright n$ & $n \triangleright s$ & $\Rightarrow$ \\ [0.5ex] 
+  & $m \triangleright n$ & $n \triangleright s$ & $\Rightarrow$ \\ [0.5ex] 
  \hline\hline
  1 & $k<l$ in $m_1, n_1 \neq 0$ & $l<h$ in $n_1, s_1 \neq 0$ & $k<h$ in $m_1, s_1 \neq 0$ \\ 
  2 & $k<l$ in $m_1, n_1 \neq 0$ & $l=h$ in $0<n_1 \leq s_1$ & $k<h$ in $m_1, s_1 \neq 0$ \\
@@ -236,6 +236,7 @@ Sedaj smo definirali vse potrebne pojme in spoznali tudi ureditev Šarkovskega. 
 Če ima zvezna funkcija $f : I \to I$ točko periode $m$ in velja $ m \triangleright l$, potem obstaja tudi točka periode $l$.
 \end{izrek}
 Izrek pove, da je množica period zvezne funkcije na intervalu $I$ rep ureditve Šarkovskega. \emph{Rep ureditve Šarkovskega} je taka množica $\mathcal{T} \subseteq \N$, za katero je $m \triangleright n$ za  vsaki naravni števili $m \notin \mathcal{T}$ in $n \in \mathcal{T}$. Obstajajo trije različni tipi repov:  Za neko naravno število $m$ je rep množica $\{n \in \N; m \triangleright n\}$, množica $\{\dots, 16, 8, 4, 2, 1\}$ vseh potenc števila 2 in $\emptyset$.
+
 Naslednji izrek je neke vrste obrat zgornjega izreka.
 
 \begin{izrek}[The Sharkovsky realization theorem]\label{izr:realization}
@@ -255,7 +256,7 @@ Funkcija $f$, ki je zvezna na intervalu $[a, b]$ in je na krajiščih intervala 
   \centering
   \includegraphics[]{images/intermediate.pdf}
 % \caption[caption za v kazalo]{Dolg caption pod sliko}
-  \caption[Primer vektorske slike.]{Slika prikazuje, kako poiščemo interval $K$.}
+  \caption[Primer vektorske slike.]{Zvezna funkcija, ki je definirana na intervalu in je na krajiščih intervala različno predznačena ima vsaj eno ničlo.}
   \label{fig:bezje}
 \end{figure}
 
@@ -486,8 +487,8 @@ Iz $m$-cikla $\mathcal{O}$ izbrane točke $x_0, x_1, \dots, x_n$ tvorijo Štefan
     \item če je $0\leq j \leq n-1$, potem $x_j$ menja strani in $x_{j+1} \in \mathcal{O}_{f(x_j)}$,\label{eq:š4}
     \item točka $x_n$ ne menja strani. \label{eq:š5}
 \end{enumerate}
-  
 \end{definicija}
+
 \begin{opomba}\label{op:štefzap}
 Štefanovo zaporedje dobimo tako, da iz množice $m$ točk, ki tvorijo $\mathcal{O}$-cikel izberemo $n+1$ točk, ki zadoščajo zgornjim pogojem. 
 Pogoj $x_{j+1} \in \mathcal{O}_{f(x_j)}$ v~\ref{eq:š4} pomeni, da je točka $x_{j+1}$ bližje centru kot slika $f(x_j)$ točke $x_j$. Velja ena od neenakosti: $c < x_{j+1} \leq f(x_j)$ ali $f(x_j) \leq x_{j+1} < c$. Pogoja ~\ref{eq:š2} in~\ref{eq:š3} zagotavljata, da so točke $x_0, x_1, \dots, x_n$ paroma različne. Če sledimo točkam na način, ki je opisan v primeru~\ref{primer3}, dobimo spiralo, zato za točke, ki ustrezajo pogojema ~\ref{eq:š2} in~\ref{eq:š3} rečemo, da se spiralno oddaljujejo od centra $c$. Ker lahko pri izbiri točk iz cikla $\mathcal{O}$ kakšno točko izpustimo, je število $n+1$ izbranih točk manjše ali enako številu vseh točk v $\mathcal{O}$-ciklu. Velja torej neenakost $n+1 \leq m$. Če se vrnemo na primere iz prejšnjega poglavja, lahko vidimo, da v primerih~\ref{primer1}, \ref{primer2} in \ref{primer4} Štefanovo zaporedje sestavljajo vse točke $\mathcal{O}$-cikla. V primeru~\ref{primer3} pa dve točki $\mathcal{O}$-cikla ne nastopata v Štefanovem zaporedju.
@@ -755,10 +756,10 @@ Denimo, da funkcija $T_{h(2^{\infty})}$ vsebuje nek $m$ cikel, kjer število $m$
 Za konec pokažimo, da obstaja funkcija, ki nima periodičnih točk. Za primer lahko vzamemo translacijo $f : \R \to \R$ s predpisom $f(x) = x + a$, kjer je $a$ katerokoli neničelno realno število.
 \end{proof}
 
-
+\newpage
 %#############  PROSTOR ŠARKOVSKEGA ##############
 \section{Prostor Šarkovskega}
-Po zaklučenem dokazu si radoveden matematik hitro postavi vprašanje, kako se spremenijo posledice v izreku, če spremenimo predpostavke izreka. Glede na to, kako spremenimo predpostavke, lahko pridemo do različnih posplošitev izreka. Tudi v primeru izreka Šarkovskega obstaja več posplošitev. Nekatere obravnavajo izrek tudi za nezvezne funkcije, ki ustrezajo določenim pogojem. Izrek Šarkovskega govori samo o zveznih funkcijah definiranih na intervalu, obstajajo pa posplošitve izreka, ki preučujejo zvezne funkcije, ki so definirane na drugih topoloških prostorih. Vprašamo se lahko, kakšna ureditev naravnih števil, če ta obstaja, opiše prisotnost periodičnih točk zvezne funkcije $f:X \to X$. Natančneje, iščemo relacijo $\triangleleft_X$ z lastnostjo: če je $m$ perioda za zvezno funkcijo $f:X \to X$, potem je vsako naravno število $l$, za katero je $l \triangleleft_X m$, tudi perioda za funkcijo $f$. Če je relacija $\triangleleft_X$ enaka relaciji Šarkovskega, ki smo jo spoznali v definiciji~\ref{def:ureditev-sark}, pravimo, da je prostor $X$ prostor Šarkovskega. To poglavje bomo namenili temu, da bomo spoznali nekaj prostorov Šarkovskega in tudi nekaj prostorov, ki to niso. Predstavili bomo tudi kakšno lastnost, ki jo imajo vsi prostori Šarkovskega. 
+Po zaklučenem dokazu si lahko postavimo vprašanje, kako se spremenijo posledice v izreku, če spremenimo predpostavke izreka. Glede na to, kako spremenimo predpostavke, lahko pridemo do različnih posplošitev izreka. V primeru izreka Šarkovskega obstaja več posplošitev. Nekatere obravnavajo izrek za nezvezne funkcije, ki ustrezajo določenim pogojem, druge pa preučujejo zvezne funkcije, ki so definirane na različnih topoloških prostorih. Vprašamo se lahko, kakšna ureditev naravnih števil, če ta obstaja, opiše prisotnost periodičnih točk zvezne funkcije $f:X \to X$. Natančneje, iščemo relacijo $\triangleleft_X$ z lastnostjo: če je $m$ perioda za zvezno funkcijo $f:X \to X$, potem je vsako naravno število $l$, za katero je $l \triangleleft_X m$, tudi perioda za funkcijo $f$. Če je relacija $\triangleleft_X$ enaka relaciji Šarkovskega, ki smo jo spoznali v definiciji~\ref{def:ureditev-sark}, pravimo, da je prostor $X$ prostor Šarkovskega. To poglavje bomo namenili temu, da bomo spoznali nekaj prostorov Šarkovskega in tudi nekaj prostorov, ki to niso. Predstavili bomo tudi kakšno lastnost, ki jo imajo vsi prostori Šarkovskega. 
 
 Najbolj tipični predstavniki prostorov Šarkovskega, so množica realnih števil in intervali v realnih številih. Poglejmo si primer prostora, ki ni prostor Šarkovskega.
 
@@ -770,19 +771,20 @@ R_n &: S^1 \to S^1 \\
 R_n &: (cos(\varphi), \sin(\varphi)) \mapsto (cos(\varphi + \frac{2 \pi}{n}), \sin(\varphi + \frac{2 \pi}{n})).
 \end{split}
 \end{equation*}
-Vse točke iz krožnice $S^1$ so periodične točke za funkcijo $R_n$ in vse imajo periodo $n$. Zato iz obstoja periodične točke za zvezno funkcijo $f : S^1 \to S^1$ ne moremo sklepati na obstoj drugih period za to funkcijo.
+Vse točke krožnice $S^1$ so periodične točke za funkcijo $R_n$ in vse imajo periodo $n$. Zato iz obstoja periodične točke za zvezno funkcijo $f : S^1 \to S^1$ ne moremo sklepati na obstoj drugih period za to funkcijo.
 \end{primer}
-S podobnim sklepanjem kot zgoraj lahko hitro poiščemo veliko prostorov, ki niso prostori Šarkovskega. To naredimo tako, da poiščemo prostore, ki imajo kakšno os rotacijske simetrije in preverimo, da res niso prostori Šarkovskega. Primeri takih prostorov so npr. sfera, krogla, torus, piramida, kocka\dots 
+S podobnim sklepanjem kot zgoraj lahko za nekatere prostore hitro preverimo, da niso prostori Šarkovskega. To naredimo tako, da poiščemo kakšno os rotacijske simetrije in preverimo, da res niso prostori Šarkovskega. Primeri takih prostorov so npr. sfera, krogla, torus, pravilna pokončna piramida\dots 
 
 Videli smo, da pri krožnici ne obstaja taka relacija, ki bi opisala periode zveznih funkcij iz prostora $S^1$ nazaj v prostor $S^1$. V naslednjem primeru bomo spoznali prostor, ki ni prostor Šarkovskega, vseeno pa lahko iz prisotnosti nekaterih period sklepamo na prisotnost durgih.
 \begin{primer}
-Naj bo prostor $X$ unija dveh disjunktnih intervalov: $X = [-2, -1] \cup [1, 2]$. Funkcija $g : X \to X$ podana s predpisom $g(x) = -x$ je zvezna funkcja. Vsaka točka iz prostora $X$ ima periodo 2, funkcija pa nima nobene fiksne točke, zato prostor $X$ ni prostor Šarkovskega. Vseeno pa lahko poiščemo relacijo $\triangleleft_X$, ki opiše katere periode ima lahko funkcija. Zaradi lažje obravnave bomo interval $[-2, -1]$ označili z $I_1$, interval $[1, 2]$ ia z $I_2$. Pri poljubni funkciji $f: X \to X$ imamo štiri možnosti. Če je $f(I_1) \subset I_1$ in $f(I_2) \subset I_2$ lahko za funkciji $f|_{I_1}$ in $f|_{I_2}$ uporabimo izrek Šarkovskega in ugotovimo, de je relacija $\triangleleft_X$ enaka relaciji Šarkovskega. V primeru, ko je $f(I_1) \subset I_1$ in $f(I_2) \subset I_1$ lahko periodične točke ležijo samo v intervalu $I_1$. Za funkcijo $f|_{I_1}$ uporabimo izrek Šarkovskega in ugotovimo, da je relacija $\triangleleft_X$ enaka relaciji Šarkovskega. Podoben sklep lahko naredimo tudi v primeru, ko je $f(I_1) \subset I_2$ in $f(I_2) \subset I_2$. Do spremembe pride, ko obravnavamo primer $f(I_1) \subset I_2$ in $f(I_2) \subset I_1$. V tem primeru se točke iz intervala $I_1$ s funkcijo $f$ slikajo v interval $I_2$ in obratno. Zato ima vsaka periodična točka sodo periodo. Naj bo $x \in X$ točks periode $2m$ za funkcijo $f$. Brez izgube splošnosti lahko sklepamo, da točka $x$ pripada intervalu $I_1$. Potem ima točka $x$ periodo $m$ za funkcijo $f^2|_{I_1} :I_1 \to I_1$. Ker je $I_1$ prostor Šarkovskega in je $f^2$ zvezna funkcija, lahko uporabimo izrek Šarkovskega in ugotovimo, da za vsako naravno število $l$, za katerega velja $l \triangleleft m$, obstaja točke $y \in I_1$ s periodo $l$ za funkcijo $f^2$. Točka $y$ ima periodo $2l$ za funkcijo $f$, saj $l$ je orbita točke $y$ sestavljen iz $l$ različnih točk v intervalu $I_1$ (sode iteracije) in $l$ različnih točk iz intervala $I_2$ (lihe iteracije). Ugotovili smo naslednje: Če ima zvezna funkcija $f:X \to X$ liho periodo $m$, potem ima zagotovo tudi vse periode $l$, kjer je $l \triangleleft m$. Če pa je perioda $m$ soda, potem ima funkcija vse periode $l=1$, za katere je $l \triangleleft m$.
+Naj bo prostor $X$ unija dveh disjunktnih intervalov: $X = [-2, -1] \cup [1, 2]$. Funkcija $g : X \to X$ podana s predpisom $g(x) = -x$ je zvezna funkcja. Vsaka točka iz prostora $X$ ima periodo 2, funkcija pa nima fiksne točke, zato prostor $X$ ni prostor Šarkovskega. Vseeno lahko poiščemo relacijo $\triangleleft_X$, ki opiše katere periode ima lahko funkcija. Zaradi lažje obravnave bomo interval $[-2, -1]$ označili z $I_1$, interval $[1, 2]$ pa z $I_2$. Pri poljubni funkciji $f: X \to X$ imamo štiri možnosti. Če je $f(I_1) \subset I_1$ in $f(I_2) \subset I_2$ lahko za funkciji $f|_{I_1}$ in $f|_{I_2}$ uporabimo izrek Šarkovskega in ugotovimo, de je relacija $\triangleleft_X$ enaka relaciji Šarkovskega. V primeru, ko je $f(I_1) \subset I_1$ in $f(I_2) \subset I_1$ lahko periodične točke ležijo samo v intervalu $I_1$. Za funkcijo $f|_{I_1}$ uporabimo izrek Šarkovskega in ugotovimo, da je relacija $\triangleleft_X$ enaka relaciji Šarkovskega. Podoben sklep lahko naredimo tudi v primeru, ko je $f(I_1) \subset I_2$ in $f(I_2) \subset I_2$. Drugače je v primeru $f(I_1) \subset I_2$ in $f(I_2) \subset I_1$. V tem primeru se točke iz intervala $I_1$ s funkcijo $f$ slikajo v interval $I_2$ in obratno. Zato ima vsaka periodična točka sodo periodo. Naj bo $x \in X$ točka periode $2m$ za funkcijo $f$. Brez izgube splošnosti lahko sklepamo, da točka $x$ pripada intervalu $I_1$. Potem ima točka $x$ periodo $m$ za funkcijo $f^2|_{I_1} :I_1 \to I_1$. Ker je $I_1$ prostor Šarkovskega in je $f^2$ zvezna funkcija, lahko uporabimo izrek Šarkovskega in ugotovimo, da za vsako naravno število $l$, za katerega velja $l \triangleleft m$, obstaja točka $y \in I_1$ s periodo $l$ za funkcijo $f^2$. Točka $y$ ima periodo $2l$ za funkcijo $f$, saj je orbita točke $y$ sestavljena iz $l$ različnih točk v intervalu $I_1$ (sode iteracije) in $l$ različnih točk iz intervala $I_2$ (lihe iteracije). 
+Ugotovili smo naslednje: Če ima zvezna funkcija $f:X \to X$ liho periodo $m$, potem ima zagotovo tudi vse periode $l$, kjer je $l \triangleleft m$. Če pa je perioda $m$ soda, potem ima funkcija vse periode $l\neq1$, za katere je $l \triangleleft m$. 
 Dobimo relacijo $\triangleright_X$:
-$$3 \triangleright_X 5 \triangleright_X 7 \triangleright_X \cdots \triangleright_X 2\cdot 3 \triangleright_X 2\cdot 5 \triangleright_X 2\cdot 7 \triangleright_X \cdots \triangleright_X 2^2\cdot 3 \triangleright_X 2^2\cdot 5 \triangleright_X 2^2\cdot 7 \triangleright_X \cdots \triangleright_X 2^3 \triangleright_X 2^2 \triangleright_X 2.$$
+$$3 \triangleright_X 5 \triangleright_X 7 \triangleright_X \cdots \triangleright_X 2\cdot 3 \triangleright_X 2\cdot 5 \triangleright_X 2\cdot 7 \triangleright_X \cdots \triangleright_X 2^2\cdot 3 \triangleright_X 2^2\cdot 5 \triangleright_X 2^2\cdot 7 \triangleright_X \cdots \triangleright_X 2^3 \triangleright_X 2^2 \triangleright_X 2,$$
 $$3 \triangleright_X 5 \triangleright_X 7 \triangleright_X \cdots \triangleright_X 1.$$
 \end{primer}
 
-Na začetku primera smo enostavno pokazali, da disjunktna unija ni prostor Šarkovskega. Z zelo podobno idejo lahko pokažemo, da noben nepovezan prostor ni prostor Šarkovskega.
+Na začetku primera smo enostavno pokazali, da disjunktna unija dveh intervalov ni prostor Šarkovskega. Z zelo podobno idejo lahko pokažemo, da je vsak prostor Šarkovskega povezan.
 
 \begin{trditev}
 Prostor Šarkovskega je povezan.
@@ -797,36 +799,57 @@ Naj bo prostor $X$ disjunktna unija prostorov $A$ in $B$ in naj bosta $a \in A$ 
 Funkcija $f$ ima samo dve periodični točki. To sta točki $a$ in $b$. Obe pa imata periodo 2. Ker nobena točka prostora $X$ ni fiksna točka za funkcijo $f$, prostor $X$ ni prostor Šarkovskega.
 \end{proof}
 
+Prepričajmo se, da je lastnos biti prostor Šarkovskega topološka lastnost.
+
 \begin{trditev}
 Lastnost biti prostor Šarkovskega je topološka lastnost. To pomeni, če je $X$ prostor Šarkovskega in je prostor $Y$ homeomorfen prostoru $X$, potem je tudi $Y$ prostor Šarkovskega.
 \end{trditev}
 \begin{proof}
-Naj bo prostor $X$ prostor Šarkovskega in naj bo prostor $Y$ homeomorfen prostoru $X$. Naj bo $h : X \to Y$ homeomorfizem med njima. Funkciji $f : Y \to Y$ in $g = h^{-1} \circ f \circ h : X \to X$ imata enake periode, zato je $Y$ tudi prostor Šarkovskega.
+Naj bo prostor $X$ prostor Šarkovskega in naj bo prostor $Y$ homeomorfen prostoru $X$. Naj bo $h : X \to Y$ homeomorfizem med prostoroma $X$ in $Y$. Funkciji $f : Y \to Y$ in $g = h^{-1} \circ f \circ h : X \to X$ imata enake periode, zato je $Y$ tudi prostor Šarkovskega.
 \end{proof}
 
+
+
 \begin{definicija}
-Naj bo $X$ topološki prostor in $A \subset X$ njegov podprostor. Preslikavi $r : X \to A$ pravimo \emph{retrakcija}, če je preslikava $r|_A = id_A$. Podprostor $A \subset X$ je \emph{retrakt} prostora $X$, če obstaja retrakcija $r: X \to A$.
+Naj bo $X$ topološki prostor in $A \subset X$ njegov podprostor. Zvezni preslikavi $r : X \to A$ pravimo \emph{retrakcija}, če je preslikava $r|_A = id_A$. Podprostor $A \subset X$ je \emph{retrakt} prostora $X$, če obstaja retrakcija $r: X \to A$.
 \end{definicija}
 
 \begin{trditev}
 Retrakt prostora Šarkovskega je prostor Šarkovskega.
 \end{trditev}
 \begin{proof}
-Denimo, da je prostor $X$ prostor Šarkovskega in prostor $A \subset X$ retrakt prostora $X$. Naj bo $r : X \to A$ retrakcija $i : X \to A$ inkluzija. Če je funkcija $f : A \to A$ zvezna, ima funkcija $g = i \circ f \circ r : X \to X$ enake periodične točke, kot funkcija $f$. Zato je prostor $A$ tudi prostor Šarkovskega.
+Denimo, da je prostor $X$ prostor Šarkovskega in prostor $A \subset X$ retrakt prostora $X$. Naj bo $r : X \to A$ retrakcija $i : X \to A$ inkluzija. Če je funkcija $f : A \to A$ zvezna, ima funkcija $g = i \circ f \circ r : X \to X$ enake periodične točke, kot funkcija $f$. Zato je tudi prostor $A$ prostor Šarkovskega.
 \end{proof}
 
+Prepričali smo se že, da je vsak prostor Šarkovskega povezan prostor. V nadaljevanju bomo ponovili kakšni prostori so lokalno povezani in ugotovili, da je prostor Šarkovskega lahko lokalno nepovezan prostor.
 
 \begin{definicija}
-Naj bo C grapf funkcije $\sin\left(\frac{1}{x}\right)$ na intervalu $x \in (0 , 1]$ in naj bo $A$ daljica $\{ 0 \} \times [-1 , 1]$. Varšavski lok je prostor $X = C \cup A$.
-Prostor $X$ je kompakten in ima dve komponenti za povezavost s potmi. Komponenta $A$ je homeomorfna zaprtemu intervalu, komponenta $C$ pa je homeomorfna polodprtemu intervalu. Prostor je prikazan na sliki~\ref{fig:varsavski_lok}
+Prostor $X$ je lokalno povezan prostor, če za vsako točko $x \in X$ in vsako odptro množico $U \subset X$, ki vsebuje točko $x$, obstaja taka odprta povezana množica $V \subset X$, da je $x \in V \subset U$. Prostoru, ki ni lokalno povezan pravimo lokalno nepovezan prostor.
 \end{definicija}
+
+poglejmo si nekaj primerov:
+\begin{primer}
+Odprti disk v $\R^2$ je povezan in lokalno povezan prostor.
+\end{primer}
+
+\begin{primer}
+Poglejmo si nepovezan prostor, sestavljen iz treh komponent za povezanost kot prikazuje slika. Prostor je lokalno povezan, saj za vsako točko $x \in X$ in vsako njeno odprto okolico $U\subset X$ obstaja taka povezana okolica $V$, da je $x \in V \subset U$.
+\end{primer}
+
+Morda bi na hitro pomislili, da je lokalna povezanost strožji pogoj kot povezanost. To bi pomenilo, da so vsi lokalno povezani prostori tudi povezani. Prepričajmo se, da to ni res. Poglejmo si primer povezanega prostora, ki ni lokalno povezan.
+
+\begin{primer}
+Naj bo $C$ grapf funkcije $\sin\left(\frac{1}{x}\right)$ na intervalu $x \in (0 , 1]$ in naj bo $A$ daljica $\{ 0 \} \times [-1 , 1]$. \emph{Varšavski lok} je prostor $X = C \cup A$.
+Prostor $X$ je povezan, kompakten in ima dve komponenti za povezavost s potmi. Komponenta $A$ je homeomorfna zaprtemu intervalu, komponenta $C$ pa je homeomorfna polodprtemu intervalu. Prostor je prikazan na sliki~\ref{fig:varsavski_lok}.
+Prepričajmo se, da je prostor $X$ povezan. Ker je množica $C$ povezana, celotena leži v neki komponenti za povezanost $V$ prostora $X$. Poglejmo točko iz $x = (0, 0) \in  A$. Naj bo $\delta$ poljubno majhno pozitivno število in množica $U$ delta okolica točke $x$ v prostoru $X$. Za naravno število $k > \frac{1}{\pi \delta}$ točka $(\frac{1}{k \pi}, 0)$ leži v množici $C$ in v množici $U$, kar pomeni, da točka $(0, 0)$ leži v komponenti za povezanost $V$. Ker je množica $A$ povezana množica, cela leži v množici $V$, zato ima prostor $X$ eno samo komponento za povezanost in je povezan prostor.
+\end{primer}
 
 \begin{trditev}
 Varšavski lok je prostor Šarkovskega.
 \end{trditev}
 \begin{proof}
-Varšavski lok zapišimo kot $X = C \cup A$, kjer je C krivulja $\{(x, \sin(\frac{1}{x})), x\in [0, 1]\}$ in $A= \{0\} \times [0, 1]$. Naj bo $x \in X$ točka s periodo $n$ in naj za neko naravno število $m$ velja relacija $m \triangleleft n$. Pokazali bomo, da obstaja točka $y$ s periodo $m$. Ker je funkcija $f$ zvezna, se ne more zgoditi, da ja $f(A) \subset C$ in $f(C) \subset A$. V tem primeru bi bila množica $f(C)$ kompaktna množica, ki je nima skupne točke z množico $C$. Ker ima prostor $\R$ lastnost $T_4$, obstajata disjunktni odprti množici, $U$ in $V$, za kateri velje $f(C) \subset U$, $f(A) \subset C \subset V$, kar predstavlja separacijo prostora $f(X)$, kar pa ni mogoče, saj Če je $f(A) \subset C$, potem je zaradi zveznosti funkcije $f$ tudi $f(C) \subset C$. Ker je $X$ kompaktna množica in je slika kompaktne množice z zvezno preslikavo kompaktna, je množica $f(X)$ kompaktna povezana podmnožica množice $C$. Množica $C$ je homeomorfna intervalu, zato je tudi $f(X)$ homeromorfna intervalu, kar pomeni, da je tudi $f(X)$ prostor Šarkovskega. Zato obstaja točka $y$ s periodo $m$. Če je $f ( C ) \subset A $, potem je tudi $f ( A ) \subset A $ in vsaka periodična točka funkcije $f$ leži v $A$.  Zopet je množica $f(X)$ povezana kompaktna podmnožica homeomorfna intervalu. Torej obstaja točka $y$ s periodo $m$. 
-Dokazati moramo še primer, ko je $f ( A ) \subset A $ in $f ( C ) \subset C $. Ker sta prostora $A$ in $C$ homeomorfna intervalu, sta prostora Šarkovskega, kar pomeni, da zagotovo obstaja točka $y \in X$, ki leži v isti komponenti za povezanost s potmi kot točka $x$, s periodo $m$.
+Varšavski lok zapišimo kot $X = C \cup A$, kjer je C krivulja $\{(x, \sin(\frac{1}{x})), x\in [0, 1]\}$ in $A= \{0\} \times [-1, 1]$. Naj bo $x \in X$ točka s periodo $n$ in naj bo $m$ tako naravno število, da velja relacija $m \triangleleft n$. Pokazali bomo, da obstaja točka $y$ s periodo $m$. Ker je funkcija $f$ zvezna, se ne more zgoditi, da ja $f(A) \subset C$ in $f(C) \subset A$. V tem primeru bi bila množica $f(C)$ kompaktna množica, ki nima skupne točke z množico $C$. Ker ima prostor $\R$ lastnost $T_4$, obstajata disjunktni odprti množici, $U$ in $V$, za kateri velja $f(C) \subset U$, $f(A) \subset C \subset V$, kar predstavlja separacijo prostora $f(X)$, kar pa ni mogoče, saj je prostor $X$ povezan. Množica $f(X)$ je slika povezanega prostora z zvezno funkcijo in je tudi povezana. Če je $f(A) \subset C$, potem je zaradi zveznosti funkcije $f$ tudi $f(C) \subset C$. Ker je $X$ kompaktna množica in je slika kompaktne množice z zvezno preslikavo kompaktna, je množica $f(X)$ kompaktna povezana podmnožica množice $C$. Množica $C$ je homeomorfna intervalu, zato je tudi $f(X)$ homeromorfna intervalu, kar pomeni, da je tudi $f(X)$ prostor Šarkovskega. Zato obstaja točka $y$ s periodo $m$. Če je $f (C) \subset A $, potem je tudi $f (A) \subset A $ in vsaka periodična točka funkcije $f$ leži v $A$.  Zopet je množica $f(X)$ povezana kompaktna podmnožica homeomorfna intervalu. Torej obstaja točka $y$ s periodo $m$. 
+Dokazati moramo še primer, ko je $f (A) \subset A $ in $f (C) \subset C $. Ker sta prostora $A$ in $C$ homeomorfna intervalu, sta prostora Šarkovskega, kar pomeni, da zagotovo obstaja točka $y \in X$, ki leži v isti komponenti za povezanost s potmi kot točka $x$, s periodo $m$.
 \end{proof}
 
 \begin{figure}[h]
@@ -879,7 +902,7 @@ Prepričali se bomo, da je ta komponenta kar enaka $p(U)$. To je res, saj kompon
 V tem poglavju bomo spoznali topologijo urejenih prostorov in posebne urejene prostore s topologijo urejenih prostorov, ki jih imenujemo linearni kontinuum. Gre za neke vrste posplošitev premice realnih števil. Pokazali bomo, da je linearni kontinuum prostor Šarkovskega.
 
 Naj bo množica $X$ urejena s strogo linearno relacijo $<$. Za dana elementa $a, b \in X$, za katera velja neenakost $a<b$, lahko definiramo štiri podmnožice prostora $X$, ki jih imenujemo intervali s krajišči $a$ in $b$. To so:
- Na množici $X$ imamo dve vrsti odprtih množic, ki ju zapišemo na naslednji način:
+ %Na množici $X$ imamo dve vrsti odprtih množic, ki ju zapišemo na naslednji način:
 \begin{equation*} %\label{eq1}
 \begin{split}
 (a, b) &= \{x \in X: a< x <b\} \\ 
@@ -888,6 +911,26 @@ Naj bo množica $X$ urejena s strogo linearno relacijo $<$. Za dana elementa $a,
 [a, b] &= \{x \in X: a \leq x \leq b\}
 \end{split}
 \end{equation*}
+
+\begin{opomba}\label{op:intervali}
+Interval $(a, b)$ imenujemo odprti interval, intervalu $(a, b]$ rečemo pol odprti interval, interval $[a, b)$ je pol zaprti interval, interval $[a, b]$ pa je zaprti interval.
+\end{opomba}
+
+\begin{definicija}
+Naj bo $X$ množica z vsaj dvema elementoma urejena z relacijo $<$ in naj bo $B$ družina množic, ki vsebuje intervale naslednjih tipov:
+\begin{enumerate}
+\item Vsi odprti intervali $(a, b) \in X$.
+\item Vsi intervali $[a_0, b) \in X$, kjer je $a_0$ najmanjši element (če obstaja) množice $X$.
+\item Vsi intervali $(a, b_0] \in X$, kjer je $b_0$ največji element (če obstaja) množice $X$.
+\end{enumerate}
+Družina množic $B$ je baza za topologijo na množici $X$, ki jo imenujemo topologija urejenih množic.
+\end{definicija}
+
+\begin{opomba}\label{op:ekstremi}
+Če množica $X$ nima najmanjšega elementa, potem baza $B$ ne vsebuje intervalov tipa 2 in če množica $X$ nima največjega elementa, potem baza $B$ ne vsebuje intervalov tipa 3.
+\end{opomba}
+
+Prepričati se moramo, da zgoraj opisana družina množic $B$ res predstavlja bazo topologije na urejeni množici $X$. Najprej moramo preveriti, da je vsaka točka množice $X$ vsebovana v nekem intervalu iz družine $B$. Če je točka $x$ enaka $a_0$, potem velja $x \in [a_0, a)$ za neko točko $a \in X$. Podobno lahko sklepamo v primeru, ko je $x = b_0$. Če je $x \neq a_0$ in $x \neq b_0$, potem zagotovo obstaja
 
 \begin{definicija}
 \emph{Linearni kontinuum} je linearno urejena množica $S$, ki ima naslednji lastnosti:
@@ -909,22 +952,22 @@ Predpostavimo, da je prostor $X$ s topologijo urejenih množic linearni kontinuu
 \end{proof}
 
 \begin{izrek}
-Naj bo $f : X \to Y$ zvezna funkcija, kjer je $X$ povezan prostor in $Y$ urejen prostor s topologijo urejenih množic. Če sta $a$ in $b$ dve točki v prostoru $X$ in je $r$ točka v prostoru $Y$, ki leži med točkama $f(a)$ in $f(b)$, potem obstaja točke $c \in X$, da velja $f(c) = r$.
+Naj bo $f : X \to Y$ zvezna funkcija, kjer je $X$ povezan prostor in $Y$ urejen prostor s topologijo urejenih množic. Če sta $a$ in $b$ dve točki v prostoru $X$ in je $r$ točka v prostoru $Y$, ki leži med točkama $f(a)$ in $f(b)$, potem obstaja točka $c \in X$, da velja $f(c) = r$.
 \end{izrek}
 \begin{proof}
 Privzemimo predpostavke izreka. Množici $=f(X) \cap (-\infty, r)$ in $B=f(X) \cap (r, \infty)$ sta disjunktni in neprazni, saj ena množica vsebuje točko $f(a)$, druga pa točko $f(b)$. Obe sta odprti v $f(X)$ saj smo ju dobili kot presek odprtega intervala z množico $f(X)$. Če ne obstaja taka točke $c \in X$, da je $f(c) = r$, potem je $f(X)$ unija množic $A$ in $B$. Na ta način smo dobili separacijo množice $f(X)$, kar pa je protislovje, saj je slika povezane množice z zvezno preslikavo povezana.
 \end{proof}
 
 \begin{lema}
-Naj bo $L$ linearni kontinuum v topologiji urejenih množic. Naj bosta $I$ in $J$ zaprta intervala v $L$ in $f:L \to L$ zvezna funkcija. Če je $J \subset f(I)$, obstaja zaprt interval $K \subset I$, za katerega je $f(K) = J$.
+Naj bo $L$ linearni kontinuum s topologijo urejenih množic. Naj bosta $I$ in $J$ zaprta intervala v $L$ in $f:L \to L$ zvezna funkcija. Če je $J \subset f(I)$, obstaja zaprt interval $K \subset I$, za katerega je $f(K) = J$.
 \end{lema}
 \begin{proof}
 Izberemo taki točki $p, q \in I$, da velja $p<q$ in $J=[f(p), f(q)]$ ali $J=[f(q), f(p)]$. Definiramo točko $p \leq r < q$:
 $$r= \sup\{x \in [p, q] : f(x) = f(p)\}.$$
-Trdimo, da je $f(r) = f(p)$. V nasprotnem primeru obstaja odprta množica $V$, ki vsebuje točko $f(r)$ in ne vsebuje točke $f(p)$.To je res, ker je prostor $L$ Hausdorffov. Zaradi zveznosti funkcije $f$ obstaja taka odprta okolica $U$ točke $r$, da je $f(U) \subset V$. Ker je $L$ linearni kontinuum obstaja točka $p \leq r' < r$, da je interval $[r', r]$ vsebovan v množici $U$. Torej je $f([r', r]) \subset V$, kar pomeni, da $f(p) \notin f([r', r])$. To pa je protislovje z definicijo točke $r$ kot supremum množice.
+Trdimo, da je $f(r) = f(p)$. V nasprotnem primeru obstaja odprta množica $V$, ki vsebuje točko $f(r)$ in ne vsebuje točke $f(p)$.To je res, ker je prostor $L$ Hausdorffov. Zaradi zveznosti funkcije $f$ obstaja taka odprta okolica $U$ točke $r$, da je $f(U) \subset V$. Ker je $L$ linearni kontinuum obstaja taka točka $p \leq r' < r$, za katero je interval $[r', r]$ vsebovan v množici $U$. Torej je $f([r', r]) \subset V$, kar pomeni, da $f(p) \notin f([r', r])$. To pa je protislovje z definicijo točke $r$ kot supremum množice.
 Sedaj definiramo $r<s \leq q$:
 $$r= \inf\{x \in [r, q] : f(x) = f(q)\}.$$ 
-Enako kot prej se prepričamo, da je $f(s) = f(q)$. Zapišimo $Q = [r, s]$ in pokažimo, da je $f(Q) = J$. Izrek o vmesni vrednosti zagotavlja, da je interval $J$ vsebovan v množici $f([r, s])$. Velja tudi $f([r, s]) \subset J$, saj v nasprotnem primeru obstaja $r<x<s$, za katerega velja $f(x) \notin J$. Če je $f(x) < f(p) < f(q)$ ali $f(q) < f(p) < f(x)$, potem po izreku o vmesni vrednosti obstaja tak $x'$, da velja $r<x<x'<s$ in $f(p) = f(x')$. to pa je protislovje z definicijo točke $r$ kot supremum. Če je $f(x) < f(q) < f(p)$ ali $f(p) < f(q) < f(x)$, to privede do protislovja z definicijo točke $s$ kot infimum. To pomeni, da res felja $J = f(Q)$.
+Enako kot prej se prepričamo, da je $f(s) = f(q)$. Zapišimo $Q = [r, s]$ in pokažimo, da je $f(Q) = J$. Izrek o vmesni vrednosti zagotavlja, da je interval $J$ vsebovan v množici $f([r, s])$. Velja tudi $f([r, s]) \subset J$, saj v nasprotnem primeru obstaja $r<x<s$, za katerega velja $f(x) \notin J$. Če je $f(x) < f(p) < f(q)$ ali $f(q) < f(p) < f(x)$, potem po izreku o vmesni vrednosti obstaja tak $x'$, da velja $r<x<x'<s$ in $f(p) = f(x')$. to pa je protislovje z definicijo točke $r$ kot supremum. Če je $f(x) < f(q) < f(p)$ ali $f(p) < f(q) < f(x)$, to privede do protislovja z definicijo točke $s$ kot infimum. To pomeni, da res velja $J = f(Q)$.
 \end{proof}
 
 \begin{lema}
