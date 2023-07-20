@@ -1,0 +1,182 @@
+%\documentclass[mat1]{fmfdelo}
+% \documentclass[fin1]{fmfdelo}
+% \documentclass[isrm1]{fmfdelo}
+ \documentclass[mat2]{fmfdelo}
+% \documentclass[fin2]{fmfdelo}
+% \documentclass[isrm2]{fmfdelo}
+
+% naslednje ukaze ustrezno napolnite
+\avtor{Tom Gornik}
+
+\naslov{Izrek Šarkovskega}
+\title{Sharkovsky theorem}
+
+% navedite ime mentorja s polnim nazivom: doc.~dr.~Ime Priimek,
+% izr.~prof.~dr.~Ime Priimek, prof.~dr.~Ime Priimek
+% uporabite le tisti ukaz/ukaze, ki je/so za vas ustrezni
+\mentor{izr. prof. dr. Aleš Vavpetič}
+% \mentorica{}
+% \somentor{}
+% \somentorica{}
+% \mentorja{}{}
+% \mentorici{}{}
+
+\letnica{2023} % leto diplome
+
+%  V povzetku na kratko opišite vsebinske rezultate dela. Sem ne sodi razlaga organizacije dela --
+%  v katerem poglavju/razdelku je kaj, pač pa le opis vsebine.
+\povzetek{}
+
+%  Prevod slovenskega povzetka v angleščino.
+\abstract{}
+
+% navedite vsaj eno klasifikacijsko oznako --
+% dostopne so na www.ams.org/mathscinet/msc/msc2020.html
+\klasifikacija{}
+\kljucnebesede{} % navedite nekaj ključnih pojmov, ki nastopajo v delu
+\keywords{} % angleški prevod ključnih besed
+
+\zapisiMetaPodatke  % poskrbi za metapodatke in veljaven PDF/A-1b standard
+
+% aktivirajte pakete, ki jih potrebujete
+\usepackage{standalone}
+%\usepackage{fmfdelo}
+\usepackage{import}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{arrows,matrix,positioning, arrows.meta, cd}
+\usepackage{scalerel}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{subfiles} % Best loaded last in the preamble
+
+
+% za številske množice uporabite naslednje simbole
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Q}{\mathbb Q}
+
+% matematične operatorje deklarirajte kot take, da jih bo Latex pravilno stavil
+% \DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\interior}{int}
+
+% vstavite svoje definicije ...
+\newcommand{\dashedTri}{%
+        \begin{tikzpicture}
+
+\tikzset{vertex/.style = {shape=circle, fill=black,draw,minimum size=3pt, inner sep=0pt}}
+\tikzset{edge/.style = {->,> = latex'}}
+\tikzset{interval/.style = {<->,> = {Bracket[length=0.8mm, width=4mm]}, line width = 0.8pt}}
+% vertices
+\node[vertex] (1) at  (0, 0) {};
+\node[vertex] (2) at  (0.8, 0) {};
+\node[vertex] (3) at  (1.6, 0) {};
+%edges
+\draw[edge, dashed] (1) to[bend left=12] (2);
+\draw[edge, dashed] (2) to[bend left=12] (3);
+\draw[edge, dashed] (3) to[bend left=10] (1);
+\end{tikzpicture}%
+    }
+    
+    \makeatletter
+  \begingroup
+    \setbox\@tempboxa=\hbox{$\subset$}
+    \@tempdima=\dp\@tempboxa
+    \newbox\@sarabox
+    \global\setbox\@sarabox=\hbox{%
+      \begin{tikzpicture} [baseline=0pt]
+        \node (subset) at (0,-\@tempdima) [above left, inner sep=0pt, outer sep=0pt] {$\subset$};
+        \begin{pgfinterruptboundingbox}
+          \draw (-2.5pt,6.24pt) edge [->] +(1.6pt,0pt);
+       \end{pgfinterruptboundingbox}
+      \end{tikzpicture}%
+    }
+    \global\ht\@sarabox=\ht\@tempboxa
+  \endgroup
+  \newcommand*\sara{\mathrel{\scalerel*{\usebox\@sarabox}{\subset}}}
+\makeatother
+
+%  \newcommand{}{}
+
+\graphicspath{{\subfix{images/}}}
+\begin{document}
+%#############  UVOD ##############
+\section{Uvod}
+\subfile{sections/uvod}
+
+%#############  DEFINICIJE IN FORMULACIJA IZREKA ##############
+\section{Definicije in formulacija izreka}
+\subfile{sections/formulacija-izreka}
+
+%################ POGLAVJE S PRIMERI ##############
+\section{Primeri}
+\subfile{sections/primeri}
+
+%################################## ŠTEFANOVO ZAPOREDJE ###########################
+%##############################################################################
+\section{Štefanovo zaporedje} \label{stefan_zap} 
+\subfile{sections/stefan}
+
+%Dodatno onformacijo o prisotnosti periodičnih točk lahko dobimo tudi pri opazovanju ciklov dolžine $2^k$, za neko naravno število $k$. Če tak cikel vsebuje točko, ki ne menja strani, 
+
+
+%#############  KONSTRUKCIJA ŠTEFANOVEGA ZAPOREDJA ##############
+\section{Konstrukcija Štefanovega zaporedja} \label{konssz}
+\subfile{sections/konstrukcija-stefan}
+
+ %#############  DOKAZ IZREKA ŠARKOVSKEGA ##############
+\section{Dokaz izreka Šarkovskega}
+\subfile{sections/dokaz-izreka}
+
+%#############  REALIZACIJSKI IZREK ŠARKOVSKEGA ##############
+\section{Dokaz realizacijskega izrek Šarkovskega}\label{sec:realizacija}
+\subfile{sections/realizacija}
+
+\newpage
+%#############  PROSTOR ŠARKOVSKEGA ##############
+\section{Prostor Šarkovskega}
+\subfile{sections/prostor-sarkovskega}
+
+
+%V tem poglavju zapišemo definicijo prostora Šarkovskega. Pokažemo, da je lastnsot prostora Šarkovskega topološka lastnost ( če je X prostor Šarkovskega in je Y homeomorfen prostoru X, je tudi Y prostor Šarkovskskega. Retrakt prostora Šarkovskega je prostor Šarkovskega. Prikažemo nekaj primerov in protiprimerov.
+
+%Ko dokažemo izrek, je naravno, da se vprašamo, ali se da mogoče izrek posplošiti. Lahko se vprašamo, kako se izrek spremeni, če spremenimo predpostavke izreka. Obstaja več posplošitev izreka, ki namesto zveznih funkcij na realnih številih obravnavajo funkcije, ki slikajo nek topološki prostor nazaj vase. V teh primerih lahko periode funkcij ne sledijo nujno Šarkovskemu zaporedju. Kadar pa velja, da za vsako funkcijo $f:X \to X$, ki ima točko periode $m$ obstaja tudi točka periode $l$ za vsak $l \triangleleft m$, imenujemo prostor $X$ prostor Šarkovskega. 
+%#############  LINEARNI KONTINUUM JE PROSTOR ŠARKOVSKEGA ##############
+%https://en.wikipedia.org/wiki/Order_topology
+%https://planetmath.org/aspaceisconnectedundertheorderedtopologyifandonlyifitisalinearcontinuum
+%http://mathcenter.spb.ru/nikaan/2019/topology/4.pdf
+%http://www.math.buffalo.edu/~badzioch/MTH427/_static/mth427_notes_4.pdf
+
+\section{Linearni kontinuum je prostor Šarkovskega}
+\subfile{sections/linearni-kontinuum}
+
+
+% Literatura:
+% Primer navajanja na http://www.fmf.uni-lj.si/storage/24240/LiteraturaM.pdf,
+% ampak bi moral stil poskrbeti za vse. Reference se uredijo po abecedi.
+% Če nobena izbira izmed @book, @atricle,... ni ok, potem se lahko vse napiše v
+% @misc pod note={} in deluje tako kot normalen LaTeX.
+% Komentar v bib datoteki se naredi samo s parom { }
+% Za urejanje literature avtor priporoča program Jabref, ki zna tudi avtomatsko
+% okrajšati imena revij. Za pravilno sortiranje vnosov brez avtorja, uporabite
+% polje key={ }, kot v primeru.
+% V primeru napak ustvarite issue na GitHubu ali pišite na jure.slak@fmf.uni-lj.si.
+\cleardoublepage                           % na desni strani
+\phantomsection                            % da prav delujejo hiperlinki
+\addcontentsline{toc}{section}{\bibname}   % dodajmo v kazalo
+\bibliographystyle{fmf-sl}                 % uporabljen stil je v datoteki fmf-sl.bst, na voljo tudi angleška verzija
+%\bibliography{\literatura}                 % literatura je v datoteki, definirani na začetku
+% TeXStudio zmede \ zgoraj, tako da lahko notri napišeš dejansko ime .bib datoteke, če ti
+% ne delajo predlogi citatov.
+
+% Za stvarno kazalo
+\cleardoublepage                           % na desni strani
+\phantomsection                            % da prav delujejo hiperlinki
+\addcontentsline{toc}{section}{\indexname} % dodajmo v kazalo
+\printindex
+
+\end{document}
+
+

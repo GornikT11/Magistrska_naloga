@@ -3,18 +3,12 @@
 \usepackage{pgfplots}
 
 \begin{document}
-\begin{tikzpicture}[x=5cm]
-\draw (0.14,-2) -- (0.14,2);
+
+\begin{tikzpicture}[x=2cm, y=2cm]
+\draw (0,-1) -- (0,1);
    % \draw[->] (0,-1) -- (0,1.1) node[above] {$\sin (1/x)$};
-  \draw[domain=0.15:1,samples=1000, smooth] plot (\x, {2*sin((6/\x)r)});
-  \filldraw[white] (0.14, 0) circle (14.7pt);
-  \draw (0.14, 0) circle (15pt);
-	\begin{scope}
-	\clip (0.14, 0) circle (15 pt);
-	\draw[red, domain=0.15:1,samples=1000, smooth] plot (\x, {2*sin((6/\x)r)});
-	\draw[red] (0.14,-2) -- (0.14,2);
-	\end{scope}
-\filldraw (0.14, 0) circle (1.5pt) node[black, left] {$x$};
+ \draw[domain=0.05:1,samples=5000, smooth] plot (\x, {sin((pi/\x)r)});
+
 \end{tikzpicture}
 
 \end{document}

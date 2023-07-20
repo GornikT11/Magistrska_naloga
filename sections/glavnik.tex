@@ -1,0 +1,12 @@
+\documentclass[tikz]{standalone}
+
+\begin{document}
+\begin{tikzpicture}[scale=4]
+  %\draw (0,0)--(1.2,0)--(1.2,1.2)--(0,1.2)--cycle;
+  \draw[color=black, very thick]  (0,0)--(0,1);
+  \draw[color=black, very thick]  (0,0)--(1,0);
+  \foreach \x in {1, ..., 35}
+   \draw[color=black, very thick]  (1/\x,0)--(1/\x,1);
+ % \fill[color=blue]  (1/20,0)--(1/20,1)--(0,1)--(0,0)--cycle;
+\end{tikzpicture}
+\end{document}
