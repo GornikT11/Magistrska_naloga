@@ -1,0 +1,9 @@
+\documentclass[tikz]{standalone}
+
+\begin{document}
+\begin{tikzpicture}
+	\foreach \x in {1, ..., 90}
+	\draw[color=black]  (0,0)--(5,5/\x);
+	\filldraw[red] (5, 0) circle (2pt);
+\end{tikzpicture}
+\end{document}

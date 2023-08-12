@@ -142,7 +142,7 @@ Za vsak rep $\mathcal{T}$ v zaporedju Šarkovskega obstaja taka zvezna funkcija 
 
 Izrek Šarkovskega je unija izreka~\ref{izr:forcing} in izreka~\ref{izr:realization}. Podmnožica naravnih števil je množica period zvezne funkcije $f:I \to I$, če in samo če je množica rep ureditve Šarkovskega. Nasledja poglavja so namenjena pripravi in dokazu izreka~\ref{izr:forcing}, v poglavju~\ref{sec:realizacija} pa je predstavljen dokaz izreka~\ref{izr:realization}.
 
-\section{Intervali, relacija pokritja in cikli}%############### Intervali, relacija pokritja in cikli
+\section{Intervali, relacija pokritja in cikli}\label{sec:intervali}%############### Intervali, relacija pokritja in cikli
 Vsi dokazi izreka Šarkovskega so si podobni po tem, da so elementarni. Ne glede na to, kako zvito se lotimo dokaza, je ključnega pomena lastnost zveznih funkcij, ki ob določenih predpostavkah zagotavlja obstoj ničle funkcije. To je izrek o vmesni vrednosti.
 
 \begin{izrek}[izrek o vmesni vrednosti]\label{izr:iovv}
@@ -179,7 +179,7 @@ Definiramo zvezno funkcijo $g(x) = f(x) - y$. Ker točka $y$ leži med točkama 
 Posledica pove, da zvezna funkcija na intervalu $[a, b]$ zavzame vse vrednosti med $f(a)$ in $f(b)$. V resnici pove še več. Naj bosta $[a, b]$ in $[c, d]$ intervala v realnih številih in $f : [a, b] \to \R$ zvezna funkcija. Če obstajata taki točki $a_1, b_1 \in [a, b]$, za kateri velja $f(a_1) \leq c$ in $f(b_1) \geq d$, potem interval $[c, d]$ leži v sliki $f([a, b])$. To je res, saj funkcija $f$ na intervalu $[a_1, b_1]$ zavzame vse vrednosti med $f(a_1)$ in $f(b_1)$. Torej, $[c, d] \subseteq f([a_1, b_1]) \subseteq f([a, b])$.
 
 \begin{definicija}\label{def:pokritja}
-Pravimo, da interval $I$ pokrije interval $J$, če je $J \subseteq f(I)$. Relacijo zapišemo kot $I \xrightarrow{f} J$. Kadar je jasno, katera funkcija nastopa v relaciji, lahko nadpis, ki označi katero funkcijo imamo v mislih tudi izpustimo in pišemo samo $I \to J$. Če velja $f(I) =J$, zapišemo $I \rightarrowtail J$.
+Naj bosta $I, J \subseteq \R$ in naj bo $f : I \to J$ zvezna funkcija. Pravimo, da interval $I$ $f$-pokrije interval $J$, če je $J \subseteq f(I)$. Relacijo zapišemo kot $I \xrightarrow{f} J$. Kadar je jasno, katero funkcijo imamo v mislih, lahko rečemo samo, da interval $I$ pokrije interval $J$.V tem primeru, lahko nadpis, ki označi katero funkcijo imamo v mislih izpustimo in pišemo samo $I \to J$. Če velja $f(I) =J$, zapišemo $I \rightarrowtail J$.
 \end{definicija}
 S pomočjo izreka o vmesni vrednosti in poznavanja, kako se intervali slikajo s funkcijo $f$, lahko izvemo, ali obstajajo periodične točke. Kako potrdimo obstoj periodičnih točk, nam povejo naslednje leme.
 
@@ -195,7 +195,7 @@ Zvezna funkcija $g$ je na krajiščih intervala $[a, b]$ različno predznačena.
 Pri iteracijah funkcije lahko opazujemo, kako se premika točka. To smo počeli na sliki~\ref{fig:iteracije}. Poglejmo, kako se s $f$ slikajo celi intervali. Lahko se zgodi, da nek interval $I_0$ pokrije interval $I_1$, interval $I_1$ pa pokrije interval $I_2$ itn. Na ta način dobimo zaporedje relacij pokritja npr. $I_0 \to I_1 \to I_2 \to \cdots $ Enako kot pri periodičnih točkah lahko pri zaporedju relacij pokritja po nekaj korakih zopet pridemo do prvotnega intervala. Dobimo naslednje zaporedje relacij pokritja: $I_0 \to I_1 \to \cdots \to I_n \to I_0$. Če je začetni interval enak končnemu intervalu, zaporedju intervalov in pripadajočim relacijam pokritja pravimo \emph{zanka intervalov} ali samo zanka. Od tu naprej bo, razen če ne povemo drugače, interval predstavljal zaprto, omejeno in povezano podmnožico realnih števil.
 
 \begin{lema}\label{lem:zanka}
-Če za intervale $I_0, I_1, \dots, I_{n-1}$ veljajo naslednje relacije pokritosti: $I_0 \to I_1 \to \dots \to I_{n-1} \to I_0$, potem obstaja taka točka $c \in I_0$, za katero je $f^{i}(x) \in I_i$ za $0 \leq i < n$ in $f^n(c)=c$. Pravimo, da točka $c$ sledi zanki.
+Če za intervale $I_0, I_1, \dots, I_{n-1}$ veljajo naslednje relacije pokritosti: $I_0 \to I_1 \to \dots \to I_{n-1} \to I_0$, potem obstaja taka točka $c \in I_0$, za katero je $f^{i}(x) \in I_i$ za $0 \leq i < n$ in $f^n(c)=c$. Pravimo, da točka $c$ sledi zanki $I_0 \to I_1 \to \dots \to I_{n-1} \to I_0$.
 \end{lema}
 
 \begin{proof}

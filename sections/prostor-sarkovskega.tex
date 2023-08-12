@@ -2,7 +2,7 @@
 \graphicspath{{\subfix{../images/}}}
 
 \begin{document}
-Po zaklučenem dokazu si lahko postavimo vprašanje, kako se spremenijo posledice v izreku, če spremenimo predpostavke izreka. Glede na to, kako spremenimo predpostavke, lahko pridemo do različnih posplošitev izreka. V primeru izreka Šarkovskega obstaja več posplošitev. Nekatere obravnavajo izrek za nezvezne funkcije, ki ustrezajo določenim pogojem, druge pa preučujejo zvezne funkcije, ki so definirane na različnih topoloških prostorih. Vprašamo se lahko, kakšna ureditev naravnih števil, če ta obstaja, opiše prisotnost periodičnih točk zvezne funkcije $f:X \to X$, ki slika nek topološki prostor $X$ nazaj vase. Natančneje, iščemo relacijo $\triangleleft_X$ z lastnostjo: če je $m$ perioda za zvezno funkcijo $f:X \to X$, potem je vsako naravno število $l$, za katero je $l \triangleleft_X m$, tudi perioda za funkcijo $f$. Če je relacija $\triangleleft_X$ enaka relaciji Šarkovskega, ki smo jo spoznali v definiciji~\ref{def:ureditev-sark}, pravimo, da je prostor $X$ \emph{prostor Šarkovskega}. To poglavje bomo namenili temu, da bomo spoznali nekaj prostorov Šarkovskega in tudi nekaj prostorov, ki to niso. S primeri in protiprimeri bomo poskušali ugotoviti katere topološke lastnosti imajo prostori Šarkovskega.
+Po zaklučenem dokazu si lahko postavimo vprašanje, kako se spremenijo posledice izreka, če spremenimo njegove predpostavke. Glede na to, kako spremenimo predpostavke, lahko pridemo do različnih posplošitev izreka. V primeru izreka Šarkovskega že obstaja več posplošitev. Nekatere obravnavajo izrek za nezvezne funkcije, ki ustrezajo določenim pogojem, druge pa preučujejo zvezne funkcije, ki so definirane na različnih topoloških prostorih. V tem primeru se lahko vprašamo, kakšna ureditev naravnih števil, če ta obstaja, opiše prisotnost periodičnih točk zvezne funkcije $f:X \to X$, ki slika nek topološki prostor $X$ nazaj vase. Natančneje, iščemo relacijo $\triangleleft_X$ z lastnostjo: če je $m$ perioda za zvezno funkcijo $f:X \to X$, potem je vsako naravno število $l$, za katero je $l \triangleleft_X m$, tudi perioda za funkcijo $f$. Če je relacija $\triangleleft_X$ enaka relaciji Šarkovskega, ki smo jo spoznali v definiciji~\ref{def:ureditev-sark}, pravimo, da je prostor $X$ \emph{prostor Šarkovskega}. To poglavje bomo namenili temu, da bomo spoznali nekaj prostorov Šarkovskega in tudi nekaj prostorov, ki to niso. S primeri in protiprimeri bomo poskušali ugotoviti katere topološke lastnosti imajo prostori Šarkovskega.
 Preden začnemo s preučevanjem različnih prostorov Šarkovskega se prepričajmo, da je lastnost biti prostor Šarkovskega tudi topološka lastnost. 
 \begin{trditev}
 Lastnost biti prostor Šarkovskega je topološka lastnost. To pomeni, če je $X$ prostor Šarkovskega in je prostor $Y$ homeomorfen prostoru $X$, potem je tudi $Y$ prostor Šarkovskega.
@@ -11,50 +11,45 @@ Lastnost biti prostor Šarkovskega je topološka lastnost. To pomeni, če je $X$
 Naj bo prostor $X$ prostor Šarkovskega in naj bo prostor $Y$ homeomorfen prostoru $X$. Naj bo $h : X \to Y$ homeomorfizem med prostoroma $X$ in $Y$. Funkciji $f : Y \to Y$ in $g = h^{-1} \circ f \circ h : X \to X$ imata enake periode, zato je $Y$ tudi prostor Šarkovskega.
 \end{proof}
 
-Nove prostore, ki so prostori Šarkovskega, lahko poiščemo tudi s pomočjo nekaterih zveznih preslikav. Definirajmo eno tako preslikavo, ki nam pomaga konstruirati nove prostore Šarkovskega.
-\begin{definicija}
-Naj bo $X$ topološki prostor in $A \subseteq X$ njegov podprostor. Zvezni preslikavi $r : X \to A$ pravimo \emph{retrakcija}, če je preslikava $r|_A = id_A$. Podprostor $A \subseteq X$ je \emph{retrakt} prostora $X$, če obstaja retrakcija $r: X \to A$.
-\end{definicija}
+%Nove prostore, ki so prostori Šarkovskega, lahko poiščemo tudi s pomočjo nekaterih zveznih preslikav. Definirajmo tako preslikavo, ki nam pomaga konstruirati nove prostore Šarkovskega.
 
-S pomočjo retrakcije lahko pridemo do novih prostorov Šarkovskega.
+%\begin{definicija}
+%Naj bo $X$ topološki prostor in $A \subseteq X$ njegov podprostor. Zvezni preslikavi $r : X \to A$ pravimo \emph{retrakcija}, če je preslikava $r|_A = id_A$. Podprostor $A \subseteq X$ je \emph{retrakt} prostora $X$, če obstaja retrakcija $r: X \to A$.
+%\end{definicija}
 
-\begin{trditev}
-Retrakt prostora Šarkovskega je prostor Šarkovskega.
-\end{trditev}
-\begin{proof}
-Denimo, da je prostor $X$ prostor Šarkovskega in prostor $A \subseteq X$ retrakt prostora $X$. Naj bo $r : X \to A$ retrakcija $i : X \to A$ inkluzija. Če je funkcija $f : A \to A$ zvezna, ima funkcija $g = i \circ f \circ r : X \to X$ enake periodične točke, kot funkcija $f$. Zato je tudi prostor $A$ prostor Šarkovskega.
-\end{proof}
+%S pomočjo retrakcije lahko pridemo do novih prostorov Šarkovskega.
 
-Sedaj pa si poglejmo nekaj primerov prostorov Šarkovskega. Iz prejšnjih poglavji je razvidno, da so tipični predstavniki prostorov Šarkovskega množica realnih števil in intervali v realnih številih. Poglejmo si primer prostora, ki ni prostor Šarkovskega.
+%\begin{trditev}
+%Retrakt prostora Šarkovskega je prostor Šarkovskega.
+%\end{trditev}
+%\begin{proof}
+%Denimo, da je prostor $X$ prostor Šarkovskega in prostor $A \subseteq X$ retrakt prostora $X$. Naj bo $r : X \to A$ retrakcija $i : X \to A$ inkluzija. Če je funkcija $f : A \to A$ zvezna, ima funkcija $g = i \circ f \circ r : X \to X$ enake periodične točke, kot funkcija $f$. Zato je tudi prostor $A$ prostor Šarkovskega.
+%\end{proof}
 
-\begin{primer}
-Krožnica $S^1 = \{ (cos(\varphi), \sin(\varphi)), \varphi \in [0, 1) \}$ ni prostor Šarkovskega. Hitro se lahko prepričamo, da obstajajo funkcije, ki imajo samo eno periodo. To so rotacije okoli koordinatnega izhodišča. Definiramo družino funkciji: 
-\begin{equation*} %\label{eq1}
-\begin{split}
-R_n &: S^1 \to S^1 \\ 
-R_n &: (cos(\varphi), \sin(\varphi)) \mapsto (cos(\varphi + \frac{2 \pi}{n}), \sin(\varphi + \frac{2 \pi}{n})).
-\end{split}
-\end{equation*}
-Vse točke krožnice $S^1$ so periodične točke za funkcijo $R_n$ in vse imajo periodo $n$. Zato iz obstoja periodične točke za zvezno funkcijo $f : S^1 \to S^1$ ne moremo sklepati na obstoj drugih period za to funkcijo.
-\end{primer}
-S podobnim sklepanjem kot zgoraj lahko za nekatere prostore hitro preverimo, da niso prostori Šarkovskega. To naredimo tako, da poiščemo kakšno os $n$-kratne rotacijske simetrije, kjer je $n$ naravno število večje od $2$. Pri takih primerih lahko hitro ugotovimo, da ima rotacija neko periodo večjo od $2$, nima pa periode $2$. Zaradi tega taki prostori ne morejo biti prostori Šarkovskega. Primeri takih prostorov so npr. sfera, krogla, torus \dots 
+Iz prejšnjih poglavji je razvidno, da so tipični predstavniki prostorov Šarkovskega množica realnih števil in intervali v realnih številih. Poglejmo si primer prostora, ki ni prostor Šarkovskega.
 
-Videli smo, da pri krožnici ne obstaja taka relacija, ki bi opisala periode zveznih funkcij iz prostora $S^1$ nazaj v prostor $S^1$. V naslednjem primeru bomo spoznali prostor, ki ni prostor Šarkovskega, vseeno pa lahko iz prisotnosti nekaterih period sklepamo na prisotnost durgih.
-\begin{primer}
-Naj bo prostor $X$ unija dveh disjunktnih intervalov: $X = [-2, -1] \cup [1, 2]$. Funkcija $g : X \to X$ podana s predpisom $g(x) = -x$ je zvezna funkcja. Vsaka točka iz prostora $X$ ima periodo 2, funkcija pa nima fiksne točke, zato prostor $X$ ni prostor Šarkovskega. Vseeno lahko poiščemo relacijo $\triangleleft_X$, ki opiše katere periode ima lahko funkcija. Zaradi lažje obravnave bomo interval $[-2, -1]$ označili z $I_1$, interval $[1, 2]$ pa z $I_2$. Pri poljubni funkciji $f: X \to X$ imamo štiri možnosti. Če je $f(I_1) \subseteq I_1$ in $f(I_2) \subseteq I_2$ lahko za funkciji $f|_{I_1}$ in $f|_{I_2}$ uporabimo izrek Šarkovskega in ugotovimo, de je relacija $\triangleleft_X$ enaka relaciji Šarkovskega. V primeru, ko je $f(I_1) \subseteq I_1$ in $f(I_2) \subseteq I_1$ lahko periodične točke ležijo samo v intervalu $I_1$. Za funkcijo $f|_{I_1}$ uporabimo izrek Šarkovskega in ugotovimo, da je relacija $\triangleleft_X$ enaka relaciji Šarkovskega. Podoben sklep lahko naredimo tudi v primeru, ko je $f(I_1) \subseteq I_2$ in $f(I_2) \subseteq I_2$. Drugače je v primeru $f(I_1) \subseteq I_2$ in $f(I_2) \subseteq I_1$. V tem primeru se točke iz intervala $I_1$ s funkcijo $f$ slikajo v interval $I_2$ in obratno. Zato ima vsaka periodična točka sodo periodo. Naj bo $x \in X$ točka periode $2m$ za funkcijo $f$. Brez izgube splošnosti lahko sklepamo, da točka $x$ pripada intervalu $I_1$. Potem ima točka $x$ periodo $m$ za funkcijo $f^2|_{I_1} :I_1 \to I_1$. Ker je $I_1$ prostor Šarkovskega in je $f^2$ zvezna funkcija, lahko uporabimo izrek Šarkovskega in ugotovimo, da za vsako naravno število $l$, za katerega velja $l \triangleleft m$, obstaja točka $y \in I_1$ s periodo $l$ za funkcijo $f^2$. Točka $y$ ima periodo $2l$ za funkcijo $f$, saj je orbita točke $y$ sestavljena iz $l$ različnih točk v intervalu $I_1$ (sode iteracije) in $l$ različnih točk iz intervala $I_2$ (lihe iteracije). 
-Ugotovili smo naslednje: Če ima zvezna funkcija $f:X \to X$ liho periodo $m$, potem ima zagotovo tudi vse periode $l$, kjer je $l \triangleleft m$. Če pa je perioda $m$ soda, potem ima funkcija vse periode $l\neq1$, za katere je $l \triangleleft m$. 
-Dobimo relacijo $\triangleright_X$:
-$$3 \triangleright_X 5 \triangleright_X 7 \triangleright_X \cdots \triangleright_X 2\cdot 3 \triangleright_X 2\cdot 5 \triangleright_X 2\cdot 7 \triangleright_X \cdots \triangleright_X 2^2\cdot 3 \triangleright_X 2^2\cdot 5 \triangleright_X 2^2\cdot 7 \triangleright_X \cdots \triangleright_X 2^3 \triangleright_X 2^2 \triangleright_X 2,$$
-$$3 \triangleright_X 5 \triangleright_X 7 \triangleright_X \cdots \triangleright_X 1.$$
-\end{primer}
+
+
+S podobnim sklepanjem kot zgoraj lahko za nekatere prostore hitro preverimo, da niso prostori Šarkovskega. To naredimo tako, da poiščemo kakšno os $n$-kratne rotacijske simetrije, kjer je $n$ naravno število večje od $2$. Pri takih primerih lahko hitro ugotovimo, da ima rotacija za kot $\varphi = \frac{360^\circ}{n}$, za $n>2$, točke periode $n$ in morda tudi točke periode $1$, nima pa točk periode $2$. Zaradi tega taki prostori ne morejo biti prostori Šarkovskega. Primeri takih prostorov so npr. sfera, krogla, torus \dots 
+
+
 
 Na začetku primera smo enostavno pokazali, da disjunktna unija dveh intervalov ni prostor Šarkovskega. Z zelo podobno idejo lahko pokažemo, da je vsak prostor Šarkovskega povezan.
+
+%\begin{definicija}
+%Topološki prostor $X$ je \emph{nepovezan}, če obstajata neprazni odprti podmnožici $U, V \subset X$, ki zadoščata spodnjima pogojema:
+%\begin{enumerate}
+%\item $U \cup V = X$ in 
+%\item $U \cap V \neq \emptyset$.
+%\end{enumerate}
+%Prostor, ki ni nepovezan je \emph{povezan}.
+%\end{definicija}
 
 \begin{trditev}
 Prostor Šarkovskega je povezan.
 \end{trditev}
 \begin{proof}
-Naj bo prostor $X$ disjunktna unija prostorov $A$ in $B$ in naj bosta $a \in A$ in $b \in B$ poljubni točki tega prostora. Definiramo funkcijo $f:X \to X$ s predpisom:
+Naj bo prostor $X$ disjunktna unija nepraznih prostorov $A$ in $B$ in naj bosta $a \in A$ in $b \in B$ poljubni točki tega prostora. Definiramo funkcijo $f:X \to X$ s predpisom:
 \[ f(x) = \begin{cases}
   a, & \mbox{ če $x \in B $}\\
   b ,& \mbox{ če $x \in A$.}
@@ -63,10 +58,44 @@ Naj bo prostor $X$ disjunktna unija prostorov $A$ in $B$ in naj bosta $a \in A$ 
 Funkcija $f$ ima samo dve periodični točki. To sta točki $a$ in $b$. Obe pa imata periodo 2. Ker nobena točka prostora $X$ ni fiksna točka za funkcijo $f$, prostor $X$ ni prostor Šarkovskega.
 \end{proof}
 
+Pokazali smo, da je vsak prostor Šarkovskega povezan prostor. V nadaljevanju bomo ponovili kakšni prostori so s potmi povezani, lokalno povezani in lokalno s potmi povezani. S primeri se bomo prepričali, da obstajajo prostori Šarkovskega, ki imajo te lastnosti, in tudi prostori Šarkovskega, ki teh lastnosti nimajo.
 
+%Najbolj tipični primeri prostorov Šarkovskega so intervali v realnih številih. Ti so povezani s potmi, lokalno povezani in lokalno povezani s potmi. Poglejmo si primer prostora Šarkovskega, ki ni 
 
+\begin{definicija}
+Topološki prostor $X$ je \emph{s potmi povezan}, če za poljubni točki $a, b \in X$ obstaja zvezna preslikava $\gamma:[0, 1] \to X$, za katero je $\gamma(0) = a$ in $\gamma(1) = b$. Preslikavi $\gamma$ rečemo tudi pot med točkama $a$ in $b$.
+\end{definicija}
 
-Prepričali smo se že, da je vsak prostor Šarkovskega povezan prostor. V nadaljevanju bomo ponovili kakšni prostori so lokalno povezani in ugotovili, da je prostor Šarkovskega lahko lokalno nepovezan prostor.
+Primeri s potmi povezanih prostorov so intervali v realnih številih, krožnica, disk v $\R^2$\dots
+\begin{trditev}
+Lastnost biti s potmi povezan je strožji pogoj, kot biti povezan. To pomeni, da je vsak s potmi povezan prostor tudi povezan.
+\end{trditev}
+
+\begin{dokaz}
+Naj bo $X$ s potmi povezan prostor. Dokazovali bomo s protislovjem. Denimo, da prostor $X$ ni povezan. Potem obstajata neprazni odprti množici $U, V \subseteq X$, za kateri veljata naslednji lastnosti:
+\begin{enumerate}
+\item $U \cup V = X$ in 
+\item $U \cap V \neq \emptyset$.
+\end{enumerate}
+Množici $U$ in $V$ sta neprazni, zato si lahko izberemo točki $a\in U$ in $b\in V$. Prostor $X$ je s potmi povezan, kar pomeni, da obstaja pot $\gamma : [0, 1] \to X$, za katero je $\gamma(0) =a$ in $\gamma(1)=b$. Sedaj bomo obravnavali množici $\gamma^{-1}(U)$ in $\gamma^{-1}(V)$. Množici sta disjunktni podmnožici intervala $[0, 1]$, njuna unija pa je enaka interevalu $[0, 1]$. Obe množici sta odprti v $[0, 1]$, saj je pot $\gamma$ zvezna funkcija. Ker je $0$ element množice  $\gamma^{-1}(U)$ in $1$ element množice $\gamma^{-1}(V)$, tvorita ti dve množici separacijo povezane množice $[0, 1]$, kar je protislovje. Torej je prostor $X$ povezan.
+\end{dokaz}
+
+Implikacija v drugo smer ne drži. Torej, če je nek topološki prostor $X$ povezan, ne moremo sklepati, da je tudi s potmi povezan. Poglejmo si primer povezanega prostora, ki pa ni s potmi povezan.
+
+\begin{definicija}
+Naj bo $C$ grapf funkcije $\sin\left(\frac{\pi}{x}\right)$ na intervalu $x \in (0 , 1]$ in naj bo $A$ daljica $\{ 0 \} \times [-1 , 1]$. \emph{Varšavski lok} je prostor $X = C \cup A$.
+\end{definicija}
+
+Prepričajmo se, da je Varšavski lok povezan prostor. Množica $C$ je homeomorfna intervalu, zato je povezana množica in cela leži v neki komponenti za povezanost. Enako velja za množico $A$. Ker vsaka okolica točke $(0, 0) \in A$ vsebuje tudi točke iz množice $C$, ležita obe množici v isti komponenti za povezanost, zato ima prostor $X$ samo eno komponento za povezanost, kar pomeni, da je povezan.
+Pokažimo, da prostor ni s potmi povezan. Poskusimo poiskati pot med točkama $(0, 0) \in A$ in $(1, 0) \in C$.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{glavnik.pdf}
+% \caption[caption za v kazalo]{Dolg caption pod sliko}
+  \caption[Primer vektorske slike.]{Relacije pokritja v trditvi~\ref{trd:pokritja} lahko prikažemo z grafom.}
+  \label{fig:varsavski_lok}
+\end{figure}
 
 \begin{definicija}
 Prostor $X$ je lokalno povezan prostor, če za vsako točko $x \in X$ in vsako odptro množico $U \subseteq X$, ki vsebuje točko $x$, obstaja taka odprta povezana množica $V \subseteq X$, da je $x \in V \subseteq U$. Prostoru, ki ni lokalno povezan pravimo lokalno nepovezan prostor.
@@ -79,6 +108,13 @@ Odprti disk v $\R^2$ je povezan in lokalno povezan prostor.
 
 \begin{primer}
 Poglejmo si nepovezan prostor, sestavljen iz treh komponent za povezanost kot prikazuje slika. Prostor je lokalno povezan, saj za vsako točko $x \in X$ in vsako njeno odprto okolico $U\subseteq X$ obstaja taka povezana okolica $V$, da je $x \in V \subseteq U$.
+\begin{figure}[h]
+  \centering
+  \includegraphics{nepov-lokpov.pdf}
+% \caption[caption za v kazalo]{Dolg caption pod sliko}
+  \caption[Primer vektorske slike.]{Relacije pokritja v trditvi~\ref{trd:pokritja} lahko prikažemo z grafom.}
+  \label{fig:varsavski_lok}
+\end{figure}
 \end{primer}
 
 Morda bi na hitro pomislili, da je lokalna povezanost strožji pogoj kot povezanost. To bi pomenilo, da so vsi lokalno povezani prostori tudi povezani. Prepričajmo se, da to ni res. Poglejmo si primer povezanega prostora, ki ni lokalno povezan.
@@ -92,7 +128,7 @@ Morda bi na hitro pomislili, da je lokalna povezanost strožji pogoj kot povezan
 \end{figure}
 
 \begin{definicija}
-Prostor $X$ je s potmi povezan prostor, če za vsaki točki $a, b \in X$ obstaja taka zvezna preslikava $\gamma : [0, 1] \to X$, za katero je $\gamma(0) = a$ in $\gamma(1) = b$. Preslikavo $\gamma$ imenujemo tudi pot med točkama $a$ in $b$.
+Prostor $X$ je lokalno s potmi povezan prostor, če za vsako točko $ x\in X$ in vsako odprto množico $V$, ki vsebuje $x$, obstaja odprta in s potmi povezana okolica, ki vsebuje $x$ in je vsebovana v množici $V$.
 \end{definicija}
 
 \begin{primer}
