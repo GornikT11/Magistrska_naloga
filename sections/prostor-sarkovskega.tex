@@ -2,7 +2,7 @@
 \graphicspath{{\subfix{../images/}}}
 
 \begin{document}
-Po zaklučenem dokazu si lahko postavimo vprašanje, kako se spremenijo posledice izreka, če spremenimo njegove predpostavke. Glede na to, kako spremenimo predpostavke, lahko pridemo do različnih posplošitev izreka. V primeru izreka Šarkovskega že obstaja več posplošitev. Nekatere obravnavajo izrek za nezvezne funkcije, ki ustrezajo določenim pogojem, druge pa preučujejo zvezne funkcije, ki so definirane na različnih topoloških prostorih. V tem primeru se lahko vprašamo, kakšna ureditev naravnih števil, če ta obstaja, opiše prisotnost periodičnih točk zvezne funkcije $f:X \to X$, ki slika nek topološki prostor $X$ nazaj vase. Natančneje, iščemo relacijo $\triangleleft_X$ z lastnostjo: če je $m$ perioda za zvezno funkcijo $f:X \to X$, potem je vsako naravno število $l$, za katero je $l \triangleleft_X m$, tudi perioda za funkcijo $f$. Če je relacija $\triangleleft_X$ enaka relaciji Šarkovskega, ki smo jo spoznali v definiciji~\ref{def:ureditev-sark}, pravimo, da je prostor $X$ \emph{prostor Šarkovskega}. To poglavje bomo namenili temu, da bomo spoznali nekaj prostorov Šarkovskega in tudi nekaj prostorov, ki to niso. S primeri in protiprimeri bomo poskušali ugotoviti katere topološke lastnosti imajo prostori Šarkovskega.
+V prejšnjem poglavju smo obravnavali periode zveznih funkcij definiranih na dveh disjunktnih intervalih in na krožnici. Ko smo obravnavali periode poljubne funkcije $f$ definirane na prostoru $X = I_1 \cup I_2$, smo prišli do relacije $\triangleright_X$, ki določa prisotnost period za funkcijo $f : X \to X$. Torej, če je $m$ perioda za zvezno funkcijo $f:X \to X$, potem je vsako naravno število $l$, za katero je $l \triangleleft_X m$, tudi perioda za funkcijo $f$. V tem poglavju bomo obravnali prostore, pri katerih je relacija, ki določa prisotnost period funkcije enaka relaciji Šarkovskega, ki smo jo spoznali v definiciji~\ref{def:ureditev-sark}. Če je relacija $\triangleright_X$ enaka relaciji Šarkovskaga, pravimo, da je prostor $X$ \emph{prostor Šarkovskega}. V tem poglavju, bomo spoznali nekaj prostorov Šarkovskega in tudi nekaj prostorov, ki to niso. S primeri in protiprimeri bomo poskušali ugotoviti katere topološke lastnosti imajo prostori Šarkovskega.
 Preden začnemo s preučevanjem različnih prostorov Šarkovskega se prepričajmo, da je lastnost biti prostor Šarkovskega tudi topološka lastnost. 
 \begin{trditev}
 Lastnost biti prostor Šarkovskega je topološka lastnost. To pomeni, če je $X$ prostor Šarkovskega in je prostor $Y$ homeomorfen prostoru $X$, potem je tudi $Y$ prostor Šarkovskega.
@@ -26,15 +26,11 @@ Naj bo prostor $X$ prostor Šarkovskega in naj bo prostor $Y$ homeomorfen prosto
 %Denimo, da je prostor $X$ prostor Šarkovskega in prostor $A \subseteq X$ retrakt prostora $X$. Naj bo $r : X \to A$ retrakcija $i : X \to A$ inkluzija. Če je funkcija $f : A \to A$ zvezna, ima funkcija $g = i \circ f \circ r : X \to X$ enake periodične točke, kot funkcija $f$. Zato je tudi prostor $A$ prostor Šarkovskega.
 %\end{proof}
 
-Iz prejšnjih poglavji je razvidno, da so tipični predstavniki prostorov Šarkovskega množica realnih števil in intervali v realnih številih. Poglejmo si primer prostora, ki ni prostor Šarkovskega.
+Iz prejšnjih poglavji je razvidno, da so tipični predstavniki prostorov Šarkovskega množica realnih števil in intervali v realnih številih. V poglavju~\ref{sec:circ} smo spoznali dva prostora, ki nista prostora Šarkovskega. Največ časa smo namenili krožnici, ki ni prostor Šarkovskega, saj imajo na primer pri rotaciji za $120^\circ$ vse točke periodo $3$, drugih period pa ta rotacija nima.
+S podobnim sklepanjem lahko za nekatere prostore hitro preverimo, da niso prostori Šarkovskega. To naredimo tako, da poiščemo kakšno os $n$-kratne rotacijske simetrije, kjer je $n$ naravno število večje od $2$. Pri takih primerih lahko hitro ugotovimo, da ima rotacija za kot $\varphi = \frac{360^\circ}{n}$, za $n>2$, točke periode $n$ in morda tudi točke periode $1$, nima pa točk periode $2$. Zaradi tega taki prostori ne morejo biti prostori Šarkovskega. Primeri takih prostorov so npr. sfera, krogla, torus \dots 
 
 
-
-S podobnim sklepanjem kot zgoraj lahko za nekatere prostore hitro preverimo, da niso prostori Šarkovskega. To naredimo tako, da poiščemo kakšno os $n$-kratne rotacijske simetrije, kjer je $n$ naravno število večje od $2$. Pri takih primerih lahko hitro ugotovimo, da ima rotacija za kot $\varphi = \frac{360^\circ}{n}$, za $n>2$, točke periode $n$ in morda tudi točke periode $1$, nima pa točk periode $2$. Zaradi tega taki prostori ne morejo biti prostori Šarkovskega. Primeri takih prostorov so npr. sfera, krogla, torus \dots 
-
-
-
-Na začetku primera smo enostavno pokazali, da disjunktna unija dveh intervalov ni prostor Šarkovskega. Z zelo podobno idejo lahko pokažemo, da je vsak prostor Šarkovskega povezan.
+Na začetku poglavja~\ref{sec:circ} smo enostavno pokazali, da disjunktna unija dveh intervalov ni prostor Šarkovskega. Z zelo podobno idejo lahko pokažemo, da je vsak prostor Šarkovskega povezan.
 
 %\begin{definicija}
 %Topološki prostor $X$ je \emph{nepovezan}, če obstajata neprazni odprti podmnožici $U, V \subset X$, ki zadoščata spodnjima pogojema:
@@ -87,11 +83,18 @@ Naj bo $C$ grapf funkcije $\sin\left(\frac{\pi}{x}\right)$ na intervalu $x \in (
 \end{definicija}
 
 Prepričajmo se, da je Varšavski lok povezan prostor. Množica $C$ je homeomorfna intervalu, zato je povezana množica in cela leži v neki komponenti za povezanost. Enako velja za množico $A$. Ker vsaka okolica točke $(0, 0) \in A$ vsebuje tudi točke iz množice $C$, ležita obe množici v isti komponenti za povezanost, zato ima prostor $X$ samo eno komponento za povezanost, kar pomeni, da je povezan.
-Pokažimo, da prostor ni s potmi povezan. Poskusimo poiskati pot med točkama $(0, 0) \in A$ in $(1, 0) \in C$.
+
+Pokažimo, da prostor ni s potmi povezan. Predpostavili bomo, da obstaja pot $p$ med točkama $(0, 0) \in A$ in $(1, 0) \in C$ in prišli do protislovja. Za pot $p$ velja $x(p(0)) = 0$ in $x(p(1)) = 1$. Lahko definiramo število $t_0$:
+$$t_0 := \inf\{t \in [0, 1]: x(p(t)) > 0 \}.$$
+Za vsako število $t <t_0$ je $x(p(t)) = 0$. Zaradi zveznosti funkcije $x \circ p$ v točki $t_0$ velja enakost $x(p(t_0)) = \lim\limits_{t \uparrow t_0} x(p(t)) = 0$. Izberimo tako pozitivno realno število $\delta$, za katerega velja:
+$$t_0 \leq t < t_0 + \delta \Rightarrow ||p(t) - p(t_0)|| < \frac{1}{2}.$$
+Obstaja točka $t_1 \in (t_0, t_0 + \delta)$, za katero je $a := x(p(t_1)) >0$. Ker je množica $[t_0, t_1]$ povezana, je tudi njena slika $x(p([t_0, t_1]))$ z zvezno funkcijo $x \circ p$ povezana in vsebuje $0 = x(p(t_0))$ in $a = x(p(t_1))$. Vsaka povezana podmnožica množice realnih števil $\R$ je interval, zato velja:
+$$[0, a] \subseteq x(p([t_0, t_1])).$$
+Za $k > \frac{2+a}{4a}$ ležita števili $\frac{2}{4k+1}$ in $\frac{2}{4k-1}$ v intervalu $[0, a]$. Ti dve števili predstavljata $x$-koordinati točk $p(t')$ in $p(t'')$ za neki števili $t', t'' \in [t_0, t_o + \delta)$. Velja $p(t') = (\frac{2}{4k+1}, 1)$ in $p(t'') = (\frac{2}{4k-1}, -1)$. Zaradi izbire števil $t'$ in $t''$ iz intervala $[t_0, t_o + \delta)$ in zaradi zveznosti funkcije $p$, velja $||p(t') - p(t_0)||< \frac{1}{2}$ in $||p(t'') - p(t_0)||< \frac{1}{2}$ iz česar sledi, da je $||p(t') - p(t'')||< 1$. Po drugi strani pa velja $||p(t') - p(t'')|| = \sqrt{\left(\frac{2}{4k+1}-\frac{2}{4k-1}\right)^2 + (1-(-1))^2} \geq \sqrt{(1-(-1))^2} = 2$, kar je protislovje. Varšavski lok res ni s potmi povezan prostor.
 
 \begin{figure}[h]
   \centering
-  \includegraphics{glavnik.pdf}
+  \includegraphics{varsavskilok.pdf}
 % \caption[caption za v kazalo]{Dolg caption pod sliko}
   \caption[Primer vektorske slike.]{Relacije pokritja v trditvi~\ref{trd:pokritja} lahko prikažemo z grafom.}
   \label{fig:varsavski_lok}
@@ -103,7 +106,7 @@ Prostor $X$ je lokalno povezan prostor, če za vsako točko $x \in X$ in vsako o
 
 poglejmo si nekaj primerov:
 \begin{primer}
-Odprti disk v $\R^2$ je povezan in lokalno povezan prostor.
+Odprti disk v $\R^2$ je povezan in lokalno povezan prostor. Prav tako so intervali v realnih številih lokalno povezani prostori.
 \end{primer}
 
 \begin{primer}
@@ -119,13 +122,6 @@ Poglejmo si nepovezan prostor, sestavljen iz treh komponent za povezanost kot pr
 
 Morda bi na hitro pomislili, da je lokalna povezanost strožji pogoj kot povezanost. To bi pomenilo, da so vsi lokalno povezani prostori tudi povezani. Prepričajmo se, da to ni res. Poglejmo si primer povezanega prostora, ki ni lokalno povezan.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics{glavnik.pdf}
-% \caption[caption za v kazalo]{Dolg caption pod sliko}
-  \caption[Primer vektorske slike.]{Relacije pokritja v trditvi~\ref{trd:pokritja} lahko prikažemo z grafom.}
-  \label{fig:varsavski_lok}
-\end{figure}
 
 \begin{definicija}
 Prostor $X$ je lokalno s potmi povezan prostor, če za vsako točko $ x\in X$ in vsako odprto množico $V$, ki vsebuje $x$, obstaja odprta in s potmi povezana okolica, ki vsebuje $x$ in je vsebovana v množici $V$.
@@ -145,13 +141,6 @@ Varšavski lok zapišimo kot $X = C \cup A$, kjer je C krivulja $\{(x, \sin(\fra
 Dokazati moramo še primer, ko je $f (A) \subseteq A $ in $f (C) \subseteq C $. Ker sta prostora $A$ in $C$ homeomorfna intervalu, sta prostora Šarkovskega, kar pomeni, da zagotovo obstaja točka $y \in X$, ki leži v isti komponenti za povezanost s potmi kot točka $x$, s periodo $m$.
 \end{proof}
 
-\begin{figure}[h]
-  \centering
-  \includegraphics{varsavskilok.pdf}
-% \caption[caption za v kazalo]{Dolg caption pod sliko}
-  \caption[Primer vektorske slike.]{Relacije pokritja v trditvi~\ref{trd:pokritja} lahko prikažemo z grafom.}
-  \label{fig:varsavski_lok}
-\end{figure}
 
 \begin{figure}[h]
   \centering
@@ -164,8 +153,8 @@ Dokazati moramo še primer, ko je $f (A) \subseteq A $ in $f (C) \subseteq C $. 
 \begin{definicija}\label{def:vk}
 varšavska krožnica je topološki prostor, ki ga lahko definiramo na naslednji način:
 $$S_W = \left\{\left(x, \sin\left(\frac{\pi}{x}\right)\right); 0 < x \leq 1\right\} \cup \{(0, y); -1 \leq x \leq 1\} \cup C,$$
-kjer je C zvezna krivulja, ki povezuje točki $(0,1)$ in $(0,0)$ in ne seka preostalega dela Waršavske krožnice.
-Množici, ki jo lahko parametriziramo na naslednji način:
+kjer je C zvezna krivulja, ki povezuje točki $(0,-1)$ in $(1,0)$ in ne seka preostalega dela Waršavske krožnice.
+Množico lahko parametriziramo tudi na naslednji način:
 \[ p(t) = \begin{cases}
   (t, \sin(\frac{\pi}{t}), & \mbox{ če $t \in (0, 1) $}\\
  (\cos(\frac{3\pi x}{2}-\frac{\pi}{2})+1, \sin(\frac{3\pi x}{2}-\frac{\pi}{2})-1). & \mbox{ če $t \in [1, 2]$}\\
@@ -178,12 +167,12 @@ Množici, ki jo lahko parametriziramo na naslednji način:
 Varšavska krožnica je prostor Šarkovskega.
 \end{trditev}
 
-\begin{tikzcd}
-A \arrow{d} \arrow{r}[near start]{\phi}[near end]{\psi}
-& B \arrow[red]{d}{\xi} \\
-C \arrow[red]{r}[blue]{\eta}
-& D
-\end{tikzcd}
+%\begin{tikzcd}
+%A \arrow{d} \arrow{r}[near start]{\phi}[near end]{\psi}
+%& B \arrow[red]{d}{\xi} \\
+%C \arrow[red]{r}[blue]{\eta}
+%& D
+%\end{tikzcd}
 
 \begin{proof}
 Varšavsko krožnico $X$ lahko parametriziramo z zvezno bijektivno preslikavo $p:I \to X$. Naj bo $f: X \to X$ zvezna funkcija. Ker je funkcija $p$ bijektivna, je funkcija $\widehat{f} = p^{-1} \circ f \circ p : I \to I$ dobro definirana. Trdimo, da je funkcija $\widehat{f}$ zvezna. Ker je funkcija $p$ bijekcija, imata funkciji $f$ in $\widehat{f}$ enake periode. Ker je interval $I$ prostor Šarkovskega, je tudi $X$ prostor Šarkovskega. 

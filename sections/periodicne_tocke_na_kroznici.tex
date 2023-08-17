@@ -3,7 +3,7 @@
 
 \begin{document}
 Po zaklučenem dokazu si lahko postavimo vprašanje, kako se spremenijo posledice izreka, če spremenimo njegove predpostavke. Glede na to, kako spremenimo predpostavke, lahko pridemo do različnih posplošitev izreka. V primeru izreka Šarkovskega že obstaja več posplošitev. Nekatere obravnavajo izrek za nezvezne funkcije, ki ustrezajo določenim pogojem, druge pa preučujejo zvezne funkcije, ki so namesto na intervalu definirane na drugih prostorih. V tem primeru se lahko vprašamo, kakšna ureditev naravnih števil, če ta obstaja, opiše prisotnost periodičnih točk zvezne funkcije $f:X \to X$, ki slika nek topološki prostor $X$ nazaj vase.  Natančneje, iščemo relacijo $\triangleleft_X$ z lastnostjo: če je $m$ perioda za zvezno funkcijo $f:X \to X$, potem je vsako naravno število $l$, za katero je $l \triangleleft_X m$, tudi perioda za funkcijo $f$.
-V tem poglavju si bomo najprej pogledali, kakšne periodične točke lahko ima zvezna funkcija definirana na dveh disjunktnih intervalih, nato pa bomo pogledali prisotnost periodičnih točk za zvezvne funkcije na krožnici.
+V tem poglavju si bomo najprej pogledali, kakšne periodične točke lahko ima zvezna funkcija definirana na dveh disjunktnih intervalih, nato pa bomo obravnavali prisotnost periodičnih točk za zvezvne funkcije na krožnici.
 
 Na začetku si poglejmo, kaj lahko povemo o periodah funkcije, ki je definirana na dveh disjunktnih intervalih.
 
@@ -12,7 +12,7 @@ Naj bo prostor $X$ unija dveh disjunktnih intervalov $X=I_1 \cup I_2$, kjer sta 
 Ugotovili smo naslednje: Če ima zvezna funkcija $f:X \to X$ liho periodo $m$, potem ima zagotovo tudi vse periode $l$, kjer je $l \triangleleft m$. Če pa je perioda $m$ soda, potem ima funkcija vse periode $l\neq1$, za katere je $l \triangleleft m$. 
 Dobimo relacijo $\triangleright_X$:
 $$3 \triangleright_X 5 \triangleright_X 7 \triangleright_X \cdots \triangleright_X 2\cdot 3 \triangleright_X 2\cdot 5 \triangleright_X 2\cdot 7 \triangleright_X \cdots \triangleright_X 2^2\cdot 3 \triangleright_X 2^2\cdot 5 \triangleright_X 2^2\cdot 7 \triangleright_X \cdots \triangleright_X 2^3 \triangleright_X 2^2 \triangleright_X 2,$$
-$$3 \triangleright_X 5 \triangleright_X 7 \triangleright_X \cdots \triangleright_X 1.$$
+$$3 \triangleright_X 5 \triangleright_X 7 \triangleright_X 9 \triangleright_X  \cdots \triangleright_X 1.$$
 \end{primer}
 
 
@@ -118,11 +118,11 @@ Potem je vsako naravno število $m > k$ perioda funkcije $f$.
 \end{lema}
 
 \begin{dokaz}
-Recimo, da je $n>k$. Predpostavimo lahko, da je $n \neq m$, saj ima po predpostavkah leme funkcija $f$ točko periode $m$. Označimo intervale $L_1 = M_1, L_2 = M_1, \dots, L_{n-k} = M_1, L_{n-k+1} = M_1, L_{n-k+2} = M_2,  L_{n-k+3} = M_3, \dots, L_{n-k+k} =L_n =M_k$. Če uporabimo lemo~\ref{lem:pokr-meje} na intervalih $L_1, \dots, L_n$ ugotovimo, da obstaja negibna točka $z$ za funkcijo $f^n$, za katero velja $z \in L_1, f(z) \in L_2, \dots, f^{n-1}(z) \in L_{n-1}$. Točka $z$ leži v intervalu $M_1$, točka $F^{n-k+1}(z)$ pa v intervalu $M_2$ iz česar lahko s pomočjo pogoja~\ref{enum:p2} in pogoja\ref{enum:p3} iz predpostavk leme sklepamo, da $z$ ni negibna točka funkcije $f$. 
+Recimo, da je $n>k$. Predpostavimo lahko, da je $n \neq m$, saj ima po predpostavkah leme funkcija $f$ točko periode $m$. Označimo intervale $L_1 = M_1, L_2 = M_1, \dots, L_{n-k} = M_1, L_{n-k+1} = M_1, L_{n-k+2} = M_2,  L_{n-k+3} = M_3, \dots, L_{n-k+k} =L_n =M_k$. Če uporabimo lemo~\ref{lem:4} na intervalih $L_1, \dots, L_n$ ugotovimo, da obstaja negibna točka $z$ za funkcijo $f^n$, za katero velja $z \in L_1, f(z) \in L_2, \dots, f^{n-1}(z) \in L_{n-1}$. Točka $z$ leži v intervalu $M_1$, točka $F^{n-k+1}(z)$ pa v intervalu $M_2$ iz česar lahko s pomočjo pogoja~\ref{enum:p2} in pogoja\ref{enum:p3} iz predpostavk leme sklepamo, da $z$ ni negibna točka funkcije $f$. 
 
 Trdimo tudi, da točka $z$ ne pripada ciklu $P$. Predpostavimo najprej, da je $n \geq k + 2$. Potem je $L_1 =L_2 = L_3 = M_1$. Torej, točke $z, f(z)$ in $f^2(z)$ ležijo v intervalu $M_1$. Ker je $P$ cikel dolžine $m \geq 3$, lahko s pomočjo pogoja~\ref{enum:p1} sklepamo, da točka $z$ ne pripada orbiti $P$. Sedaj predpostavimo, da je $n < k+2$. Potem je $n < m+2$. Ker je $n\neq m$ in $m \geq 3$, število $n$ ni večkratnik števila $m$. Iz enakosti $f^n(z) = z$ sledi, da točka $z$ ne pripada ciklu $P$.
 
-Ugotovili smo, da točka $z$ ni negibna točka funkcije $f$ in tudi ne pripada ciklu $P$, zato lahko s pomočjo pogoja~\ref{enum:p4} iz predpostavk leme sklepamo, da $z$ leži v notranjosti intervala $M_1$. Ker točka $f^n(z) = z$ ne pripada cuklu $P$, za vsako naravno število $r < n$ tudi točka $f^r(z)$ ne pripada ciklu $P$. Trdimo lahko tudi, da $f^r(z)$ ni negibna točka funkcije $f$. Zaradi pogojev~\ref{enum:p3} in~\ref{enum:p4} za vsako naravno število $r < n$ velja, da $f^r(z)$ ni krajišče nobenega intervala $M_1, \dots, M_k$. S pomočjo te ugotovitve, pogoja~\ref{enum:2} in dejstva, da je $z \in M_1, f(z) \in M_1, f^2(z) \in M_1, \dots, f^{n-k}(z) \in M_1, f^{n-k+1} \in M_2, \dots, f^{n-1} \in M_k$, lahko sklepamo, da je točka $z$ periodična točka funkcije $f$ s periodo $n$.
+Ugotovili smo, da točka $z$ ni negibna točka funkcije $f$ in tudi ne pripada ciklu $P$, zato lahko s pomočjo pogoja~\ref{enum:p4} iz predpostavk leme sklepamo, da $z$ leži v notranjosti intervala $M_1$. Ker točka $f^n(z) = z$ ne pripada cuklu $P$, za vsako naravno število $r < n$ tudi točka $f^r(z)$ ne pripada ciklu $P$. Trdimo lahko tudi, da $f^r(z)$ ni negibna točka funkcije $f$. Zaradi pogojev~\ref{enum:p3} in~\ref{enum:p4} za vsako naravno število $r < n$ velja, da $f^r(z)$ ni krajišče nobenega intervala $M_1, \dots, M_k$. S pomočjo te ugotovitve, pogoja~\ref{enum:p2} in dejstva, da je $z \in M_1, f(z) \in M_1, f^2(z) \in M_1, \dots, f^{n-k}(z) \in M_1, f^{n-k+1} \in M_2, \dots, f^{n-1} \in M_k$, lahko sklepamo, da je točka $z$ periodična točka funkcije $f$ s periodo $n$.
 \end{dokaz}
 
 
