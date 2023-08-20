@@ -6,8 +6,8 @@
 \begin{tikzpicture}[x=2cm, y=2cm]
 \draw (0,-1) -- (0,1);
    % \draw[->] (0,-1) -- (0,1.1) node[above] {$\sin (1/x)$};
- \draw[domain=0.05:1,samples=5000, smooth] plot (\x, {sin((pi/\x)r)});
- \draw[domain=1:2,samples=1000, smooth] plot ({cos((3*pi*\x/2-pi/2)r)+1}, {sin((3*pi*\x/2-pi/2)r)-1});
+ \draw[domain=0.05:1,samples=5000, smooth, thick] plot (\x, {sin((pi/\x)r)});
+ \draw[domain=1:2,samples=1000, smooth, thick] plot ({cos((3*pi*\x/2-pi/2)r)+1}, {sin((3*pi*\x/2-pi/2)r)-1});
 \end{tikzpicture}
 
 %\begin{tikzpicture}[x=4cm]

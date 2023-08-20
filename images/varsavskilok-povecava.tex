@@ -1,0 +1,35 @@
+\documentclass[10pt,letterpaper]{standalone}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry} 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage[version=0.96]{pgf}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,automata,backgrounds,petri,positioning}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.shapes}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{decorations.fractals}
+\usetikzlibrary{decorations.footprints}
+\usetikzlibrary{shadows}
+\usetikzlibrary{calc}
+\usetikzlibrary{spy}
+
+\begin{document}
+
+\begin{tikzpicture}
+  [spy using outlines={circle, thick, magnification=5, size=4cm, connect spies}]
+
+ \draw (0.12,-2) -- (0.12, 2);
+   % \draw[->] (0,-1) -- (0,1.1) node[above] {$\sin (1/x)$};
+ \draw[domain=0.045:1,samples=5000, smooth, xscale = 4, yscale = 2] plot (\x, {sin((pi/\x)r)});
+
+
+  \spy [red, thick] on (0.12,0)
+             in node [left] at (-3,0);
+
+\end{tikzpicture}
+
+\end{document}

@@ -82,16 +82,6 @@ Implikacija v drugo smer ne drži. Torej, če je nek topološki prostor $X$ pove
 Naj bo $C$ grapf funkcije $\sin\left(\frac{\pi}{x}\right)$ na intervalu $x \in (0 , 1]$ in naj bo $A$ daljica $\{ 0 \} \times [-1 , 1]$. \emph{Varšavski lok} je prostor $X = C \cup A$.
 \end{definicija}
 
-Prepričajmo se, da je Varšavski lok povezan prostor. Množica $C$ je homeomorfna intervalu, zato je povezana množica in cela leži v neki komponenti za povezanost. Enako velja za množico $A$. Ker vsaka okolica točke $(0, 0) \in A$ vsebuje tudi točke iz množice $C$, ležita obe množici v isti komponenti za povezanost, zato ima prostor $X$ samo eno komponento za povezanost, kar pomeni, da je povezan.
-
-Pokažimo, da prostor ni s potmi povezan. Predpostavili bomo, da obstaja pot $p$ med točkama $(0, 0) \in A$ in $(1, 0) \in C$ in prišli do protislovja. Za pot $p$ velja $x(p(0)) = 0$ in $x(p(1)) = 1$. Lahko definiramo število $t_0$:
-$$t_0 := \inf\{t \in [0, 1]: x(p(t)) > 0 \}.$$
-Za vsako število $t <t_0$ je $x(p(t)) = 0$. Zaradi zveznosti funkcije $x \circ p$ v točki $t_0$ velja enakost $x(p(t_0)) = \lim\limits_{t \uparrow t_0} x(p(t)) = 0$. Izberimo tako pozitivno realno število $\delta$, za katerega velja:
-$$t_0 \leq t < t_0 + \delta \Rightarrow ||p(t) - p(t_0)|| < \frac{1}{2}.$$
-Obstaja točka $t_1 \in (t_0, t_0 + \delta)$, za katero je $a := x(p(t_1)) >0$. Ker je množica $[t_0, t_1]$ povezana, je tudi njena slika $x(p([t_0, t_1]))$ z zvezno funkcijo $x \circ p$ povezana in vsebuje $0 = x(p(t_0))$ in $a = x(p(t_1))$. Vsaka povezana podmnožica množice realnih števil $\R$ je interval, zato velja:
-$$[0, a] \subseteq x(p([t_0, t_1])).$$
-Za $k > \frac{2+a}{4a}$ ležita števili $\frac{2}{4k+1}$ in $\frac{2}{4k-1}$ v intervalu $[0, a]$. Ti dve števili predstavljata $x$-koordinati točk $p(t')$ in $p(t'')$ za neki števili $t', t'' \in [t_0, t_o + \delta)$. Velja $p(t') = (\frac{2}{4k+1}, 1)$ in $p(t'') = (\frac{2}{4k-1}, -1)$. Zaradi izbire števil $t'$ in $t''$ iz intervala $[t_0, t_o + \delta)$ in zaradi zveznosti funkcije $p$, velja $||p(t') - p(t_0)||< \frac{1}{2}$ in $||p(t'') - p(t_0)||< \frac{1}{2}$ iz česar sledi, da je $||p(t') - p(t'')||< 1$. Po drugi strani pa velja $||p(t') - p(t'')|| = \sqrt{\left(\frac{2}{4k+1}-\frac{2}{4k-1}\right)^2 + (1-(-1))^2} \geq \sqrt{(1-(-1))^2} = 2$, kar je protislovje. Varšavski lok res ni s potmi povezan prostor.
-
 \begin{figure}[h]
   \centering
   \includegraphics{varsavskilok.pdf}
@@ -99,6 +89,30 @@ Za $k > \frac{2+a}{4a}$ ležita števili $\frac{2}{4k+1}$ in $\frac{2}{4k-1}$ v 
   \caption[Primer vektorske slike.]{Relacije pokritja v trditvi~\ref{trd:pokritja} lahko prikažemo z grafom.}
   \label{fig:varsavski_lok}
 \end{figure}
+
+
+Komponenta $A$ je homeomorfna zaprtemu intervalu $[-1, 1]$, komponenta $C$ pa je homeomorfna polodprtemu intervalu $(0, 1]$. Denimo, da lahko množico $X$ zapišemo kot unija dveh nepraznih odprtih množic $U$ in $V$. Ker je množica $C$ povezana, celotna leži v eni množici, denimo, da leži v množici $V$. Pokažimo, da v vsaki okolici točke $x = (0, 0) \in  A$ ležijo tudi točke iz množice $C$ in zato tudi iz množice $V$. Naj bo $\delta$ poljubno majhno pozitivno število in množica $U$ delta okolica točke $x$ v prostoru $X$. Za naravno število $k > \frac{1}{\pi \delta}$ točka $\left(\frac{1}{k \pi}, 0\right)$ leži v množici $C$ in v množici $U$, kar pomeni, da točka $(0, 0)$ leži v množici $V$. Ker je množica $A$ povezana množica, cela leži v množici $V$. Ugotovili smo, da celoten prostor $X$ leži v množici $V$, zato je povezan prostor.
+
+Pokažimo, da Varšavski lok ni s potmi povezan. Predpostavimo, da obstaja pot $p$ med točkama $(0, 0) \in A$ in $(1, 0) \in C$, za katero velja $x(p(0)) = 0$ in $x(p(1)) = 1$. Naj bo $x: \R^2 \to \R$ projekcija na os $x$. Funkcija $x$ je zvezna. Pot med točkama $(0, 0)$ in $(1, 0)$ se začne na množici $A$ in mora v neki točki ,,skočiti'' na množico $C$, ki je del Varšavskega loka s pozitivno koordinato $x$.   
+Lahko definiramo natančen čas, ko se to zgodi kot število $t_0$:
+$$t_0 := \inf\{t \in [0, 1]: x(p(t)) > 0 \}.$$
+Za vsako število $t < t_0$ je $x(p(t)) = 0$. Zaradi zveznosti funkcije $x \circ p$ v točki $t_0$ velja enakost $x(p(t_0)) = \lim\limits_{t \uparrow t_0} x(p(t)) = 0$. Zaradi zveznosti funkcije $p$ lahko izberemo tako pozitivno realno število $\delta$, za katerega velja:
+$$t_0 \leq t < t_0 + \delta \Rightarrow ||p(t) - p(t_0)|| < \frac{1}{2}.$$
+Obstaja točka $t_1 \in (t_0, t_0 + \delta)$, za katero je $a := x(p(t_1)) >0$. Ker je množica $[t_0, t_1]$ povezana, je tudi njena slika $x(p([t_0, t_1]))$ z zvezno funkcijo $x \circ p$ povezana in vsebuje $0 = x(p(t_0))$ in $a = x(p(t_1))$. Vsaka povezana podmnožica množice realnih števil $\R$ je interval, zato velja:
+$$[0, a] \subseteq x(p([t_0, t_1])).$$
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{varsavski_lok_s_potmi_nepovezan.pdf}
+% \caption[caption za v kazalo]{Dolg caption pod sliko}
+  \caption[Primer vektorske slike.]{Relacije pokritja v trditvi~\ref{trd:pokritja} lahko prikažemo z grafom.}
+  \label{fig:varsavski_lok}
+\end{figure}
+
+S slike lahko razberemo, da je to v protislovju z zveznostjo funkcije $x \circ p$, saj graf funkcije $\sin\left(\frac{\pi}{x}\right)$ sega izven rdečega kroga s središčem v $p(t_0)$. Zato $x$-vrednosti točk na množici $X$, ki ležijo znotraj kroga, ne vsebujejo vseh vrednosti iz intervala $[0, a]$. Pretvorimo vizualno razlago v matematični dokaz.
+
+Za $k > \frac{2+a}{4a}$ ležita števili $\frac{2}{4k+1}$ in $\frac{2}{4k-1}$ v intervalu $[0, a]$. Ti dve števili predstavljata $x$-koordinati točk $p(t')$ in $p(t'')$ za neki števili $t', t'' \in [t_0, t_0 + \delta)$. Velja $p(t') = (\frac{2}{4k+1}, 1)$ in $p(t'') = (\frac{2}{4k-1}, -1)$. Zaradi izbire števil $t'$ in $t''$ iz intervala $[t_0, t_0 + \delta)$ in zaradi zveznosti funkcije $p$, velja $||p(t') - p(t_0)||< \frac{1}{2}$ in $||p(t'') - p(t_0)||< \frac{1}{2}$ iz česar sledi, da je $||p(t') - p(t'')||< 1$. Po drugi strani pa velja $||p(t') - p(t'')|| = \sqrt{\left(\frac{2}{4k+1}-\frac{2}{4k-1}\right)^2 + (1-(-1))^2} \geq \sqrt{(1-(-1))^2} = 2$, kar je protislovje. Varšavski lok res ni s potmi povezan prostor.
+
 
 \begin{definicija}
 Prostor $X$ je lokalno povezan prostor, če za vsako točko $x \in X$ in vsako odptro množico $U \subseteq X$, ki vsebuje točko $x$, obstaja taka odprta povezana množica $V \subseteq X$, da je $x \in V \subseteq U$. Prostoru, ki ni lokalno povezan pravimo lokalno nepovezan prostor.
@@ -120,26 +134,33 @@ Poglejmo si nepovezan prostor, sestavljen iz treh komponent za povezanost kot pr
 \end{figure}
 \end{primer}
 
-Morda bi na hitro pomislili, da je lokalna povezanost strožji pogoj kot povezanost. To bi pomenilo, da so vsi lokalno povezani prostori tudi povezani. Prepričajmo se, da to ni res. Poglejmo si primer povezanega prostora, ki ni lokalno povezan.
+Obstajajo pa tudi prostori, ki so povezani, vendar so lokalno nepovezani. Perpričajmo se, da temu pogoju ustreza Varšavski lok. 
 
+\begin{figure}[h]
+  \centering
+  \includegraphics{varsavskilok-povecava.pdf}
+% \caption[caption za v kazalo]{Dolg caption pod sliko}
+  \caption[Primer vektorske slike.]{Relacije pokritja v trditvi~\ref{trd:pokritja} lahko prikažemo z grafom.}
+  \label{fig:vl-lok-nepovezan}
+\end{figure}
 
 \begin{definicija}
 Prostor $X$ je lokalno s potmi povezan prostor, če za vsako točko $ x\in X$ in vsako odprto množico $V$, ki vsebuje $x$, obstaja odprta in s potmi povezana okolica, ki vsebuje $x$ in je vsebovana v množici $V$.
 \end{definicija}
 
-\begin{primer}
-Naj bo $C$ grapf funkcije $\sin\left(\frac{\pi}{x}\right)$ na intervalu $x \in (0 , 1]$ in naj bo $A$ daljica $\{ 0 \} \times [-1 , 1]$. \emph{Varšavski lok} je prostor $X = C \cup A$.
-Prostor $X$ je povezan, kompakten in ima dve komponenti za povezavost s potmi. Komponenta $A$ je homeomorfna zaprtemu intervalu, komponenta $C$ pa je homeomorfna polodprtemu intervalu. Prostor je prikazan na sliki~\ref{fig:varsavski_lok}.
-Prepričajmo se, da je prostor $X$ povezan. Ker je množica $C$ povezana, celotna leži v neki komponenti za povezanost $V$ prostora $X$. Poglejmo točko iz $x = (0, 0) \in  A$. Naj bo $\delta$ poljubno majhno pozitivno število in množica $U$ delta okolica točke $x$ v prostoru $X$. Za naravno število $k > \frac{1}{\pi \delta}$ točka $(\frac{1}{k \pi}, 0)$ leži v množici $C$ in v množici $U$, kar pomeni, da točka $(0, 0)$ leži v komponenti za povezanost $V$. Ker je množica $A$ povezana množica, cela leži v množici $V$, zato ima prostor $X$ eno samo komponento za povezanost in je povezan prostor.
-\end{primer}
+Primer prostora, ki je lokalno s potmi povezan, je množica realnih števil ali interval v množici realnih števil. Primer prostora, ki ni lokalno s potmi povezan, pa je Varšavski lok. Slika~\ref{fig:vl-lok-nepovezan} pokaže, da je vsaka okolica točke $(0, 0)$ nepovezana, saj vsebuje nepovezane navpične črte.
+
+Varšavski lok je primer prostora, ki ni s potmi povezan in ni lokalno povezan, a je kljub temu prostor Šarkovskega.
+
 
 \begin{trditev}
 Varšavski lok je prostor Šarkovskega.
 \end{trditev}
 \begin{proof}
-Varšavski lok zapišimo kot $X = C \cup A$, kjer je C krivulja $\{(x, \sin(\frac{\pi}{x})), x\in [0, 1]\}$ in $A= \{0\} \times [-1, 1]$. Naj bo $x \in X$ točka s periodo $n$ in naj bo $m$ tako naravno število, da velja relacija $m \triangleleft n$. Pokazali bomo, da obstaja točka $y$ s periodo $m$. Ker je funkcija $f$ zvezna, se ne more zgoditi, da ja $f(A) \subseteq C$ in $f(C) \subseteq A$. V tem primeru bi bila množica $f(C)$ kompaktna množica, ki nima skupne točke z množico $C$. Ker ima prostor $\R$ lastnost $T_4$, obstajata disjunktni odprti množici, $U$ in $V$, za kateri velja $f(C) \subseteq U$, $f(A) \subseteq C \subseteq V$, kar predstavlja separacijo prostora $f(X)$, kar pa ni mogoče, saj je prostor $X$ povezan. Množica $f(X)$ je slika povezanega prostora z zvezno funkcijo in je tudi povezana. Če je $f(A) \subseteq C$, potem je zaradi zveznosti funkcije $f$ tudi $f(C) \subseteq C$. Ker je $X$ kompaktna množica in je slika kompaktne množice z zvezno preslikavo kompaktna, je množica $f(X)$ kompaktna povezana podmnožica množice $C$. Množica $C$ je homeomorfna intervalu, zato je tudi $f(X)$ homeromorfna intervalu, kar pomeni, da je tudi $f(X)$ prostor Šarkovskega. Zato obstaja točka $y$ s periodo $m$. Če je $f (C) \subseteq A $, potem je tudi $f (A) \subseteq A $ in vsaka periodična točka funkcije $f$ leži v $A$.  Zopet je množica $f(X)$ povezana kompaktna podmnožica homeomorfna intervalu. Torej obstaja točka $y$ s periodo $m$. 
+Varšavski lok zapišimo kot $X = C \cup A$, kjer je $A= \{0\} \times [-1, 1]$ in C krivulja $\left\{\left(x, \sin\left(\frac{\pi}{x}\right)\right), x\in [0, 1]\right\}$. Naj bo $x \in X$ točka s periodo $n$ in naj bo $m$ tako naravno število, da velja relacija $m \triangleleft n$. Pokazali bomo, da obstaja točka $y$ s periodo $m$. Ker je funkcija $f$ zvezna, se ne more zgoditi, da ja $f(A) \subseteq C$ in $f(C) \subseteq A$. V tem primeru bi bila množica $f(C)$ kompaktna množica, ki nima skupne točke z množico $C$. Ker ima prostor $\R$ lastnost $T_4$, obstajata disjunktni odprti množici, $U$ in $V$, za kateri velja $f(C) \subseteq U$, $f(A) \subseteq C \subseteq V$, kar predstavlja separacijo prostora $f(X)$, kar pa ni mogoče, saj je prostor $X$ povezan. Množica $f(X)$ je slika povezanega prostora z zvezno funkcijo in je tudi povezana. Če je $f(A) \subseteq C$, potem je zaradi zveznosti funkcije $f$ tudi $f(C) \subseteq C$. Ker je $X$ kompaktna množica in je slika kompaktne množice z zvezno preslikavo kompaktna, je množica $f(X)$ kompaktna povezana podmnožica množice $C$. Množica $C$ je homeomorfna intervalu, zato je tudi $f(X)$ homeromorfna intervalu, kar pomeni, da je tudi $f(X)$ prostor Šarkovskega. Zato obstaja točka $y$ s periodo $m$. Če je $f (C) \subseteq A $, potem je tudi $f (A) \subseteq A $ in vsaka periodična točka funkcije $f$ leži v $A$.  Zopet je množica $f(X)$ povezana kompaktna podmnožica homeomorfna intervalu. Torej obstaja točka $y$ s periodo $m$. 
 Dokazati moramo še primer, ko je $f (A) \subseteq A $ in $f (C) \subseteq C $. Ker sta prostora $A$ in $C$ homeomorfna intervalu, sta prostora Šarkovskega, kar pomeni, da zagotovo obstaja točka $y \in X$, ki leži v isti komponenti za povezanost s potmi kot točka $x$, s periodo $m$.
 \end{proof}
+
 
 
 \begin{figure}[h]
@@ -151,10 +172,10 @@ Dokazati moramo še primer, ko je $f (A) \subseteq A $ in $f (C) \subseteq C $. 
 
 
 \begin{definicija}\label{def:vk}
-varšavska krožnica je topološki prostor, ki ga lahko definiramo na naslednji način:
+Varšavska krožnica je topološki prostor, ki ga lahko definiramo na naslednji način:
 $$S_W = \left\{\left(x, \sin\left(\frac{\pi}{x}\right)\right); 0 < x \leq 1\right\} \cup \{(0, y); -1 \leq x \leq 1\} \cup C,$$
-kjer je C zvezna krivulja, ki povezuje točki $(0,-1)$ in $(1,0)$ in ne seka preostalega dela Waršavske krožnice.
-Množico lahko parametriziramo tudi na naslednji način:
+kjer je C zvezna krivulja, ki povezuje točki $(0,-1)$ in $(1,0)$ in ne seka preostalega dela Varšavske krožnice.
+Množico lahko parametriziramo na naslednji način:
 \[ p(t) = \begin{cases}
   (t, \sin(\frac{\pi}{t}), & \mbox{ če $t \in (0, 1) $}\\
  (\cos(\frac{3\pi x}{2}-\frac{\pi}{2})+1, \sin(\frac{3\pi x}{2}-\frac{\pi}{2})-1). & \mbox{ če $t \in [1, 2]$}\\
