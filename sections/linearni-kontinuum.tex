@@ -82,7 +82,10 @@ Naj bo $w$ poljubna točka iz množice $X \setminus U$. Potem $w$ zagotovo ni zg
 
 Ker sta množici $U$ in $X \setminus U$ obe neprazni in odprti, tvorita separacijo prostora $X$. 
 
-Recimo, da prostor $X$ ne ustreza pogoju~\ref{enum:L2}. To pomeni, da odbstajata elementa $a$ in $b$ , prostoru $X$, za katari velja $a < b$, vandar ne obstaja točka $c \in X$, za katero je izpolnjena neenakost $a < c < b$. Definiramo množici $U := \{x \in X, x <b\}$ in $V:= \{x\in X;x>a\}$. Ker med točko $a$ in točko $b$ ne leži nobena točka iz $X$, sta množici $U$ in $V$ disjunktni. Ker je relacija $<$ relacija linearne urejenost, za svaki točki $x$ in $y$...
+Recimo, da prostor $X$ ne ustreza pogoju~\ref{enum:L2}. To pomeni, da odbstajata elementa $a$ in $b$ , prostoru $X$, za katari velja $a < b$, vandar ne obstaja točka $c \in X$, za katero je izpolnjena neenakost $a < c < b$. Definiramo množici $U := \{x \in X, x <b\}$ in $V:= \{x\in X;x>a\}$. Ker med točko $a$ in točko $b$ ne leži nobena točka iz $X$, sta množici $U$ in $V$ disjunktni. Ker je relacija $<$ relacija linearne urejenost, za vsaki točki $x$ in $y$ velja $x < y$ ali $y < x$. Za poljubno točko $x \in X$ lahko velja $x<a$, $a<x$ ali $x=a$.
+Če je $x<a$, zaradi tranzitivnosti sklepamo, da je $x<b$, kar pomeni, da je točka $x$ vsebovana v množici $U$. Če je $x=a$, velja $x=a<b$, zato točka $x$ pripada množici $U$. Kadar je $a<x$, točka $x$ pripada množici $V$. Prepričali smo se, da je $U \cup V = X$. Množici $U$ in $V$ sta neprazni, saj prva vsebuje točko $a$, druga pa vsebuje točko $b$. Množici sta tudi odprti in tvorita particijo množice $X$. S tem smo dokazali, da je množica $X$ nepovezana.
+
+Predpostavimo, da je $X$ nepovezana množica z lastnostjo~\ref{enum:L1}. Naj bosta množici $U$ in $V$ neprazni odprti množici, ki tvorita particijo prostora $X$. Naj bo $a$ točka iz množice $U$ in naj obstaja taka točka $b \in V$, ki ustreza relaciji $a<b$. Če taka točka ne obstaja, zamenjamo imeni za množici $U$ in $V$. Množica $Z = \{x \in V, x>a\}$ je odprta množica, saj jo dobimo kot presek odprte množice $V$ in odprte množice $\{x \in X, x>a\}$. Množica $Z$ je neprazna, saj vsebuje točko $b$. 
 \end{proof}
 
 \begin{izrek}
