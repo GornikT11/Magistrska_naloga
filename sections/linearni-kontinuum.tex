@@ -2,7 +2,7 @@
 \graphicspath{{\subfix{../images/}}}
 
 \begin{document}
-V tem poglavju bomo spoznali topologijo urejenih prostorov in posebne urejene prostore s topologijo urejenih prostorov, ki jih imenujemo linearni kontinuum. Gre za neke vrste posplošitev premice realnih števil. Pokazali bomo, da je linearni kontinuum prostor Šarkovskega.
+V tem poglavju bomo obravnavali topologijo porojemo z linearno ureditvijo. Spoznali bomo družino topoloških prostorov, ki jih imenujemo linearni kontinuum. Gre za neke vrste posplošitev premice realnih števil. Pokazali bomo, da je linearni kontinuum prostor Šarkovskega.
 
 Naj bo množica $X$ urejena s strogo linearno relacijo $<$. Za dana elementa $a, b \in X$, za katera velja neenakost $a<b$, lahko definiramo štiri podmnožice prostora $X$, ki jih imenujemo intervali s krajišči $a$ in $b$. To so:
  %Na množici $X$ imamo dve vrsti odprtih množic, ki ju zapišemo na naslednji način:
@@ -20,32 +20,43 @@ Interval $(a, b)$ imenujemo odprti interval, intervalu $(a, b]$ rečemo pol odpr
 \end{opomba}
 
 \begin{definicija}
-Naj bo $X$ množica z vsaj dvema elementoma urejena z relacijo $<$ in naj bo $B$ družina množic, ki vsebuje intervale naslednjih tipov:
+Naj bo $X$ množica z vsaj dvema elementoma urejena z relacijo $<$ in naj bo $\mathcal{B}$ družina množic, ki vsebuje intervale naslednjih tipov:
 \begin{enumerate}
-\item Vsi odprti intervali $(a, b) \in X$.
-\item Vsi intervali $[a_0, b) \in X$, kjer je $a_0$ najmanjši element (če obstaja) množice $X$.
-\item Vsi intervali $(a, b_0] \in X$, kjer je $b_0$ največji element (če obstaja) množice $X$.
+\item Vsi odprti intervali $(a, b) \in X$. \label{enum:bazna1}
+\item Vsi intervali $[a_0, b) \in X$, kjer je $a_0$ najmanjši element (če obstaja) množice $X$. \label{enum:bazna2}
+\item Vsi intervali $(a, b_0] \in X$, kjer je $b_0$ največji element (če obstaja) množice $X$. \label{enum:bazna3}
 \end{enumerate}
-Družina množic $B$ je baza za topologijo na množici $X$, ki jo imenujemo topologija urejenih množic.
+Družina množic $\mathcal{B}$ je baza za topologijo na množici $X$ porojeno z ureditvijo $<$.
 \end{definicija}
 
 \begin{opomba}\label{op:ekstremi}
-Če množica $X$ nima najmanjšega elementa, potem baza $B$ ne vsebuje intervalov tipa 2 in če množica $X$ nima največjega elementa, potem baza $B$ ne vsebuje intervalov tipa 3.
+Če množica $X$ nima najmanjšega elementa, potem baza $\mathcal{B}$ ne vsebuje intervalov tipa~\ref{enum:bazna2} in če množica $X$ nima največjega elementa, potem baza $\mathcal{B}$ ne vsebuje intervalov tipa~\ref{enum:bazna3}.
 \end{opomba}
 
-Prepričati se moramo, da zgoraj opisana družina množic $B$ res predstavlja bazo topologije na množici $X$ urejeni z linearno relacijo $<$. Družina podmnožic prostora $X$ je baza topologije na prostoru $X$, če sta izpolnjeni naslednji lastnosti:
+Prepričati se moramo, da zgoraj opisana družina množic $\mathcal{B}$ res predstavlja bazo topologije na množici $X$ urejeni z linearno relacijo $<$. Družina podmnožic prostora $X$ je baza topologije na prostoru $X$, če sta izpolnjeni naslednji lastnosti:
 \begin{enumerate}[label={(b\arabic*)}]
-\item Množice iz družine $B$ pokrijejo celoten prostor $X$. Torej, vsaka točka $x \in X$ je vsebovana v neki množici $B_1 \in B$. \label{baza1}
-\item Za vsaki množici $B_1, B_2 \in B$ in vsako točko $x\in B_1 \cap B_2$ obstaja množica $B_3 \in B$, za katero velja $x \in B_3 \subseteq B_1 \cap B_2$.\label{baza2}
+\item Množice iz družine $\mathcal{B}$ pokrijejo celoten prostor $X$. Torej, vsaka točka $x \in X$ je vsebovana v neki množici $B_1 \in \mathcal{B}$. \label{baza1}
+\item Za vsaki množici $B_1, B_2 \in \mathcal{B}$ in vsako točko $x\in B_1 \cap B_2$ obstaja množica $B_3 \in \mathcal{B}$, za katero velja $x \in B_3 \subseteq B_1 \cap B_2$.\label{baza2}
 \end{enumerate}
+
 Preverimo najprej pogoj \ref{baza1}.
- Najprej moramo preveriti, da je vsaka točka množice $X$ vsebovana v nekem intervalu iz družine $B$. Če je točka $x$ enaka $a_0$, potem velja $x \in [a_0, a)$ za neko točko $a \in X$. Podobno lahko sklepamo v primeru, ko je $x = b_0$. Če je $x \neq a_0$ in $x \neq b_0$, potem zagotovo obstaja
+Najprej moramo preveriti, da je vsaka točka množice $X$ vsebovana v nekem intervalu iz družine $\mathcal{B}$. Če je točka $x$ enaka $a_0$, potem velja $x \in [a_0, a)$ za neko točko $a \in X$. Podobno lahko sklepamo v primeru, ko je $x = b_0$. Če je $x \neq a_0$ in $x \neq b_0$, potem zagotovo obstajata točki $a, b \in X$, za kateri velja $a < x < b$. Tedaj je točka $x$ vsebovana v intervalu $(a, b)$.
+
+Naj bosta $B_1, B_2 \in \mathcal{B}$ poljubni bazni množici z nepraznim presekom in naj bo $x \in B_1 \cap B_2$ poljubna točka iz preseka. Obravnavati moramo več možnosti. 
+
+Recimo, da sta obe množici $B_1, B_2$ tipa~\ref{enum:bazna2}, potem obstajata števili $b_1, b_2 \in X$, za kateri je $B_1 = [a_0, b_1)$ in $B_2 = [a_0, b_2)$. Velja $x \in [a_0, \min\{b_1, b_2\}) \subseteq B_1 \cap B_2$. Podobno lahko sklepamo, ko sta obe množici $B_1, B_2$ tipa~\ref{enum:bazna3}.
+
+Če je ena množica tipa~\ref{enum:bazna2}, ena množica pa tipa~\ref{enum:bazna3}, lahko zapišemo množici z intervali $B_1 = [a_0, b_1)$ in $B_2 = (a_2, b_0]$. Predpostavimo, da je presek teh dveh množic neprazen in da je $x \in B_1 \cap B_2$. Potem je izpolnjena neenakost $a_2 < b_1$, zato velja $x \in (a_2, b_1) \subseteq B_1 \cap B_2$.
+
+Predpostavimo, da je ena množica tipa~\ref{enum:bazna1}, ena množica pa je tipa~\ref{enum:bazna2}. Množici zapišimo s pomočjo intervalov $B_1 = (a_1, b_1), B_1 = [a_0, b_2)$. Denimo, da imata množici $B_1$ in $B_2$ neprazen presek. Potem velja $a_1 < b_2$. Za vsako število $x$ iz preseka $B_1 \cap B_2$ velja $x \in (a_1, \min\{b_1, b_2\}) \subseteq B_1 \cap B_2$. Podoben razmislek deluje tudi v primeru, če je druga množica tipa~\ref{enum:bazna3}.
+
+Na koncu obravnavamo primer, ko sta obe množici tipa~\ref{enum:bazna1}. Zapišimo ju z intervali: $B_1 = (a_1, b_1), B_2 =(a_2, b_2)$. Za vsako število $x \in B_1 \cap B_2$ velja $x \in (\max\{a_1, a_2\}, \min\{b_1, b_2\}) \subseteq B_1 \cap B_2$. Dokazali smo, da družina množic $\mathcal{B}$ res predstavlja bazo topologije na prostoru $X$.
 
 \begin{definicija}
 \emph{Linearni kontinuum} je linearno urejena množica $S$ z vsaj dvema elementoma, ki ima naslednji lastnosti:
 \begin{enumerate}
-\item Vsaka navzgor omejena podmnožica $A \subseteq S$ ima najmanjšo zgornjo mejo v $S$,
-\item za vsaki dve števili $x, y \in S$, za kateri velja $x<y$, obstaja število $z \in S$, za katerega je $x<z<y$.
+\item Vsaka navzgor omejena podmnožica $A \subseteq S$ ima najmanjšo zgornjo mejo v $S$,\label{enum:L1}
+\item za vsaki dve števili $x, y \in S$, za kateri velja $x<y$, obstaja število $z \in S$, za katerega je $x<z<y$.\label{enum:L2}
 \end{enumerate}
 \end{definicija}
 
@@ -62,17 +73,23 @@ Enotski kvadrat $[0, 1] \times [0, 1]$
 \end{figure}
 
 \begin{trditev}
-Strogo linearno urejena množica $X$ s topologijo urejenih množic je linearni kontinuum natanko tedaj, ko je povezana.
+Linearno urejena množica $X$ s topologijo porojeno z linearno uderitvijo je linearni kontinuum natanko tedaj, ko je povezana.
 \end{trditev}
 \begin{proof}
-Predpostavimo, da je prostor $X$ s topologijo urejenih množic linearni kontinuum. Dokazali bomo, da je prostor $X$ povezan.  
+Predpostavimo, da je prostor $X$ opremljen s topologijo porojeno z linearno ureditvijo $\leq$. Denimo, da $X$ ni linearni kontinuum. Potem ne zadošča pogoju~\ref{enum:L1} ali ne zadošča pogoju~\ref{enum:L2}. Recimo, da ne množica $X$ ne zadošča pogoju~\ref{enum:L1}. Naj bo $A$ neprazna podmnožica množice $X$, ki je navzgor omejena s točko $b$, vendar nima najmanjše zgornje meje. Naj bo $U$ množica vseh zgornjih mej množice $A$. Če točka $x$ leži v množici $U$, potem točka $x$ ni najmanjša zgornja meja množice $A$, zato obstaja $z \in X$, za katerega je $z < x$ in $z$ je tudi zgornja meja množice $A$. Množica $\{y \in X; y > z\}$ je odprta neprazna, saj vsebuje točko $x$. Vsak njen element je večji os točke $z$ in je tako zgornja meja množice $A$. Torej, množica $\{y \in X; y > z\}$ je odprta podmnožica množice $U$, ki vsebuje točko $x$. Ugotovili smo, da je množica U odprta podmnožica prostora $X$. Množica $U$ je neprazna, saj vsebuje točko $b$. 
+
+Naj bo $w$ poljubna točka iz množice $X \setminus U$. Potem $w$ zagotovo ni zgornja meja množice $A$, zato obstaja točka $a \in A$, za katero je $w < a$. Množica $\{y \in X; y< a\}$ je odprta in ne vsebuje nobene zgornje meje množice $A$, zato je vsebovana v množici $X \setminus U$. Sklepamo, množica $X \setminus U$ vsebuje odprto okolico točke $w$ in je zato odprta množica. 
+
+Ker sta množici $U$ in $X \setminus U$ obe neprazni in odprti, tvorita separacijo prostora $X$. 
+
+Recimo, da prostor $X$ ne ustreza pogoju~\ref{enum:L2}. To pomeni, da odbstajata elementa $a$ in $b$ , prostoru $X$, za katari velja $a < b$, vandar ne obstaja točka $c \in X$, za katero je izpolnjena neenakost $a < c < b$. Definiramo množici $U := \{x \in X, x <b\}$ in $V:= \{x\in X;x>a\}$. Ker med točko $a$ in točko $b$ ne leži nobena točka iz $X$, sta množici $U$ in $V$ disjunktni. Ker je relacija $<$ relacija linearne urejenost, za svaki točki $x$ in $y$...
 \end{proof}
 
 \begin{izrek}
 Naj bo $f : X \to Y$ zvezna funkcija, kjer je $X$ povezan prostor in $Y$ urejen prostor s topologijo urejenih množic. Če sta $a$ in $b$ dve točki v prostoru $X$ in je $r$ točka v prostoru $Y$, ki leži med točkama $f(a)$ in $f(b)$, potem obstaja točka $c \in X$, da velja $f(c) = r$.
 \end{izrek}
 \begin{proof}
-Privzemimo predpostavke izreka. Množici $=f(X) \cap (-\infty, r)$ in $B=f(X) \cap (r, \infty)$ sta disjunktni in neprazni, saj ena množica vsebuje točko $f(a)$, druga pa točko $f(b)$. Obe sta odprti v $f(X)$ saj smo ju dobili kot presek odprtega intervala z množico $f(X)$. Če ne obstaja taka točke $c \in X$, da je $f(c) = r$, potem je $f(X)$ unija množic $A$ in $B$. Na ta način smo dobili separacijo množice $f(X)$, kar pa je protislovje, saj je slika povezane množice z zvezno preslikavo povezana.
+Privzemimo predpostavke izreka. Množici $=f(X) \cap (-\infty, r)$ in $B=f(X) \cap (r, \infty)$ sta disjunktni in neprazni, saj ena množica vsebuje točko $f(a)$, druga pa točko $f(b)$. Obe sta odprti v $f(X)$ saj smo ju dobili kot presek odprtega intervala z množico $f(X)$. Če ne obstaja taka točke $c \in X$, da je $f(c) = r$, potem je $f(X)$ unija množic $A$ in $\mathcal{B}$. Na ta način smo dobili separacijo množice $f(X)$, kar pa je protislovje, saj je slika povezane množice z zvezno preslikavo povezana.
 \end{proof}
 
 \begin{lema}\label{lem:K}
@@ -98,7 +115,7 @@ A &= \{x \in L : x < f(x)\}, \\
 B &= \{x \in L : x > f(x)\}.
 \end{split}
 \end{equation*}
-Trdimo, da je množica $A$ odprta. Za vsako točko $x \in A$ lahko izberemo točko $z \in (x, f(x))$ in odprto okolico $U \subseteq  (-\infty, z)$ točke $x$, za katero velja $f(U) \subseteq (z, \infty)$. Ker je množica $U$ podmnožica množoce $A$, je točka $x$ notranja točka množice $A$. Množica $A$ je odprta. Podobno lahko dokažemo, da je množica $B$ odprta. Množici $Q \cap A$ in $Q \cap B$ sta odprti podmnožici množice $Q$ za kateri velja $Q = (Q \cap A) \cup (Q \cap B)$. Radi bi videli, da sta množici $Q \cap A$ in $Q \cap B$ neprazni. Zapišimo $I = [c, d]$. Ker je $f(Q) = I$, obstaja $x' \in Q$, za katerega je $f(x') =d$. Ker $f$ nima fiksne točke na $Q$, je $x' \neq d$. Interval $Q$ je pomnožica intervala $I$, zato velja $x' < f(x') = d$, kar pomeni, da je $x' \in Q \cap A$. Analogno poiščemo točko $x'' \in Q - \{c\}$ z lastnostjo: $f(x'') = c$ in $x'' \in Q \cap B$. Torej, množici $Q \cap A$ in $Q \cap B$ tvorita separacijo povezanega prostora $Q$, kar je protislovje. Funkcija $f$ ima negibno točko v intervalu $Q$.
+Trdimo, da je množica $A$ odprta. Za vsako točko $x \in A$ lahko izberemo točko $z \in (x, f(x))$ in odprto okolico $U \subseteq  (-\infty, z)$ točke $x$, za katero velja $f(U) \subseteq (z, \infty)$. Ker je množica $U$ podmnožica množoce $A$, je točka $x$ notranja točka množice $A$. Množica $A$ je odprta. Podobno lahko dokažemo, da je množica $\mathcal{B}$ odprta. Množici $Q \cap A$ in $Q \cap B$ sta odprti podmnožici množice $Q$ za kateri velja $Q = (Q \cap A) \cup (Q \cap B)$. Radi bi videli, da sta množici $Q \cap A$ in $Q \cap B$ neprazni. Zapišimo $I = [c, d]$. Ker je $f(Q) = I$, obstaja $x' \in Q$, za katerega je $f(x') =d$. Ker $f$ nima fiksne točke na $Q$, je $x' \neq d$. Interval $Q$ je pomnožica intervala $I$, zato velja $x' < f(x') = d$, kar pomeni, da je $x' \in Q \cap A$. Analogno poiščemo točko $x'' \in Q - \{c\}$ z lastnostjo: $f(x'') = c$ in $x'' \in Q \cap B$. Torej, množici $Q \cap A$ in $Q \cap B$ tvorita separacijo povezanega prostora $Q$, kar je protislovje. Funkcija $f$ ima negibno točko v intervalu $Q$.
 \end{proof}
 
 \end{document}
