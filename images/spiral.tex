@@ -20,6 +20,8 @@
 \node[point,fill=black] (g) at (4.9,1.4) {};
 \node[point,fill=black] (h) at (5.6,3.5) {};
 \node[point,fill=black] (i) at (6.3,0.7) {};
+\node[point,fill=black] (j) at (3.85,3.85) {};
+
 
 \draw (e) -- (f|-e);
 \draw[->] (f|-e) -- (f);
@@ -47,12 +49,14 @@
 \draw[thick] (0.1,0 |-g) -- (-0.1,0 |-g) node[left] {$x_4$};
 \draw[thick] (0.1,0 |-h) -- (-0.1,0 |-h) node[left] {$x_0$};
 \draw[thick] (0.1,0 |-i) -- (-0.1,0 |-i) node[left] {$x_6$};
+\draw[thick] (0.1, 3.85) -- (-0.1, 3.85) node[left] {$c$};
 
 \draw[thick] (a |- 0,0.1) -- (a |- 0,-0.1) node[below] {$x_6$};
 \draw[thick] (b |- 0,0.1) -- (b |- 0,-0.1) node[below] {$x_4$};
 \draw[thick] (c |- 0,0.1) -- (c |- 0,-0.1);
 \draw[thick] (d |- 0,0.1) -- (d |- 0,-0.1) node[below] {$x_2$};
 \draw[thick] (e |- 0,0.1) -- (e |- 0,-0.1) node[below] {$x_0$};
+\draw[thick] (3.85,0.1) -- (3.85,-0.1) node[below] {$c$};
 \draw[thick] (f |- 0,0.1) -- (f |- 0,-0.1) node[below] {$x_1$};
 \draw[thick] (g |- 0,0.1) -- (g |- 0,-0.1) node[below] {$x_3$};
 \draw[thick] (h |- 0,0.1) -- (h |- 0,-0.1);

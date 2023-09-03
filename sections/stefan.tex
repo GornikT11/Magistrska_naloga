@@ -6,7 +6,7 @@ V tem poglavju bomo podali definicijo Štefanovega zaporedja točk. Pokazali bom
 Če $f$-orbita vsebuje samo eno točko, je ta točka fiksna točka funkcije $f$. Perioda te točke je 1, kar je zadnji člen ureditve Šarkovskega in pri tej orbiti nimamo kaj dokazovati. Zato bomo obravnavali samo orbite oziroma cikle, ki vsebujejo vsaj dve točki. Naj bo $m \geq 2$ in $\mathcal{O}$ $m$-cikel zvezne funkcije $f$. Preden definiramo Štefanovo zaporedje, moramo spoznati nekaj pojmov. 
 
 \begin{definicija}
-Naj bo $p$ najbolj desna točka $m$-cikla $\mathcal{O}$, za katero je $f(p) > p$ in $q\in \mathcal{O}$ prva točka desno od p. Center $c$ cikla $\mathcal{O}$ definiramo kot $c=\frac{p+q}{2}$. Za vsako točko $x \in \mathcal{O}$ označimo množico točk iz cikla $\mathcal{O}$, ki ležijo v zaprtem intervalu omejenem z $x$ in $c$, z $\mathcal{O}_x$. Natančneje, $\mathcal{O}_x = \mathcal{O} \cap [x, p]$, če je $x \leq p$ in  $\mathcal{O}_x = \mathcal{O} \cap [q, x]$, če je $x \geq q$. Pravimo, da točka $x \in \mathcal{O}$ menja strani, če točka $c$ leži med točkama $x$ in $f(x)$.
+Naj bo $p$ najbolj desna točka $m$-cikla $\mathcal{O}$, za katero je $f(p) > p$ in $q\in \mathcal{O}$ prva točka desno od p. Center $c$ cikla $\mathcal{O}$ definiramo kot $c=\frac{p+q}{2}$. Za vsako točko $x \in \mathcal{O}$ označimo množico točk iz cikla $\mathcal{O}$, ki ležijo v zaprtem intervalu omejenim z $x$ in $c$, z $\mathcal{O}_x$. Natančneje, $\mathcal{O}_x = \mathcal{O} \cap [x, p]$, če je $x \leq p$ in  $\mathcal{O}_x = \mathcal{O} \cap [q, x]$, če je $x \geq q$. Pravimo, da točka $x \in \mathcal{O}$ menja strani, če točka $c$ leži med točkama $x$ in $f(x)$.
 \end{definicija}
 Poglejmo si definicijo Štefanovega zaporedja.
 
@@ -34,7 +34,7 @@ Pogoj $x_{j+1} \in \mathcal{O}_{f(x_j)}$ v~\ref{eq:š4} pomeni, da je točka $x_
 Predpostavimo, da $m$-cikel $\mathcal{O}$ vsebuje Štefanovo zaporedje. Če je $l \triangleleft m$, potem funkcija $f$ vsebuje $\mathcal{O}$-vsiljeno elementarno $l$-zanko $\mathcal{O}$-intervalov in posledično tudi periodično točko s periodo $l$.
 \end{trditev}
 
-Pri danem Štefanovem zaporedju $x_0, x_1, \dots, x_n$ definiramo intervale $I_0, I_1, \dots, I_{n-1}$ na  nasledni način: Za $1 \leq j < n$, najkrajši $\mathcal{O}$-interval, ki vsebuje točke $x_0$, $x_1$ in $x_j$, označimo z $I_j$, medtem ko z $I_0$ označimo $\mathcal{O}$-interval s krajišči $x_{n-2}$ in $x_n$. Iz lastnosti~\ref{eq:š2} lahko sklepamo, da je $\interior(I_0) \cap I_j = \emptyset$ za vsak $j \in \{1, 2, \dots, n-1\}$.
+Pri danem Štefanovem zaporedju $x_0, x_1, \dots, x_n$ definiramo intervale $I_0, I_1, \dots, I_{n-1}$ na  nasledni način: Za $1 \leq j < n$ najkrajši $\mathcal{O}$-interval, ki vsebuje točke $x_0$, $x_1$ in $x_j$, označimo z $I_j$, medtem ko z $I_0$ označimo $\mathcal{O}$-interval s krajišči $x_{n-2}$ in $x_n$. Iz lastnosti~\ref{eq:š2} lahko sklepamo, da je $\interior(I_0) \cap I_j = \emptyset$ za vsak $j \in \{1, 2, \dots, n-1\}$.
 
 \begin{trditev}\label{trd:pokritja}
 Za intervale izbrane na zgoraj opisan način veljajo naslednje relacije pokritja:
@@ -61,13 +61,13 @@ Pri dokazu točke~\ref{trd:pokritja1} bomo dokazali še močnejšo trditev, ki n
 
 Naj bo $j$ tako naravno število, za katerega velja $1 \leq j \leq n-1$. Želimo pokazati, da množica $f(I_j)$ vsebuje interval $I_{j+1}$. Vemo že, da interval $f(I_j)$ vsebuje točki $x_0$ in $x_1$. Za dokaz točke~\ref{trd:pokritja2} moramo pokazati samo še vsebovanost točke $x_{j+1}$ v množici $f(I_j)$. Podobno kot prej posledica~\ref{pos:vmesnavrednost} zagotavlja, da je v množici $f(I_j)$ vsebovan celoten interval $I_{j+1}$. V množici $f(I_j)$ so vsebovane točke $x_0, x_1$ in $f(x_j)$, zato je v tej množici vsebovana tudi množica točk $\mathcal{O}_{f(x_j)}$. Iz lastnosti~\ref{eq:š3} ugotovimo točka $x_{j+1}$ leži v množici $\mathcal{O}_{f(x_j)}$, zato velja $x_{j+1} \in \mathcal{O}_{f(x_j)} \subseteq f(I_j)$. Torej je interval $I_{j+1}$ res vsebovan v množici $f(I_j)$.
 
-Za dokaz točke~\ref{trd:pokritja3} moramo pokazati, da je za vsako liho število $1 \leq l \leq n$ interval $I_{n-l}$ vsebovan v množici $f(I_0)$.  
-Ker že vemo, da $f(I_0)$ vsebuje točki $x_0$ in $x_1$, preostane za dokazati še, da vsebuje točko $x_{n-l}$ Zaradi lastnosti~\ref{eq:š2} leži točka na drugi strani točke $c$ kot točki $x_{n-2}$ in $x_n$. Iz lastnoti~\ref{eq:š3} sklepamo, da je točka $x_{n-1}$ bolj oddaljena od točke $c$, kot točka $x_{n-l}$ za liho število $3 \leq l \leq n$ interval $I_{n-l}$, zato vsak interval, ki vsebuje točke $x_0, x_1$ in $x_{n-1}$, vsebuje tudi vse točko $x_{n-l}$ Pokazati moramo samo še, da množica $f(I_0)$ vsebuje točko $x_{n-1}$. Pri lastnosti~\ref{eq:š4} namesto $j$ pišemo $n-2$ in dobimo vsebovanost $x_{n-1} \in \mathcal{O}_{f(x_{n-2})}$. Interval $f(I_n)$ vsebuje točke $x_0, x_1$ in $f(x_j)$, 
+Za dokaz točke~\ref{trd:pokritja3} moramo pokazati, da je za vsako liho število $1 \leq d \leq n$ interval $I_{n-d}$ vsebovan v množici $f(I_0)$.  
+Ker že vemo, da $f(I_0)$ vsebuje točki $x_0$ in $x_1$, preostane za dokazati še, da vsebuje točko $x_{n-d}$. Zaradi lastnosti~\ref{eq:š2} leži točka $x_{n-d}$ na drugi strani točke $c$ kot točki $x_{n-2}$ in $x_n$. Iz lastnoti~\ref{eq:š3} sklepamo, da je točka $x_{n-1}$ bolj oddaljena od točke $c$, kot točka $x_{n-d}$ za liho število $3 \leq d \leq n$, zato vsak interval, ki vsebuje točke $x_0, x_1$ in $x_{n-1}$, vsebuje tudi točko $x_{n-d}$. Pokazati moramo samo še, da množica $f(I_0)$ vsebuje točko $x_{n-1}$. Pri lastnosti~\ref{eq:š4} namesto $j$ pišemo $n-2$ in dobimo vsebovanost $x_{n-1} \in \mathcal{O}_{f(x_{n-2})}$. To pomeni, da je točka $f(x_{n-2}$ vsaj tako oddaljena od točke $c$, kot točka $x_{n-1}$. Dokazali smo, da množica $f(I_0)$ vsebuje točke $x_0, x_1$ in $x_{n-1}$, zato vsebuje vse intervale $x_{n-1}, x_{n-3}, x_{n-5}, \dots$
 \end{proof}
 
 
 \begin{proof}[Dokaz trditve~\ref{trd:zap-cikel}]
-Naj veljajo predpostavke v trditvi~\ref{trd:zap-cikel}. Radi bi pokazali, da ima funkcija $f$ za vsako naravno število $l\triangleleft m$ točko periode $l$. Dokaz bomo razdelili na tri dele. Najprej bomo dokazali izrek za liha števila manjša od $m$, potem za soda števila manjša od $m$ in na koncu še za vsa števila večja od $m$.
+Naj veljajo predpostavke v trditvi~\ref{trd:zap-cikel}. Radi bi pokazali, da ima funkcija $f$ za vsako naravno število $l$, za katero velja $l\triangleleft m$ točko periode $l$. Dokaz bomo razdelili na tri dele. Najprej bomo dokazali izrek za liha števila manjša od $m$, potem za soda števila manjša od $m$ in na koncu še za vsa števila večja od $m$.
 Pri dokazu si bomo pomagali z naslednjimi zankami, ki jih preberamo s slike~\ref{fig:nkotnik}:
 \begin{enumerate}[label={(Z\arabic*)}]
 \item $I_1 \to I_1$,\label{eq:z1}

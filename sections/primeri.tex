@@ -2,7 +2,7 @@
 \graphicspath{{\subfix{../images/}}}
 
 \begin{document}
-V tem poglavju si bomo zaradi lažjega razumevanja pogledali nekaj posebnih primerov. Najprej si bomo pogledali najbolj znan poseben primer izreka Šarkovskega. V naslednjih dveh primerih bomo postopek iz prvega primera razširili na daljše cikle. V zadnjem primeru bomo nakazali, kako lahko iz periodičnih točk funkcije $f^2$ ugotovimo, katere periode ima funkcija $f$, kar igra pomembno vlogo pri dokazu izreka~\ref{izr:forcing}.
+V tem poglavju si bomo zaradi lažjega razumevanja pogledali nekaj posebnih primerov. Najprej si bomo pogledali najbolj znan poseben primer izreka Šarkovskega, ki obravnava funkcije s periodo 3. V naslednjih dveh primerih bomo postopek iz prvega primera razširili na daljše cikle. V zadnjem primeru bomo nakazali, kako lahko iz periodičnih točk funkcije $f^2$ ugotovimo, katere periode ima funkcija $f$, kar igra pomembno vlogo pri dokazu izreka~\ref{izr:forcing}.
 
 \begin{primer}[3-cikel]\label{primer1}
 Prepričajmo se, da perioda 3 implicira obstoj vseh ostalih period. Točka lahko tvori $3$-cikel na dva različna načina, ki sta v resnici zrcalna podoba drug drugega. Slika~\ref{fig:3cikla} prikazuje oba primera. 
@@ -32,11 +32,11 @@ Sedaj bomo obravnavali 7-cikel $\mathcal{O}$ in $\mathcal{O}$-intervale prikazan
   \caption[Primer vektorske slike.]{Primer 7-cikla.}
   \label{fig:7cikel}
 \end{figure}
- Podobno kot pri prejšnjem primeru označimo točke $x_i = f^i(x_0)$ ter intervale $I_1 = [x_0, x_1]$, $I_2 = [x_1, x_2]$  in tako naprej kot prikazuje slika~\ref{fig:7cikel}. Za to izbiro intervalov dobimo naslednje $\mathcal{O}$-vsiljene relacije pokritosti:
+ Podobno kot pri prejšnjem primeru označimo točke $x_i = f^i(x_0)$ ter intervale $I_1 = [x_0, x_1]$, $I_2 = [x_1, x_2]$  in tako naprej kot prikazuje slika~\ref{fig:7cikel}. Za tako izbiro intervalov dobimo naslednje $\mathcal{O}$-vsiljene relacije pokritosti:
 \begin{enumerate}
-\item $I_1 \to I_1$
-\item $I_1 \to I_2 \to I_3 \to I_4 \to I_5 \to I_0$
-\item $I_0 \to I_1$, $I_0 \to I_3$ in $I_0 \to I_5$
+\item $I_1 \to I_1$,
+\item $I_1 \to I_2 \to I_3 \to I_4 \to I_5 \to I_0$,
+\item $I_0 \to I_1$, $I_0 \to I_3$ in $I_0 \to I_5$.
 \end{enumerate}
 Zgornje relacije pokritosti lahko prikažemo z grafom, ki ga prikazuje slika~\ref{fig:6kotnik}.
 \begin{figure}[h]
@@ -48,10 +48,10 @@ Zgornje relacije pokritosti lahko prikažemo z grafom, ki ga prikazuje slika~\re
 \end{figure}
 Iz grafa preberemo naslednje zanke.
 \begin{enumerate}[label={(\arabic*)}]
-\item $I_1 \to I_1$
-\item $I_0 \to I_5 \to I_1$ \label{7cikelz2}
-\item $I_0 \to I_3 \to I_4 \to I_5 \to I_0$ \label{7cikelz3}
-\item $I_0 \to I_1 \to I_2 \to I_3 \to I_4 \to I_5 \to I_0$ \label{7cikelz4}
+\item $I_1 \to I_1$,
+\item $I_0 \to I_5 \to I_1$, \label{7cikelz2}
+\item $I_0 \to I_3 \to I_4 \to I_5 \to I_0$, \label{7cikelz3}
+\item $I_0 \to I_1 \to I_2 \to I_3 \to I_4 \to I_5 \to I_0$, \label{7cikelz4}
 \item $I_0 \to \underbrace{I_1 \to I_1 \to \cdots  \to I_1}_{r \text{ ponovitev intervala } I_1} \to I_2 \to I_3 \to I_4 \to I_5 \to I_0$, kjer je $r\geq 3$. \label{7cikelz5}
 \end{enumerate}
 Zanka $I_1 \to I_1$ je elementarna, saj je elementarna vsaka zanka dolžine 1. Pri ostalih zankah lahko najprej ugotovimo, da za vsak $j \in \{1, 2, \dots, 5\}$ velja $\interior(I_0) \cap I_j = \emptyset$. Pri zankah~\ref{7cikelz2},~\ref{7cikelz3} in~\ref{7cikelz4} nobena robna točka intervala $I_0$ ne more slediti zanki, saj je perioda robnih točk 7, perioda točk, ki sledijo zankam~\ref{7cikelz2},~\ref{7cikelz3} in~\ref{7cikelz4} pa je manjša ali enaka 6. S tem so izpolnjeni pogoji leme~\ref{lem:element} in so zanke elementarne. V teh zankah lahko poiščemo točke s periodami 2, 4, ali 6. Podobno kot v primeru~\ref{primer1} ugotovimo, da nobene tri zaporedne iteracije funkcije $f$ na točkah cikla $\mathcal{O}$ ne ležijo v intervalu $I_1$, zato v tem intervalu tudi ne morejo ležati tri zaporedne iteracije funkcije $f$ na robnih točkah intervala $I_0$. To pomeni, da krajišči intervala $I_0$ ne sledita zanki~\ref{7cikelz5}. S tem razmislekom so izpolnjeni pogoji leme~\ref{lem:element}, zato je zanka~\ref{7cikelz5} elementarna. Za dolžino zanke~\ref{7cikelz5} lahko izberemo katerokoli naravno število večje od 7. Torej lahko na podlagi prisotnosti 7-cikla na sliki~\ref{fig:7cikel} sklepamo, da so prisotne vse periode $l$, za katere je $l \triangleleft 7$
@@ -68,17 +68,17 @@ Predpostavimo, da ima funkcija $f$ 9-cikel $\mathcal{O}$, ki je prikazan na slik
 \end{figure}
 Določili smo šest $\mathcal{O}$-intervalov $I_0, I_1, \dots, I_5$, za katere velja, da je notranjost intervala $I_0$ disjunktna z ostalimi intervali. Torej za $j=1, 2, \dots, 5$ velja enakost: $\interior{(I_0)} \cap I_j = \emptyset$. Za tako izbrane intervale dobimo enake relacije pokritja kot v primeru~\ref{primer1} in lahko s pomočjo enakih sklepov ugotovimo prisotnost enakih elementarnih zank in posledično periodičnih točk s periodami 1, 2, 4, 6 in vse periode večje od 7.
 
-Zaporedje števil $x_0, x_1, \dots, x_6$ smo določili tako, da se spiralno oddaljujejo od centra $c:=\frac{x_0+x_1}{2}$, kar je prikazano na sliki~\ref{fig:spiral}. S tako izbiro točk pa v zaporedju ne nastopajo vse točke cikla $\mathcal{O}$ in tudi ne velja enakost $f(x_i) = x_{i+1}$ za vsak $i = 1, 2, \dots, 5$ kot je to veljalo v primeru~\ref{primer2}.
+Zaporedje števil $x_0, x_1, \dots, x_6$ smo določili tako, da se spiralno oddaljujejo od centra $c:=\frac{x_0+x_1}{2}$, kar je prikazano na sliki~\ref{fig:spiral}. S tako izbiro točk v zaporedju ne nastopajo vse točke cikla $\mathcal{O}$ in tudi ne velja enakost $f(x_i) = x_{i+1}$ za vsak $i = 1, 2, \dots, 5$, kot je to veljalo v primeru~\ref{primer2}.
 
 \begin{figure}[h]
   \centering
   \includegraphics{spiral.pdf}
 % \caption[caption za v kazalo]{Dolg caption pod sliko}
-  \caption[Primer vektorske slike.]{Primer 9-cikla.}
+  \caption[Primer vektorske slike.]{Izbira točk $x_0, \dots, x_6$, ki se spiralno oddaljujejo od centra $c$.}
   \label{fig:spiral}
 \end{figure}
 
-V poglavju~\ref{konssz} je predstavljen algoritem za izbiro zaporedja točk $x_0, x_1, \dots, x_6$. Glavna ideja algoritma je, da za naslednji člen zaporedja ne izberemo vedno sliko prejšnjega člena na način: $x_{i+1} = f(x_i)$, vendar včasih izberemo točko, ki je bližje centru $c$. Točko $x_{i+1}$, ki je bližje centra $c$ kot točka $f(x_i)$ izberemo, če je slika $f(x_{i+1})$ bolj oddaljena od centra kot točka $f(f(x_i))$. Postopka izbire naslednje točke na sliki~\ref{fig:iteracije} in na sliki~\ref{fig:spiral} sta podobna. V obeh primerih se pomikamo navpično do grafa funkcije in nato vodoravno do simetrale lihih kvadrantov. Sprememba se zgodi na sliki~\ref{fig:spiral}, ko lahko izberemo še neizbrano točko tako, da se v vodoravni smeri pomaknemo proti centru $c$, v navpični smeri pa stran od centra $c$. To se na sliki~\ref{fig:spiral} zgodi dvakrat in je prikazano s krivimi puščicami. 
+V poglavju~\ref{konssz} je predstavljen algoritem za izbiro zaporedja točk $x_0, x_1, \dots, x_6$. Glavna ideja algoritma je, da za naslednji člen zaporedja ne izberemo vedno sliko prejšnjega člena na način: $x_{i+1} = f(x_i)$, vendar včasih izberemo točko, ki je bližje centru $c$. Točko $x_{i+1}$, ki je bližje centra $c$ kot točka $f(x_i)$, izberemo, če je slika $f(x_{i+1})$ bolj oddaljena od centra kot točka $f(f(x_i))$. Postopka izbire naslednje točke na sliki~\ref{fig:iteracije} in na sliki~\ref{fig:spiral} sta podobna. V obeh primerih se pomikamo navpično do grafa funkcije in nato vodoravno do simetrale lihih kvadrantov. Sprememba se zgodi na sliki~\ref{fig:spiral}, ko lahko izberemo še neizbrano točko tako, da se v vodoravni smeri pomaknemo proti centru $c$ in v navpični smeri stran od centra $c$. To se na sliki~\ref{fig:spiral} zgodi dvakrat in je prikazano s krivimi puščicami. 
 Postopek se ustavi, ko pridemo do točke $x_j$, katere slika $f(x_j)$ je na isti strani centra $c$ kot točka sama. V primeru na sliki~\ref{fig:spiral} je to točka $x_6$.
 
 V poglavju~\ref{stefan_zap} si bomo natančno pogledali kakšne lastnosti mora imeti zaporedje točk $x_0, x_1, \dots, x_{n-1}$, ki predstavlja krajišča intervalov $I_0, I_1, \dots, I_{n-1}$. Izvedeli bomo tudi, kako taka izbira točk in intervalov zagotavlja obstoj elementarnih zank. V poglavju~\ref{konssz} se bomo naučili, kako iz točk cikla izberemo zaporedje, ki ima željene lastnosti. 
