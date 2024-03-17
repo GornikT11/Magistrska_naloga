@@ -1,7 +1,8 @@
+ \documentclass[ped, tisk]{fmfdelo}
 %\documentclass[mat1]{fmfdelo}
 % \documentclass[fin1]{fmfdelo}
 % \documentclass[isrm1]{fmfdelo}
- \documentclass[mat2]{fmfdelo}
+% \documentclass[ped]{fmfdelo}
 % \documentclass[fin2]{fmfdelo}
 % \documentclass[isrm2]{fmfdelo}
 
@@ -21,26 +22,62 @@
 % \mentorja{}{}
 % \mentorici{}{}
 
-\letnica{2023} % leto diplome
+\letnica{2024} % leto diplome
 
 %  V povzetku na kratko opišite vsebinske rezultate dela. Sem ne sodi razlaga organizacije dela --
 %  v katerem poglavju/razdelku je kaj, pač pa le opis vsebine.
-\povzetek{}
+\povzetek{tukaj je nakaj stvari, ki povzamejo delo}
 
 %  Prevod slovenskega povzetka v angleščino.
-\abstract{}
+\abstract{tukaj je nakaj stvari, ki povzamejo delo-v ang}
 
 % navedite vsaj eno klasifikacijsko oznako --
 % dostopne so na www.ams.org/mathscinet/msc/msc2020.html
-\klasifikacija{}
-\kljucnebesede{} % navedite nekaj ključnih pojmov, ki nastopajo v delu
-\keywords{} % angleški prevod ključnih besed
+\klasifikacija{112}
+\kljucnebesede{nekaj} % navedite nekaj ključnih pojmov, ki nastopajo v delu
+\keywords{something} % angleški prevod ključnih besed
 
-\zapisiMetaPodatke  % poskrbi za metapodatke in veljaven PDF/A-1b standard
+% - neobvezna zahvala
+\zahvala{
+  Neobvezno.
+  Zahvaljujem se \dots
+}
+
+% - program dela, ki ga napiše mentor z osnovno literaturo
+\programdela{
+  Mentor naj napiše program dela skupaj z osnovno literaturo.
+}
+
+\osnovnaliteratura{
+% Literatura mora biti tukaj posebej samostojno navedena (po pomembnosti) in ne
+% le citirana. V tem razdelku literature ne oštevilčimo po svoje, ampak uporabljamo
+% ukaz \vnosliterature, v katerega vpišemo citat
+  \vnosliterature{lebedev2009introduction}
+  \vnosliterature{gurtin1982introduction}
+  \vnosliterature{zienkiewicz2000finite}
+  \vnosliterature{STtemplate}
+}
+
+% - ime datoteke z viri (vključno s končnico .bib), če uporabljate BibTeX
+\literatura{literatura.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DODATNE DEFINICIJE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{definicije.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ZAČETEK VSEBINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\zapisiMetaPodatke  % poskrbi za metapodatke in veljaven PDF/A-1b standard
 
 % aktivirajte pakete, ki jih potrebujete
 \usepackage{standalone}
-%\usepackage{fmfdelo}
+%%\usepackage{fmfdelo}
 \usepackage{import}
 \usepackage{tikz}
 \usepackage{graphicx}
@@ -51,12 +88,7 @@
 \usepackage{subfiles} % Best loaded last in the preamble
 
 
-% za številske množice uporabite naslednje simbole
-\newcommand{\R}{\mathbb R}
-\newcommand{\N}{\mathbb N}
-\newcommand{\Z}{\mathbb Z}
-\newcommand{\C}{\mathbb C}
-\newcommand{\Q}{\mathbb Q}
+
 
 % matematične operatorje deklarirajte kot take, da jih bo Latex pravilno stavil
 % \DeclareMathOperator{\conv}{conv}
@@ -166,19 +198,19 @@
 % okrajšati imena revij. Za pravilno sortiranje vnosov brez avtorja, uporabite
 % polje key={ }, kot v primeru.
 % V primeru napak ustvarite issue na GitHubu ali pišite na jure.slak@fmf.uni-lj.si.
-\cleardoublepage                           % na desni strani
-\phantomsection                            % da prav delujejo hiperlinki
-\addcontentsline{toc}{section}{\bibname}   % dodajmo v kazalo
-\bibliographystyle{fmf-sl}                 % uporabljen stil je v datoteki fmf-sl.bst, na voljo tudi angleška verzija
+%\cleardoublepage                           % na desni strani
+%\phantomsection                            % da prav delujejo hiperlinki
+%\addcontentsline{toc}{section}{\bibname}   % dodajmo v kazalo
+%\bibliographystyle{fmf-sl}                 % uporabljen stil je v datoteki fmf-sl.bst, na voljo tudi angleška verzija
 %\bibliography{\literatura}                 % literatura je v datoteki, definirani na začetku
 % TeXStudio zmede \ zgoraj, tako da lahko notri napišeš dejansko ime .bib datoteke, če ti
 % ne delajo predlogi citatov.
 
 % Za stvarno kazalo
-\cleardoublepage                           % na desni strani
-\phantomsection                            % da prav delujejo hiperlinki
-\addcontentsline{toc}{section}{\indexname} % dodajmo v kazalo
-\printindex
+%\cleardoublepage                           % na desni strani
+%\phantomsection                            % da prav delujejo hiperlinki
+%\addcontentsline{toc}{section}{\indexname} % dodajmo v kazalo
+%\printindex
 
 \end{document}
 
