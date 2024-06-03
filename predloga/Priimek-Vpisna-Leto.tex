@@ -32,6 +32,7 @@
 % \mentorici{...}{...}
 % \somentorici{...}{...}
 
+\usepackage{biblatex}
 % - leto magisterija
 \letnica{2017}
 
@@ -77,12 +78,14 @@ the content and not the structure of your work.}
 
 % - ime datoteke z viri (vključno s končnico .bib), če uporabljate BibTeX
 \literatura{literatura.bib}
+\addbibresource{literatura.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DODATNE DEFINICIJE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{definicije.tex}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ZAČETEK VSEBINE
@@ -93,5 +96,7 @@ the content and not the structure of your work.}
 \input{vsebina/uvod.tex}
 \input{vsebina/integrali.tex}
 \input{vsebina/napotki.tex}
+
+\printbibliography
 
 \end{document}
