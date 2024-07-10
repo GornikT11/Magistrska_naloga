@@ -2,13 +2,13 @@
 \graphicspath{{\subfix{../images/}}}
 
 \begin{document}
-Po zaklučenem dokazu si lahko postavimo vprašanje, kako se spremenijo posledice izreka, če spremenimo njegove predpostavke. Glede na to, kako spremenimo predpostavke, lahko pridemo do različnih posplošitev izreka. V primeru izreka Šarkovskega že obstaja več posplošitev. Nekatere obravnavajo izrek za nezvezne funkcije, ki ustrezajo določenim pogojem, druge pa preučujejo zvezne funkcije, ki so namesto na intervalu definirane na drugih prostorih. V tem primeru se lahko vprašamo, kakšna ureditev naravnih števil, če ta obstaja, opiše prisotnost periodičnih točk zvezne funkcije $f:X \to X$, ki slika nek topološki prostor $X$ nazaj vase.  Natančneje, iščemo relacijo $\triangleleft_X$ z lastnostjo: če je $m$ perioda za zvezno funkcijo $f:X \to X$, potem je vsako naravno število $l$, za katero je $l \triangleleft_X m$, tudi perioda za funkcijo $f$.
-V tem poglavju si bomo najprej pogledali, kakšne periodične točke lahko ima zvezna funkcija definirana na dveh disjunktnih intervalih, nato pa bomo obravnavali prisotnost periodičnih točk za zvezvne funkcije na krožnici.
+Po zaklučenem dokazu si lahko postavimo vprašanje, kako se spremenijo posledice izreka, če spremenimo njegove predpostavke. Glede na to, kako spremenimo predpostavke, lahko pridemo do različnih posplošitev izreka. V primeru izreka Šarkovskega že obstaja več posplošitev. Nekatere obravnavajo izrek za nezvezne funkcije, ki ustrezajo določenim pogojem, druge pa preučujejo zvezne preslikave, ki so namesto na intervalu definirane na drugih prostorih. V tem primeru se lahko vprašamo, kakšna ureditev naravnih števil, če ta obstaja, opiše prisotnost periodičnih točk zvezne preslikave $f:X \to X$, ki slika nek topološki prostor $X$ nazaj vase.  Natančneje, iščemo relacijo $\triangleleft_X$ z lastnostjo: če je $m$ perioda za zvezno preslikavo $f:X \to X$, potem je vsako naravno število $l$, za katero je $l \triangleleft_X m$, tudi perioda za preslikavo $f$.
+V tem poglavju si bomo najprej pogledali, kakšne periodične točke lahko ima zvezna funkcija definirana na dveh disjunktnih intervalih, nato pa bomo obravnavali prisotnost periodičnih točk za zvezvne preslikave na krožnici.
 
-Na začetku si poglejmo, kaj lahko povemo o periodah funkcije, ki je definirana na dveh disjunktnih intervalih.
+%Na začetku si poglejmo, kaj lahko povemo o periodah funkcije, ki je definirana na dveh disjunktnih intervalih.
 
 \begin{primer}
-Naj bo prostor $X$ unija dveh disjunktnih intervalov $X=I_1 \cup I_2$, kjer sta $I_1$ in $I_2$ disjunktna intervala v množici $\R$. Funkcija $g : X \to X$ podana s predpisom $g(x) = -x$ je zvezna funkcja. Vsaka točka iz prostora $X$ ima periodo 2, funkcija pa nima fiksne točke. Vseeno lahko poiščemo relacijo $\triangleleft_X$, ki opiše katere periode ima lahko funkcija.  Pri poljubni funkciji $f: X \to X$ imamo štiri možnosti. Če je $f(I_1) \subseteq I_1$ in $f(I_2) \subseteq I_2$ lahko za funkciji $f|_{I_1}$ in $f|_{I_2}$ uporabimo izrek Šarkovskega in ugotovimo, da v tem primeru uresitev Šarkovskega opiše prisotnost periodičnih točk. V primeru, ko je $f(I_1) \subseteq I_1$ in $f(I_2) \subseteq I_1$ lahko periodične točke ležijo samo v intervalu $I_1$. Za funkcijo $f|_{I_1}$ uporabimo izrek Šarkovskega in ugotovimo, da prisotnost periodičnih točk spet natančno opiše ureditev Šarkovskega. Podoben sklep lahko naredimo tudi v primeru, ko je $f(I_1) \subseteq I_2$ in $f(I_2) \subseteq I_2$. Drugače je v primeru $f(I_1) \subseteq I_2$ in $f(I_2) \subseteq I_1$. V tem primeru se točke iz intervala $I_1$ s funkcijo $f$ slikajo v interval $I_2$ in obratno. Zato ima vsaka periodična točka sodo periodo. Naj bo $x \in X$ točka periode $2m$ za funkcijo $f$. Brez izgube splošnosti lahko sklepamo, da točka $x$ pripada intervalu $I_1$. Potem ima točka $x$ periodo $m$ za funkcijo $f^2|_{I_1} :I_1 \to I_1$. Ker je $I_1$ prostor Šarkovskega in je $f^2$ zvezna funkcija, lahko uporabimo izrek Šarkovskega in ugotovimo, da za vsako naravno število $l$, za katerega velja $l \triangleleft m$, obstaja točka $y \in I_1$ s periodo $l$ za funkcijo $f^2$. Točka $y$ ima periodo $2l$ za funkcijo $f$, saj je orbita točke $y$ sestavljena iz $l$ različnih točk v intervalu $I_1$ (sode iteracije) in $l$ različnih točk iz intervala $I_2$ (lihe iteracije). 
+Definirajmo disjunktna intervala $I_1 = [-2, -1]$ in $I_2 = [1, 2]$. Naj bo prostor $X$ unija teh dveh intervalov: $X=I_1 \cup I_2$. Funkcija $g : X \to X$ podana s predpisom $g(x) = -x$ je zvezna funkcja. Vsaka točka iz prostora $X$ ima periodo 2, funkcija pa nima fiksne točke, torej prostor $X$ ni prostor Šarkovskega. Vseeno lahko poiščemo relacijo $\triangleleft_X$, ki opiše, katere periode ima lahko funkcija.  Pri poljubni funkciji $f: X \to X$ imamo štiri možnosti. Če je $f(I_1) \subseteq I_1$ in $f(I_2) \subseteq I_2$, lahko za funkciji $f|_{I_1}$ in $f|_{I_2}$ uporabimo izrek Šarkovskega in ugotovimo, da v tem primeru ureditev Šarkovskega opiše prisotnost periodičnih točk. V primeru, ko je $f(I_1) \subseteq I_1$ in $f(I_2) \subseteq I_1$, lahko periodične točke ležijo samo v intervalu $I_1$. Za funkcijo $f|_{I_1}$ uporabimo izrek Šarkovskega in ugotovimo, da prisotnost periodičnih točk spet natančno opiše ureditev Šarkovskega. Podoben sklep lahko naredimo tudi v primeru, ko je $f(I_1) \subseteq I_2$ in $f(I_2) \subseteq I_2$. Drugače je v primeru $f(I_1) \subseteq I_2$ in $f(I_2) \subseteq I_1$. V tem primeru se točke iz intervala $I_1$ s funkcijo $f$ slikajo v interval $I_2$ in obratno. Zato ima vsaka periodična točka sodo periodo. Naj bo $x \in X$ točka periode $2m$ za funkcijo $f$. Brez izgube splošnosti lahko sklepamo, da točka $x$ pripada intervalu $I_1$. Potem ima točka $x$ periodo $m$ za funkcijo $f^2|_{I_1} :I_1 \to I_1$. Ker je $I_1$ prostor Šarkovskega in je $f^2$ zvezna funkcija, lahko uporabimo izrek Šarkovskega in ugotovimo, da za vsako naravno število $l$, za katerega velja $l \triangleleft m$, obstaja točka $y \in I_1$ s periodo $l$ za funkcijo $f^2$. Točka $y$ ima periodo $2l$ za funkcijo $f$, saj je orbita točke $y$ sestavljena iz $l$ različnih točk v intervalu $I_1$ (sode iteracije) in $l$ različnih točk iz intervala $I_2$ (lihe iteracije). 
 Ugotovili smo naslednje: Če ima zvezna funkcija $f:X \to X$ liho periodo $m$, potem ima zagotovo tudi vse periode $l$, kjer je $l \triangleleft m$. Če pa je perioda $m$ soda, potem ima funkcija vse periode $l\neq1$, za katere je $l \triangleleft m$. 
 Dobimo relacijo $\triangleright_X$:
 $$3 \triangleright_X 5 \triangleright_X 7 \triangleright_X \cdots \triangleright_X 2\cdot 3 \triangleright_X 2\cdot 5 \triangleright_X 2\cdot 7 \triangleright_X \cdots \triangleright_X 2^2\cdot 3 \triangleright_X 2^2\cdot 5 \triangleright_X 2^2\cdot 7 \triangleright_X \cdots \triangleright_X 2^3 \triangleright_X 2^2 \triangleright_X 2,$$
@@ -17,72 +17,76 @@ $$3 \triangleright_X 5 \triangleright_X 7 \triangleright_X 9 \triangleright_X  \
 
 
 \begin{primer}\label{primer:kroznica}
-Krožnica $S^1 = \{ (cos(\varphi), \sin(\varphi)), \varphi \in [0, 1) \}$. Hitro se lahko prepričamo, da obstajajo funkcije definirane na krožnici $S^1$, ki imajo samo eno periodo. To so rotacije okoli koordinatnega izhodišča. Definiramo družino funkciji: 
+Krožnica $S^1 = \{ (cos(\varphi), \sin(\varphi)), \varphi \in [0, 1) \}$. Hitro se lahko prepričamo, da obstajajo preslikave definirane na krožnici $S^1$, ki imajo samo eno periodo. To so rotacije okoli koordinatnega izhodišča. Definiramo družino preslikav: 
 \begin{equation*} %\label{eq1}
 \begin{split}
 R_n &: S^1 \to S^1, \\ 
 R_n &: (cos(\varphi), \sin(\varphi)) \mapsto (cos(\varphi + \frac{2 \pi}{n}), \sin(\varphi + \frac{2 \pi}{n})).
 \end{split}
 \end{equation*}
-Vse točke krožnice $S^1$ so periodične točke za funkcijo $R_n$ in vse imajo periodo $n$. Zato iz obstoja periodične točke za zvezno funkcijo $f : S^1 \to S^1$ ne moremo sklepati na obstoj drugih period za to funkcijo.
+Vse točke krožnice $S^1$ so periodične točke za preslikavo $R_n$ in vse imajo periodo $n$. Zato iz obstoja periodične točke za zvezno preslikavo $f : S^1 \to S^1$ ne moremo sklepati na obstoj drugih period za to preslikavo.
 \end{primer}
 
-Primer~\ref{primer:kroznica} pokaže, da s predpostavko splošne zvezne funkcije ne dobimo željenega rezultata. Če želimo priti do podobnega rezultata kot v primeru izreka Šarkovskega, moramo dodati še kakšen pogoj. V nadaljevanju bomo formulirali in dokazali izrek podoben izreku Šarkovskega, ki obravnava periode zveznih funkcij na krožnici $S^1$, ki imajo vsaj eno negibno točko.
+Primer~\ref{primer:kroznica} pokaže, da s predpostavko splošne zvezne preslikave ne dobimo željenega rezultata. Če želimo priti do podobnega rezultata kot v primeru izreka Šarkovskega, moramo dodati še kakšen pogoj. V nadaljevanju bomo formulirali in dokazali izrek podoben izreku Šarkovskega, ki obravnava periode zveznih preslikav na krožnici $S^1$, ki imajo vsaj eno negibno točko.
 %Če funkciji $f : S^1 \to S^1$ dodamo še kakšen pogoj, lahko pridemo do podobnega rezultata, kot pri izreku Šarkovskega. V nadaljevanju bomo dokazali naslednji izrek.
 
 \begin{izrek}\label{izr:sarkovski_kroznica}
-Naj bo $f : S^1 \to S^1$ zvezna funkcija. Predpostavimo, da ima funkcija $f$ negibno točko in da je neko liho naravno število $n$ tudi perioda funkcije $f$. Potem je vsako naravno število $m > n$ tudi perioda za funkcijo $f$.
+Naj bo $f : S^1 \to S^1$ zvezna preslikava. Predpostavimo, da ima preslikava $f$ negibno točko in da je neko liho naravno število $n$ tudi perioda preslikave $f$. Potem je vsako naravno število $m > n$ tudi perioda za preslikavo $f$.
 \end{izrek}
 
 Zaradi lažjega dokazovanja, si poglejmo naslednjo definicijo:
 \begin{definicija}\label{def:kintervali}
-Naj bosta $a \in S^1$ in $b \in S^1$ različni točki na krožnici. V tem poglavju bomo z zapisi $[a, b]$, $(a, b)$, $(a, b]$, $[a, b)$ označevali zaprt, odprt, pol odprt in pol zaprt interval na krožnici $S^1$, ki predstavljajo množice točk na krožnici od točke $a$ do točke $b$ v nasprotni smeri urinega kazalca. Intervalu, ki bo različen od celotne krožnice $S^1$, bomo reklu pravi podinterval.
+Naj bosta $a \in S^1$ in $b \in S^1$ različni točki na krožnici. V tem poglavju bomo z zapisi $[a, b]$, $(a, b)$, $(a, b]$, $[a, b)$ označevali zaprt, odprt, pol odprt in pol zaprt interval na krožnici $S^1$, ki predstavljajo množice točk na krožnici od točke $a$ do točke $b$ v nasprotni smeri urinega kazalca. Intervalu, ki je različen od celotne krožnice $S^1$, bomo rekli pravi podinterval.
 \end{definicija}
 
 Relacijo pokritja intervalov bomo definirali malo drugače, kot v poglavju~\ref{sec:intervali}.
 
 \begin{definicija}\label{def:pokritja}
-Naj bosta $I, J \subset S^1$ prava zaprta podintervala krožnice $S^1$ in naj bo $f: I \to J$ zvezna preslikava. Pravimo, da interval $I$ $f$-pokrije interval $J$, če obstaja tak interval $K \subseteq I$, za katerega velja $f(K) = J$. Relacijo zapišemo kot $I \xrightarrow{f} J$. Kadar je jasno, katero funkcijo imamo v mislih, lahko rečemo samo, da interval $I$ pokrije interval $J$. V tem primeru, lahko nadpis, ki označi katero funkcijo imamo v mislih izpustimo in pišemo samo $I \to J$.
+Naj bosta $I, J \subset S^1$ prava zaprta podintervala krožnice $S^1$ in naj bo $f: I \to J$ zvezna preslikava. Pravimo, da interval $I$ $f$-pokrije interval $J$, če obstaja tak interval $K \subseteq I$, za katerega velja $f(K) = J$. Relacijo zapišemo kot $I \xrightarrow{f} J$. Kadar je jasno, katero preslikavo imamo v mislih, lahko rečemo samo, da interval $I$ pokrije interval $J$. V tem primeru lahko nadpis, ki označi katero preslikavo imamo v mislih izpustimo in pišemo samo $I \to J$.
 \end{definicija}
 
-Preden se lotimo dokazovanja izreka bomo dokazali leme, ki so pomembne pri dokazu izreka in spoznali kakšno definicijo, ki nam olajša zapis pri dokazovanju.
+Preden se lotimo dokazovanja izreka~\ref{izr:sarkovski_kroznica}, bomo dokazali leme, ki so pomembne pri dokazu izreka in spoznali kakšno definicijo, ki nam olajša zapis pri dokazovanju.
 
 \begin{lema}\label{lem:1}					%lema1
-Naj bo $I=[a, b]$ zaprt interval na krožnici $S^1$ in naj bo $f : S^1 \to S^1$ zvezna preslikava. Predpostavimo, da je $f(a) = c$ in $f(b) =d$. Potem velja $I \to [c, d]$ ali $I \to [d, c]$.
+Naj bo $I=[a, b]$ zaprt interval na krožnici $S^1$ in naj bo $f : S^1 \to S^1$ zvezna preslikava. Predpostavimo, da je $f(a) = c$ in $f(b) =d$ in $c \neq d$. Potem velja $I \to [c, d]$ ali $I \to [d, c]$.
 \end{lema}
 
 \begin{dokaz}
-Naj bo $A = \left\{x \in I; f(x) = c \right\}$. Ker je funkcija $f$ zvezna, je praslika $f^{-1}(c) = A$ zaprta podmnožica kompaktne množice $I$, zato je tudi množica $A$ kompaktna. Obstaja točka $v \in A$, za katero je $(v, b] \cap A = \emptyset$. Naj bo $B = \left\{x \in I; f(x) = d \right\}$. Zaradi podobnega razmisleka, kot pri množici $A$ obstaja točka $w \in B$, za katero je $[v, w) \cap B = \emptyset$. Velja $f(v) = c$, $f(w)=d$ in $f(x) \notin \{c, d\}$ za vsak $x \in (c, d)$. Zaradi zveznosti funkcije $f$ velja ena od enakosti $f([u, v]) = [c, d]$ ali $f([u, v]) = [d, c]$, zato velja ena od relacij $I \to [c, d]$ ali $I \to [d, c]$.
+Naj bo $A = \left\{x \in I; f(x) = c \right\}$. Ker je preslikava $f$ zvezna, je množica $A$ zaprta podmnožica kompaktne množice $I$, zato je tudi množica $A$ kompaktna. Obstaja točka $v \in A$, za katero je $(v, b] \cap A = \emptyset$. Naj bo $B = \left\{x \in (v,b]; f(x) = d \right\}$. Zaradi podobnega razmisleka kot pri množici $A$ obstaja točka $w \in B$, za katero je $[v, w) \cap B = \emptyset$. Velja $f(v) = c$, $f(w)=d$ in $f(x) \notin \{c, d\}$ za vsak $x \in (v, w)$. Zaradi zveznosti preslikave $f$ velja ena od enakosti $f([u, v]) = [c, d]$ ali $f([u, v]) = [d, c]$, zato velja ena od relacij $I \to [c, d]$ ali $I \to [d, c]$.
 \end{dokaz}
 
 \begin{lema}\label{lem:2}		%lema2
-Naj bo $f : S^1 \to S^1$ zvezna preslikava in naj bosta $I$ in $J$ zaprta intervala na $S^1$, za katera velja $I \to J$. Če je $L \subseteq J$ zaprt interval, potem velja $I \to L$.
+Naj bo $f : S^1 \to S^1$ zvezna preslikava in naj bosta $I$ in $J$ prava zaprta intervala na $S^1$, za katera velja $I \to J$. Če je $L \subseteq J$ zaprt interval, potem velja $I \to L$.
 \end{lema}
 
 \begin{dokaz}
-Za intervala $I$ in $J$ velja relacija $I \to J$, zato obstaja interval $K \subset I$, za katerega je $f(K) = J$. Naj bo $L = [c, d]$. Obstajata točki $a, b \in K$ za kateri veljata enakosti $f(a) = c$ in $f(b)=d$. Označimo s $K_1$ tisti interval s krajiščima $a$ in $b$, ki leži v intervalu $K$. Zaradi leme~\ref{lem:1} velja $K_1 \to [c, d]$ ali $K_1 \to [d, c]$. Zaradi enakosti $f(K) = J$, in ker je $K_1$ podinterval intervala $K$, ne more veljati $K \to [d, c]$, zato velja $K \to [c, d]$. Ker je $K_1 \subseteq K \subseteq I$, velja $I \to [c, d]$.
+Za intervala $I$ in $J$ velja relacija $I \to J$, zato obstaja interval $K \subset I$, za katerega je $f(K) = J$. Naj bo $L = [c, d]  \subset J$. Obstajata točki $a, b \in K$ za kateri veljata enakosti $f(a) = c$ in $f(b)=d$. Označimo s $K_1$ tisti interval s krajiščima $a$ in $b$, ki leži v intervalu $K$. Zaradi leme~\ref{lem:1} velja $K_1 \to [c, d]$ ali $K_1 \to [d, c]$. Zaradi enakosti $f(K) = J$, in ker je $K_1$ podinterval intervala $K$, ne more veljati $K_1 \to [d, c]$, zato velja $K_1 \to [c, d]$. Ker je $K_1 \subseteq K \subseteq I$, velja $I \to [c, d]$.
 \end{dokaz}
 
 \begin{lema}\label{lem:3}		%lema3
-Naj bo $f : S^1 \to S^1$ zvezna preslikava in $I$ pravi zaprt podinterval krožnice $S^1$. Če velja relacija $I \to I$, potem ima funkcija $f$ negibno točko na intervalu $I$.
+Naj bo $f : S^1 \to S^1$ zvezna preslikava in $I$ pravi zaprt podinterval krožnice $S^1$. Če velja relacija $I \to I$, potem ima preslikava $f$ negibno točko na intervalu $I$.
 \end{lema}
 
 \begin{dokaz}
-Zaradi relacije $I \to I$ obstaja zaprt interval $K \subseteq I$, za katerega velja $f(K) = I$. Obstajata taki točki $v, w \in K$, da sta $f(v)$ in $f(w)$ krajišči intervala $I$. Označimo z $L$ zaprt podinterval intervala $K$ s krajišči $v$ in $w$. Zaradi zveznosti funkcije $f$ obstaja točka $x \in L$, za katero velja $f(x) = x$
+Zaradi relacije $I \to I$ obstaja zaprt interval $K \subseteq I$, za katerega velja $f(K) = I$. Obstajata taki točki $v, w \in K$, da sta $f(v)$ in $f(w)$ krajišči intervala $I$. Označimo z $L$ zaprt podinterval intervala $K$ s krajišči $v$ in $w$. Zaradi zveznosti preslikave $f$ obstaja točka $x \in L$, za katero velja $f(x) = x$
 \end{dokaz}
 
+\begin{opomba}
+Pogoj I je pravi interval je potreben pogoj, saj v primeru $I=S^1$ lema~\ref{lem:3} ne drži kot pokaže primer~\ref{primer:kroznica}.
+\end{opomba}
+
 \begin{lema}\label{lem:4}				%lema4
-Naj bo $f : S^1 \to S^1$ zvezna preslikava in naj bojo $M_1, M_2, \dots, M_n$ zaprti intervali na krožnici $S^1$, za katere veljajo relacije pokritja 
+Naj bo $f : S^1 \to S^1$ zvezna preslikava in naj bojo $M_1, M_2, \dots, M_n$ pravi zaprti podintervali na krožnici $S^1$, za katere veljajo relacije pokritja 
 $$M_1 \to M_2 \to \cdots \to M_n \to M_1.$$ 
 Potem obstaja točka $z \in M_1$, za katero je $f^i(z) \in M_{i+1}$ za $i = 1, \dots, n-1$ in $f^n(z) =z$. 
 \end{lema}
 
 \begin{dokaz}
-Velja relacija $M_n \to M_1$, zato obstaja interval $J_n \subseteq M_n$, za katerega je $f(J_n) = M_1$. Podobno obstajajo tudi taki intervali $J_1, \dots, J_{n-1}$, da za vsak $k = 1, \dots, n-1$ velja $f_k \subseteq M_k$ in $f(J_k) = J_{k+1}$. Sledi, da je $f^n(J_1) = M_1$. S pomočjo dokaza leme~\ref{lem:3} lahko sklepamo, da ima $f^n$ negibno točko $z \in J$. Očitno velja $z \in M_1, f(z) \in M_2, \dots, f^{n-1}(z) \in M_n$, kar zaključi dokaz.
+Velja relacija $M_n \to M_1$, zato obstaja interval $J_n \subseteq M_n$, za katerega je $f(J_n) = M_1$. Podobno obstajajo tudi taki intervali $J_1, \dots, J_{n-1}$, da za vsak $k = 1, \dots, n-1$ velja $J_k \subseteq M_k$ in $f(J_k) = J_{k+1}$. Sledi, da je $f^n(J_1) = M_1$. S pomočjo dokaza leme~\ref{lem:3} lahko sklepamo, da ima $f^n$ negibno točko $z \in J$. Očitno velja $z \in M_1, f(z) \in M_2, \dots, f^{n-1}(z) \in M_n$, kar zaključi dokaz.
 \end{dokaz}
 
 \begin{definicija}
-Naj bo $f: S^1 \to S^1$ zvezna funkcija in $P =\{p_1, p_1, \dots, p_n \}$ orbita funkcije $f$ s periodo $n$. Pravimo, da je orbita $P$ urejena, če za vsak $k=1, \dots, n-1$ velja enakost $P \cap (p_k, p_{k+1}) = \emptyset$ in $P \cap (p_n, p_1) = \emptyset$. V tem primeru definiramo $n$ intervalov določenih s $P$:
+Naj bo $f: S^1 \to S^1$ zvezna preslikava in $P =\{p_1, p_1, \dots, p_n \}$ orbita preslikave $f$ s periodo $n$. Pravimo, da je orbita $P$ urejena, če za vsak $k=1, \dots, n-1$ velja enakost $P \cap (p_k, p_{k+1}) = \emptyset$ in $P \cap (p_n, p_1) = \emptyset$. V tem primeru definiramo $n$ intervalov določenih s $P$:
 $$I_1 = [p_1, p_2], I_2 = [p_2, p_3], \dots, I_{n-1} = [p_{n-1}, p_n], I_n = [p_n, p_1].$$
 \end{definicija}
 
@@ -91,61 +95,61 @@ Naj bo $f : S^1 \to S^1$ zvezna preslikava. S $P=\{p_1, \dots, p_n\}$ označimo 
 \end{lema}
 
 \begin{dokaz}
-Predpostavimo, da sta $j$ in $k$ različni naravni števili. Izberemo točko $v$ iz notranjosti intervala $I_j$ in izberemo točko $w$ iz notranjosti intervala $I_k$. Točki $v$ in $w$ sta različni. S pomočjo točk $v$ in $w$ razdelimo cikel $P$ na dve disjunktni množici. Naj bo $A = P \cap (v, w)$ in $B = P \cap (w, v)$. Množici $A$ in $B$ sta neprazni in disjunktni. Njuna unija je enaka množici $P$.
+Predpostavimo, da sta $I_j$ in $I_k$ različna intervala določena s P. Izberemo točko $v$ iz notranjosti intervala $I_j$ in izberemo točko $w$ iz notranjosti intervala $I_k$. Točki $v$ in $w$ sta različni. S pomočjo točk $v$ in $w$ razdelimo cikel $P$ na dve disjunktni množici. Naj bo $A = P \cap (v, w)$ in $B = P \cap (w, v)$. Množici $A$ in $B$ sta neprazni in disjunktni. Njuna unija je enaka množici $P$.
 
-Trdimo: če je za neko število $x$ iz množice $A$ tudi točka $f(x)$ vsebovana v množici $A$, potem je celotna slika množice $A$ s funkcijo $f$ vsebovana v množici $A$. Res, saj v nasprotnem primeru obstajata dve sosednji točki $x, y \in A$, za kateri velja $f(x) \in A$ in $f(y) \notin A$. V tem primeru lahko s pomočjo leme~\ref{lem:1} in leme~\ref{lem:2} sklepamo, da najkrajši interval določen s točkama $x$ in $y$ pokrije interval $I_j$ ali interval $I_k$, kar je v nasprotju s predpostavkami leme~\ref{lem:5}. Slika množice $A$ ne more biti v celoti vsebovana v množici $A$, saj je množica $P$ cikel za funkcijo $f$. Sklepamo, da je slika množice $A$ s funkcijo $f$ v celoti vsebovana v množici $B$. S podobnim sklepom ugotovimo, da je slika množice $B$ s funkcijo $f$ v celoti vsebovana v množici $A$. Ker funkcija $f$ slika množico $P$ nazaj v množico $P$, velja $f(A) = B$ in $f(B) = A$. Funkcija $f$ je bijekcija med točkama $A$ in $B$, zato imata množici enako število elementov. Ker je unija množic $A$ in $B$ enaka ciklu $P$, presek množic $A$ in $B$ pa je prazen, ima $f$-orbita $P$ sodo število elementov. To pa je v protislovju s predpostavko, da je v $f$-orbiti liho število elementov.
+Trdimo: če je za neko število $x$ iz množice $A$ tudi točka $f(x)$ vsebovana v množici $A$, potem je celotna slika množice $A$ s preslikavo $f$ vsebovana v množici $A$. Res, saj v nasprotnem primeru obstajata dve sosednji točki $x, y \in A$, za kateri velja $f(x) \in A$ in $f(y) \notin A$. V tem primeru lahko s pomočjo leme~\ref{lem:1} in leme~\ref{lem:2} sklepamo, da najkrajši interval s krajiščima $x$ in $y$ pokrije interval $I_j$ ali interval $I_k$, kar je v nasprotju s predpostavkami leme~\ref{lem:5}. Slika množice $A$ ne more biti v celoti vsebovana v množici $A$, saj je množica $P$ cikel za preslikavo $f$. Sklepamo, da je slika množice $A$ s preslikavo $f$ v celoti vsebovana v množici $B$. S podobnim sklepom ugotovimo, da je slika množice $B$ s preslikavo $f$ v celoti vsebovana v množici $A$. Ker preslikava $f$ slika množico $P$ nazaj v množico $P$, velja $f(A) = B$ in $f(B) = A$. Preslikava $f$ je bijekcija med množicama $A$ in $B$, zato imata množici enako število elementov. Ker je unija množic $A$ in $B$ enaka ciklu $P$, presek množic $A$ in $B$ pa je prazen, ima $f$-orbita $P$ sodo število elementov. To je v protislovju s predpostavko, da je v $f$-orbiti liho število elementov.
 \end{dokaz}
 
 \begin{lema}\label{lem:6}				%lema6
-Predpostavimo, da ima zvezna funkcija $f : S^1 \to S^1$ periodično orbito $P = \{p1, \dots, p_n\}$ z liho periodo $n \geq 3$. Denimo, da je P urejena in da so $I_1, \dots, I_n$ intervali določeni s $P$. Naj ima funkcija $f$ negibno točko $e$. Potem ima $f$ negibno točko $z$, ki ima naslednjo lastnost: Če je $I_k$ interval določen z orbito P, ki vsebuje točko $z$, potem obstaja naravno število $j \in \{1, \dots, n\}$, kjer je $j \neq k$, za katero velja $I_j \to I_k$.
+Predpostavimo, da ima zvezna preslikava $f : S^1 \to S^1$ periodično orbito $P = \{p_1, \dots, p_n\}$ z liho periodo $n \geq 3$. Denimo, da je P urejena in da so $I_1, \dots, I_n$ intervali določeni s $P$. Naj ima preslikava $f$ negibno točko $e$. Potem ima $f$ negibno točko $z$, ki ima naslednjo lastnost: Če je $I_k$ interval določen z orbito P, ki vsebuje točko $z$, potem obstaja naravno število $j \in \{1, \dots, n\}$, kjer je $j \neq k$, za katero velja $I_j \to I_k$.
 \end{lema}
 
 \begin{dokaz}
-Po predpostavkah leme~\ref{lem:6} ima funkcija $f$ negibno točko $e$. Brez izgube splošnosti lahko sklepamo, da je $e \in I_n$. Prav tako lahko predpostavimo, da relacija pokritja $I_j \to I_n$ ne velja za nobeno število $j = 1, \dots, n-1$. V nasprotnem primeru izberemo $z=e$, kar zaključi dokaz.
-Naj bo $m$ najmanjše naravno število, za katerega iz enakosti $f(p_m) = p_r$ sledi neenakost $r < m$. Za število $m$ velja sistem neenakosti $2 \leq m \leq n$, ki ga lahko preoblikujemo tako, da vsem členom odštejemo $1$ in dobimo sistem neenakosti $1 \leq m -1 \leq n-1$, iz česar sklepamo, da velja $m-1 \neq n$. Denimo, da je $f(p_m) = p_r$ in $f(p_{m-1}) = p_q$. Potem je $I_{m-1} \subseteq (p_r, p_q)$ in $I_n \subseteq (p_q, p_r)$. S pomočjo leme~\ref{lem:1} in leme~\ref{lem:2} sklepamo, da velja relacija $I_{m-1} \to I_n$ ali $I_{m-1} \to I_{m-1}$. Toda na začetku dokaza smo predpostavili, da relacija $I_{j} \to I_n$ ne velja za nobeno naravno število $j < n$, zato velja relacija $I_{m-1} \to I_{m-1}$. S pomočjo leme~\ref{lem:3} sklepamo, da ima funkcija $f$ negibno točko $z$ na intervalu $I_{m-1}$. Ker za nobeno naravno število $j = 1, \dots, n-1$ ne velja relacija $I_j \to I_n$ iz leme~\ref{lem:5} sledi, da obstaja $j \in \{1, \dots, n\}$, $j \neq m-1$, za katerega velja relacija $I_j \to I_{m-1}$.
+Po predpostavkah leme~\ref{lem:6} ima preslikava $f$ negibno točko $e$. Brez izgube splošnosti lahko sklepamo, da je $e \in I_n$. Prav tako lahko predpostavimo, da relacija pokritja $I_j \to I_n$ ne velja za nobeno število $j = 1, \dots, n-1$. V nasprotnem primeru izberemo $z=e$, kar zaključi dokaz.
+Naj bo $m$ najmanjše naravno število, za katerega iz enakosti $f(p_m) = p_r$ sledi neenakost $r < m$. Za število $m$ velja sistem neenakosti $2 \leq m \leq n$, ki ga lahko preoblikujemo tako, da vsem členom odštejemo $1$ in dobimo sistem neenakosti $1 \leq m -1 \leq n-1$, iz česar sklepamo, da velja $m-1 \neq n$. Denimo, da je $f(p_m) = p_r$ in $f(p_{m-1}) = p_q$. Potem je $I_{m-1} \subseteq (p_r, p_q)$ in $I_n \subseteq (p_q, p_r)$. S pomočjo leme~\ref{lem:1} in leme~\ref{lem:2} sklepamo, da velja relacija $I_{m-1} \to I_n$ ali $I_{m-1} \to I_{m-1}$. Toda na začetku dokaza smo predpostavili, da relacija $I_{j} \to I_n$ ne velja za nobeno naravno število $j < n$, zato velja relacija $I_{m-1} \to I_{m-1}$. S pomočjo leme~\ref{lem:3} sklepamo, da ima preslikava $f$ negibno točko $z$ na intervalu $I_{m-1}$. Ker za nobeno naravno število $j = 1, \dots, n-1$ ne velja relacija $I_j \to I_n$ iz leme~\ref{lem:5} sledi, da obstaja $j \in \{1, \dots, n\}$, $j \neq m-1$, za katerega velja relacija $I_j \to I_{m-1}$.
 
 \end{dokaz}
 
 \begin{lema}\label{lem:7}		%lema7
-Naj bo $f : S^1 \to S^1$ zvezna preslikava in naj bo $P$ orbita funkcije $f$ s periodo $m \geq 3$. Denimo, da za nek $k \in \{2, \dots, m\}$ množica zaprtih intervalov $\{M_1, \dots, M_k\}$ izpolnjuje naslednje pogoje:
+Naj bo $f : S^1 \to S^1$ zvezna preslikava in naj bo $P$ orbita preslikave $f$ s periodo $m \geq 3$. Denimo, da za nek $k \in \{2, \dots, m\}$ množica zaprtih intervalov $\{M_1, \dots, M_k\}$ izpolnjuje naslednje pogoje:
 \begin{enumerate}
 \item za vsak $j \in \{1, \dots, k\}$ notranjost intervala $M_j$ ne vsebuje nobene točke iz $P$,\label{enum:p1}
 \item če je $i \neq j$, potem imata intervala $M_i$ in $M_j$ disjunktni notranjosti,\label{enum:p2}
 \item za $j \in \{2, \dots, k\}$ so krajišča intervala $M_j$ vsebovana v $P$,\label{enum:p3}
-\item Če je $b$ krajišče $M_1$, potem je $b \in P$ ali $b$ je negibna točka funkcije $f$,\label{enum:p4}
+\item če je $b$ krajišče $M_1$, potem je $b \in P$ ali $b$ je negibna točka preslikave $f$,\label{enum:p4}
 \item za vsak $j \in \{1, \dots, k-1 \}$ velja relacija $M_j \to M_{j+1}$,\label{enum:p5}
-\item veljata relaciji $M_1 \to M_1$ in $M_k \to M_1$.\label{enum:p6}
+\item veljata relaciji $M_1 \to M_1$ in $M_k \to M_1$,\label{enum:p6}
 \end{enumerate}
-Potem je vsako naravno število $n > k$ perioda funkcije $f$.
+potem je vsako naravno število $n > k$ perioda preslikave $f$.
 \end{lema}
 
 \begin{dokaz}
-Recimo, da je $n>k$. Predpostavimo, da je $n \neq m$, saj ima po predpostavkah leme funkcija $f$ točko periode $m$. Označimo intervale $L_1 = M_1, L_2 = M_1, \dots, L_{n-k} = M_1, L_{n-k+1} = M_1, L_{n-k+2} = M_2,  L_{n-k+3} = M_3, \dots, L_{n-k+k} =L_n =M_k$. Če uporabimo lemo~\ref{lem:4} na intervalih $L_1, \dots, L_n$ ugotovimo, da obstaja negibna točka $z$ za funkcijo $f^n$, za katero velja $z \in L_1, f(z) \in L_2, \dots, f^{n-1}(z) \in L_{n}$. Točka $z$ leži v intervalu $M_1$, točka $F^{n-k+1}(z)$ pa v intervalu $M_2$ iz česar s pomočjo pogoja~\ref{enum:p2} in pogoja~\ref{enum:p3} iz predpostavk leme sklepamo, da $z$ ni negibna točka funkcije $f$. 
+Recimo, da je $n>k$. Predpostavimo, da je $n \neq m$, saj ima po predpostavkah leme preslikava $f$ točko periode $m$. Označimo intervale $L_1 = M_1, L_2 = M_1, \dots, L_{n-k} = M_1, L_{n-k+1} = M_1, L_{n-k+2} = M_2,  L_{n-k+3} = M_3, \dots, L_{n-k+k} =L_n =M_k$. Če uporabimo lemo~\ref{lem:4} na intervalih $L_1, \dots, L_n$ ugotovimo, da obstaja negibna točka $z$ za preslikavo $f^n$, za katero velja $z \in L_1, f(z) \in L_2, \dots, f^{n-1}(z) \in L_{n}$. Točka $z$ leži v intervalu $M_1$, točka $F^{n-k+1}(z)$ pa v intervalu $M_2$ iz česar s pomočjo pogoja~\ref{enum:p2} in pogoja~\ref{enum:p3} iz predpostavk leme sklepamo, da $z$ ni negibna točka preslikave $f$. 
 
 Trdimo tudi, da točka $z$ ne pripada ciklu $P$. Predpostavimo najprej, da je $n \geq k + 2$. Potem je $L_1 =L_2 = L_3 = M_1$. Torej, točke $z, f(z)$ in $f^2(z)$ ležijo v intervalu $M_1$. Ker je $P$ cikel dolžine $m \geq 3$, lahko s pomočjo pogoja~\ref{enum:p1} sklepamo, da točka $z$ ne pripada orbiti $P$. Sedaj predpostavimo, da je $n < k+2$. Potem je $n < m+2$. Ker je $n\neq m$ in $m \geq 3$, število $n$ ni večkratnik števila $m$. Iz enakosti $f^n(z) = z$ sledi, da točka $z$ ne pripada ciklu $P$.
 
-Ugotovili smo, da točka $z$ ni negibna točka funkcije $f$ in tudi ne pripada ciklu $P$, zato lahko s pomočjo pogoja~\ref{enum:p4} iz predpostavk leme sklepamo, da $z$ leži v notranjosti intervala $M_1$. Ker točka $f^n(z) = z$ ne pripada cuklu $P$, za vsako naravno število $r < n$ tudi točka $f^r(z)$ ne pripada ciklu $P$. Trdimo, da $f^r(z)$ ni negibna točka funkcije $f$. Zaradi pogojev~\ref{enum:p3} in~\ref{enum:p4} za vsako naravno število $r < n$ velja, da $f^r(z)$ ni krajišče nobenega intervala $M_1, \dots, M_k$. S pomočjo te ugotovitve, pogoja~\ref{enum:p2} in dejstva, da je $z \in M_1, f(z) \in M_1, f^2(z) \in M_1, \dots, f^{n-k}(z) \in M_1, f^{n-k+1} \in M_2, \dots, f^{n-1} \in M_k$, sklepamo, da je točka $z$ periodična točka funkcije $f$ s periodo $n$.
+Ugotovili smo, da točka $z$ ni negibna točka preslikave $f$ in tudi ne pripada ciklu $P$, zato lahko s pomočjo pogoja~\ref{enum:p4} iz predpostavk leme sklepamo, da $z$ leži v notranjosti intervala $M_1$. Ker točka $f^n(z) = z$ ne pripada ciklu $P$, za vsako naravno število $r < n$ tudi točka $f^r(z)$ ne pripada ciklu $P$. Trdimo, da $f^r(z)$ ni negibna točka preslikave $f$. Zaradi pogojev~\ref{enum:p3} in~\ref{enum:p4} za vsako naravno število $r < n$ velja, da $f^r(z)$ ni krajišče nobenega intervala $M_1, \dots, M_k$. S pomočjo te ugotovitve, pogoja~\ref{enum:p2} in dejstva, da je $z \in M_1, f(z) \in M_1, f^2(z) \in M_1, \dots, f^{n-k}(z) \in M_1, f^{n-k+1} \in M_2, \dots, f^{n-1} \in M_k$, sklepamo, da je točka $z$ periodična točka preslikave $f$ s periodo $n$.
 \end{dokaz}
 
 
 Dokažimo izrek:
 
 \begin{dokaz}[Dokaz izreka~\ref{izr:sarkovski_kroznica}]
-Po predpostavki izreka obstaja $f$-orbita $P = \{p_1, \dots, p_n\}$ s periodo $n$. Brez izgube splošnosti lahko predpostavimo, da je orbita $P$ urejena in so $I_1, \dots, I_n$ intervali določeni s $P$. Po predpostavkah izreka ima funkcija negibno točko $e$. Predpostavimo, da točka $e$ leži v intervalu $I_n$. Po lemi~\ref{lem:6} lahko predpostavimo, da obstaja tako naravno število $j \in \{1, \dots, n-1\}$, za katerega velja $I_j \to I_n$.
+Po predpostavki izreka obstaja $f$-orbita $P = \{p_1, \dots, p_n\}$ s periodo $n$. Brez izgube splošnosti lahko predpostavimo, da je orbita $P$ urejena in so $I_1, \dots, I_n$ intervali določeni s $P$. Po predpostavkah izreka ima preslikava negibno točko $e$. Predpostavimo, da točka $e$ leži v intervalu $I_n$. Po lemi~\ref{lem:6} lahko predpostavimo, da obstaja tako naravno število $j \in \{1, \dots, n-1\}$, za katerega velja $I_j \to I_n$.
 Označimo $f(p_1) = p_s$ in $f(p_n) = p_t$. Imamo dve možnosti.
 
 Prva možnost: 
-Velja $[e, p_1] \to [e, p_s]$ ali velja $[p_n, e] \to [p_t, e]$. Ker lahko v obeh primerih dokaz izpeljemo na enak način, predpostavimo, da velja $[e, p_1] \to [e, p_s]$. S pomočjo leme~\ref{lem:2} sklepamo,da velja $[e, p_1] \to [e, p_1]$ in za vsak $j \in \{1, \dots, s-1\}$ velja $[e, p_1] \to I_j$.
+Velja $[e, p_1] \to [e, p_s]$ ali velja $[p_n, e] \to [p_t, e]$. Ker lahko v obeh primerih dokaz izpeljemo na enak način, predpostavimo, da velja $[e, p_1] \to [e, p_s]$. S pomočjo leme~\ref{lem:2} sklepamo, da velja $[e, p_1] \to [e, p_1]$ in za vsak $j \in \{1, \dots, s-1\}$ velja $[e, p_1] \to I_j$.
 Recimo, da za neko število $j \in \{1, \dots, s-1\}$ velja $I_j \to I_n$. Potem so izpolnjene predpostavke leme~\ref{lem:7} za $k=2$, $M_1=[e, p_1]$ in $M_2 = I_j$. Lema~\ref{lem:7} zagotavlja obstoj vseh period $m > 2$.
 
 Torej, lahko predpostavimo, da za nobeno število $j \in \{1, \dots, s-1\}$ ne velja $I_j \to I_n$. Ker za neko število $j \in \{1, \dots, n-1\}$ velja $I_j \to I_n$, je $s-1 < n-1$. Torej, velja $s < n$. 
 
-Obstaja naravno število $r \in \{2, \dots, s\}$, za katerega vrednost funkcije $f(p_r)$ ne leži v množici $\{p_1, \dots, p_s \}$. %zakaj? ker je s < n in je P n-cikel
+Obstaja naravno število $r \in \{2, \dots, s\}$, za katerega vrednost preslikave $f(p_r)$ ne leži v množici $\{p_1, \dots, p_s \}$. %zakaj? ker je s < n in je P n-cikel
 Brez izgube splošnosti lahko predpostavimo, da je $r$ najmanjše število s to lastnostjo. Velja $f(p_{r-1}) \in \{p_1, \dots, p_s\}$. Označimo $f(p_r) = p_q$. Ker ne velja $I_{r-1} \to I_n$, lahko s pomočjo leme~\ref{lem:1} in leme~\ref{lem:2} sklepamo, da velja $I_{r-1} \to [f(p_{r-1}), p_q]$. Torej, za vsako naravno število $j \in \{s, \dots, q-1\}$ velja $I_{r-1} \to I_j$. 
 
 Glede na definicijo točke $p_q$ opazimo, da je $s \leq q-1$. Denimo, da obstaja pozitivno naravno število $j \in \{s, \dots, q-1\}$, za katero velja $I_j \to I_n$. Potem so izpolnjene predpostavke leme~\ref{lem:7} za $k=3, M_1 = [e, p_1], M_2 = I_{r-1}$ in  $M_3 =I_j$, kar zagotavlja obstoj vseh period $m > 3$.
 
-Postopek opisan v zadnjih treh odstavkih ponavljamo in po največ $n$ korakih, z upoštevanjem dejstva, da za neko naravno število $j = 1, \dots, n-1$ velja $I_j \to I_n$, sčasoma konstruiramo množico intervalov $\{M_1, M_2, \dots, M_k\}$, kjer je $k \leq n$, za katero so izpolnjene predpostavke leme~\ref{lem:7}. To pa zagotavlja obstoj vseh period $m > k$ za funkcijo $f$.
+Postopek opisan v zadnjih treh odstavkih ponavljamo in po največ $n$ korakih, z upoštevanjem dejstva, da za neko naravno število $j = 1, \dots, n-1$ velja $I_j \to I_n$, sčasoma konstruiramo množico intervalov $\{M_1, M_2, \dots, M_k\}$, kjer je $k \leq n$, za katero so izpolnjene predpostavke leme~\ref{lem:7}. To pa zagotavlja obstoj vseh period $m > k$ za preslikavo $f$.
 
 Druga možnost:
 Ne velja $[e, p_1] \to [e, p_s]$ in ne velja $[p_n, e] \to [p_t, e]$. S pomočjo leme~\ref{lem:1} se prepričamo, da velja $[e, p_1] \to [p_s, e]$ in velja $[p_n, e] \to [e, p_t]$. Trdimo, da velja $I_n = [p_n, p_1] \to I_n$. Ker velja $[e, p_1] \to [p_s, e]$ in je $p_n \in [p_s, e]$, obstaja taka točka $a \in (e, p_1]$, za katero je $f(a) = p_n$, vendar za vsak $x \in (e, a)$ velja $f(x) \neq p_n$. Opazimo, da je $f(e) = e$ in $f(a) = p_n$, zato velja $[e, a] \to [e, p_n]$ ali $[e, a] \to [p_n, e]$. Vemo že, da ne velja $[e, p_1] \to [e, p_s]$, zato tudi ne velja $[e, a] \to [e, p_s]$. S pomočjo leme~\ref{lem:2} sklepamo, da ne velja $[e, a] \to [e, p_n]$, torej velja $[e, a] \to [p_n, e]$. Zapišemo lahko $[p_n, e] \subseteq f([e, a])$.
@@ -167,30 +171,8 @@ Naj bo $w$ najmanjše naravno število, za katero velja $f(p_w) \notin \{p_s, \d
 
 Denimo, da obstaja tako naravno število $j \in \{v, \dots, s-1 \}$, za katero velja $I_j \to I_n$. Potem so izpolnjene predpostavke leme~\ref{lem:7} za $k=3, M_1 = I_n, M_2 = I_{w-1}$ in $M_3 = I_j$, kar zagotavlja, da veljajo posledice izreka.
 
-Postopek opisan v zadnjih štirih odstavkih ponavljamo in po največ $n$ korakih, z upoštevanjem dejstva, da za neko naravno število $j = 1, \dots, n-1$ velja $I_j \to I_n$, sčasoma konstruiramo množico zaprtih intervalov $\{M_1, M_2, \dots, M_k\}$, kjer je $k \leq n$, za katero so izpolnjene predpostavke leme~\ref{lem:7}. To pa zagotavlja obstoj vseh period $m > k$ za funkcijo $f$, kar zaključi dokaz.
+Postopek opisan v zadnjih štirih odstavkih ponavljamo in po največ $n$ korakih, z upoštevanjem dejstva, da za neko naravno število $j = 1, \dots, n-1$ velja $I_j \to I_n$, sčasoma konstruiramo množico zaprtih intervalov $\{M_1, M_2, \dots, M_k\}$, kjer je $k \leq n$, za katero so izpolnjene predpostavke leme~\ref{lem:7}. To pa zagotavlja obstoj vseh period $m > k$ za preslikavo $f$, kar zaključi dokaz.
 \end{dokaz}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -60,7 +60,7 @@ Množici $S$ z vsaj dvema elementoma, ki je urejena z linearno relacijo $\leq$ i
 \end{enumerate}
 \end{definicija}
 
-Tipičen primer linearnega kontinuuma je množica realnih števil urejena s standardno relacijo $\leq$. Prav tako je vsak interval v realnih številih linearni kantinuum. Poglejmo si še en primer. 
+Tipičen primer linearnega kontinuuma je množica realnih števil urejena s standardno relacijo $\leq$. Prav tako je vsak interval v realnih številih linearni kontinuum. Poglejmo si še en primer. 
 
 \begin{primer}
 Na prostoru $[0, 1] \times [0, 1]$ lahko definiramo linearno relacijo $\preccurlyeq$. Točki $(x, y)$ in $(a, b)$ sta v relaciji $(x, y) \preccurlyeq (a, b)$ natanko tedaj, ko velja $x < a$ ali velja $x = a$ in $y \leq b$. S simboli lahko zapišemo:
@@ -71,7 +71,7 @@ Relacijo $\preccurlyeq$ imenujemo \emph{leksikografska ureditev}. Prostor $[0, 1
   \centering
   \includegraphics{urejen-kvadrat.pdf}
 % \caption[caption za v kazalo]{Dolg caption pod sliko}
-  \caption[Primer vektorske slike.]{Relacije pokritja v trditvi~\ref{trd:pokritja} lahko prikažemo z grafom.}
+  \caption[Primer vektorske slike.]{Slika prikazuje, kako izgledajo intervali v topologiji porojeni z leksikografsko ureditvijo.}
   \label{fig:varsavski_lok}
 \end{figure}
 
@@ -104,50 +104,50 @@ Predpostavimo, da je točka $z$ vsebovana v množici $U$. Množica $U$ je odprta
 Trditev, da je linearni kontinuum prostor Šarkovskega, bomo dokazali tako, da bomo sledili dokazu, ki smo ga zapisali za realna števila in izreke, leme, trditve in definicije iz dokaza za realna števila prilagodili linearnemu kontinuumu. Najprej bomo obravnavali posplošitve v poglavju~\ref{sec:intervali}. Zapišimo in dokažimo posplošitev izreka o vmesni vrednosti za linearni kontinuum.
 
 \begin{izrek}[izrek o vmesni vrednosti za linearni kontinuum]
-Naj bo $f : X \to Y$ zvezna funkcija, kjer je $X$ povezan prostor in $Y$ urejen prostor s topologijo, ki jo poraja linearna relacija $\leq$. Če sta $a$ in $b$ dve točki v prostoru $X$ in je $r$ točka v prostoru $Y$, ki leži med točkama $f(a)$ in $f(b)$, potem obstaja točka $c \in X$, za katero velja $f(c) = r$.
+Naj bo $f : X \to Y$ zvezna preslikava, kjer je $X$ povezan prostor in $Y$ urejen prostor s topologijo, ki jo poraja linearna relacija $\leq$. Če sta $a$ in $b$ dve točki v prostoru $X$ in je $r$ točka v prostoru $Y$, ki leži med točkama $f(a)$ in $f(b)$, potem obstaja točka $c \in X$, za katero velja $f(c) = r$.
 \end{izrek}
 \begin{proof}
 Privzemimo predpostavke izreka. Množici $=f(X) \cap (-\infty, r)$ in $B=f(X) \cap (r, \infty)$ sta disjunktni in neprazni, saj ena množica vsebuje točko $f(a)$, druga pa točko $f(b)$. Obe sta odprti v $f(X)$ saj smo ju dobili kot presek odprtega intervala z množico $f(X)$. Če ne obstaja taka točka $c \in X$, da je $f(c) = r$, potem je $f(X)$ unija množic $A$ in $\mathcal{B}$. Na ta način smo dobili separacijo množice $f(X)$, kar pa je protislovje, saj je slika povezane množice z zvezno preslikavo povezana.
 \end{proof}
 
-Sedaj dokažimo posplošitev leme~\ref{lem:dovetail}
+Sedaj zapišimo in dokažimo posplošitev leme~\ref{lem:dovetail}.
 
 \begin{lema}\label{lem:K}
-Naj bo $L$ linearni kontinuum s topologijo, ki jo poraja linearna relacija $\leq$. Naj bosta $I$ in $J$ zaprta intervala v $L$ in $f:L \to L$ zvezna funkcija. Če je $J \subseteq f(I)$, obstaja zaprt interval $K \subseteq I$, za katerega je $f(K) = J$.
+Naj bo $L$ linearni kontinuum s topologijo, ki jo poraja linearna relacija $\leq$. Naj bosta $I$ in $J$ zaprta intervala v $L$ in $f:L \to L$ zvezna preslikava. Če je $J \subseteq f(I)$, obstaja zaprt interval $K \subseteq I$, za katerega je $f(K) = J$.
 \end{lema}
 \begin{proof}
 Izberemo taki točki $p, q \in I$, da velja $p<q$ in $J=[f(p), f(q)]$ ali $J=[f(q), f(p)]$. Definiramo točko $r \in [p, q)$:
 $$r:= \sup\{x \in [p, q] : f(x) = f(p)\}.$$
-Trdimo, da je $f(r) = f(p)$. V nasprotnem primeru obstaja odprta množica $V$, ki vsebuje točko $f(r)$ in ne vsebuje točke $f(p)$. To je res, ker je prostor $L$ Hausdorffov. Zaradi zveznosti funkcije $f$ obstaja taka odprta okolica $U$ točke $r$, da je $f(U) \subseteq V$. Ker je $L$ linearni kontinuum obstaja taka točka $p \leq r' < r$, za katero je interval $[r', r]$ vsebovan v množici $U$. Torej je $f([r', r]) \subseteq V$, kar pomeni, da $f(p) \notin f([r', r])$. To pa je protislovje z definicijo točke $r$ kot supremum množice.
+Trdimo, da je $f(r) = f(p)$. V nasprotnem primeru obstaja odprta množica $V$, ki vsebuje točko $f(r)$ in ne vsebuje točke $f(p)$. To je res, ker je prostor $L$ Hausdorffov. Zaradi zveznosti preslikave $f$ obstaja taka odprta okolica $U$ točke $r$, da je $f(U) \subseteq V$. Ker je $L$ linearni kontinuum obstaja taka točka $p \leq r' < r$, za katero je interval $[r', r]$ vsebovan v množici $U$. Torej je $f([r', r]) \subseteq V$, kar pomeni, da $f(p) \notin f([r', r])$. To pa je protislovje z definicijo točke $r$ kot supremum množice.
 Sedaj definiramo točko $s \in (r, q]$:
 $$s:= \inf\{x \in [r, q] : f(x) = f(q)\}.$$ 
 Enako kot prej se prepričamo, da je $f(s) = f(q)$. Zapišimo $K = [r, s]$ in pokažimo, da je $f(K) = J$. Izrek o vmesni vrednosti zagotavlja, da je interval $J$ vsebovan v množici $f([r, s])$. Velja tudi $f([r, s]) \subseteq J$, saj v nasprotnem primeru obstaja $r<x<s$, za katerega velja $f(x) \notin J$. Če je $f(x) < f(p) < f(q)$ ali $f(q) < f(p) < f(x)$, potem po izreku o vmesni vrednosti obstaja tak $x'$, da velja $r<x<x'<s$ in $f(p) = f(x')$. to pa je protislovje z definicijo točke $r$ kot supremum. Če je $f(x) < f(q) < f(p)$ ali $f(p) < f(q) < f(x)$, to privede do protislovja z definicijo točke $s$ kot infimum. To pomeni, da res velja $J = f(K)$.
 \end{proof}
 
-Tudi lemo~\ref{lem:zanka1} moramo prilagoditi za linearni kontinuum.
+Tudi lemo~\ref{lem:1zanka} moramo prilagoditi za linearni kontinuum.
 
 \begin{lema}
-Naj bo $L$ linearni kontinuum s topologijo, ki jo poraja linearna relacija $\leq$. Naj bosta $I$ zaprt interval v $L$ in $f:L \to L$ zvezna funkcija. Če je $I \subseteq f(I)$, potem ima $f$ negibno točko $x \in I$.
+Naj bo $L$ linearni kontinuum s topologijo, ki jo poraja linearna relacija $\leq$. Naj bosta $I$ zaprt interval v $L$ in $f:L \to L$ zvezna preslikava. Če je $I \subseteq f(I)$, potem ima $f$ negibno točko $x \in I$.
 \end{lema}
 \begin{proof}
-S pomočjo leme~\ref{lem:K} ugotovimo, da obstaja zaprt interval $Q \subseteq I$, za katerega je $f(Q) = I$. Pokazali bomo, da ima funkcija $f$ negibno točko v intervalu $Q$. Predpostavimo, da funkcija $f$ na intervalu $Q$ nima negibne točke. Potem lahko zapišemo $Q = A \cup B$, kjer je:
+S pomočjo leme~\ref{lem:K} ugotovimo, da obstaja zaprt interval $Q \subseteq I$, za katerega je $f(Q) = I$. Pokazali bomo, da ima preslikava $f$ negibno točko v intervalu $Q$. Predpostavimo, da preslikava $f$ na intervalu $Q$ nima negibne točke. Potem lahko zapišemo $Q = A \cup B$, kjer je:
 \begin{equation*} %\label{eq1}
 \begin{split}
 A &= \{x \in L : x < f(x)\}, \\ 
 B &= \{x \in L : x > f(x)\}.
 \end{split}
 \end{equation*}
-Trdimo, da je množica $A$ odprta. Za vsako točko $x \in A$ lahko izberemo točko $z \in (x, f(x))$ in odprto okolico $U \subseteq  (-\infty, z)$ točke $x$, za katero velja $f(U) \subseteq (z, \infty)$. Ker je množica $U$ podmnožica množoce $A$, je točka $x$ notranja točka množice $A$. Množica $A$ je odprta. Podobno lahko dokažemo, da je množica $\mathcal{B}$ odprta. Množici $Q \cap A$ in $Q \cap B$ sta odprti podmnožici množice $Q$ za kateri velja $Q = (Q \cap A) \cup (Q \cap B)$. Radi bi videli, da sta množici $Q \cap A$ in $Q \cap B$ neprazni. Zapišimo $I = [c, d]$. Ker je $f(Q) = I$, obstaja $x' \in Q$, za katerega je $f(x') =d$. Ker $f$ nima negibne točke na $Q$, je $x' \neq d$. Interval $Q$ je pomnožica intervala $I$, zato velja $x' < f(x') = d$, kar pomeni, da je $x' \in Q \cap A$. Analogno poiščemo točko $x'' \in Q - \{c\}$ z lastnostjo: $f(x'') = c$ in $x'' \in Q \cap B$. Torej, množici $Q \cap A$ in $Q \cap B$ tvorita separacijo povezanega prostora $Q$, kar je protislovje. Funkcija $f$ ima negibno točko v intervalu $Q$.
+Trdimo, da je množica $A$ odprta. Za vsako točko $x \in A$ lahko izberemo točko $z \in (x, f(x))$ in odprto okolico $U \subseteq  (-\infty, z)$ točke $x$, za katero velja $f(U) \subseteq (z, \infty)$. Ker je množica $U$ podmnožica množoce $A$, je točka $x$ notranja točka množice $A$. Množica $A$ je odprta. Podobno lahko dokažemo, da je množica $\mathcal{B}$ odprta. Množici $Q \cap A$ in $Q \cap B$ sta odprti podmnožici množice $Q$ za kateri velja $Q = (Q \cap A) \cup (Q \cap B)$. Radi bi videli, da sta množici $Q \cap A$ in $Q \cap B$ neprazni. Zapišimo $I = [c, d]$. Ker je $f(Q) = I$, obstaja $x' \in Q$, za katerega je $f(x') =d$. Ker $f$ nima negibne točke na $Q$, je $x' \neq d$. Interval $Q$ je pomnožica intervala $I$, zato velja $x' < f(x') = d$, kar pomeni, da je $x' \in Q \cap A$. Analogno poiščemo točko $x'' \in Q - \{c\}$ z lastnostjo: $f(x'') = c$ in $x'' \in Q \cap B$. Torej, množici $Q \cap A$ in $Q \cap B$ tvorita separacijo povezanega prostora $Q$, kar je protislovje. Preslikava $f$ ima negibno točko v intervalu $Q$.
 \end{proof}
 
 Preostanek poglavja velja tudi za intervale v linearnem kontinuumu.
 
-V poglavju~\ref{stefan_zap} moramo razložiti besedišče, da je primerno za linearni kontinuum. Naj bo $L$ linearni kontinuum s topologijo, ki jo poraja linearna relacija $\leq$. Za točki $x$ in $y$ iz linearnega kontinuuma $L$ rečemo, da $x$ leži levo od $y$ natanko tedaj, ko velja $x<y$. Ekvivalentno rečemo, da $x$ leži desno od $y$, če velja $y<x$. Ker je $L$ linearni kontinuum, za vsaki točki $x, y \in L$ obstaja točka $z$, ki izpolnjuje pogoj $x<z<y$. Tako lahko za center cikla $\mathcal{O}$ v linearnem kontinuumu izberemo poljubno točko $c \in L$, ki izpolnjuje pogoj $p< c <q$. Pri definiciji~\ref{def:stef-zap},kjer smo definirali Štefanovo zaporedje moramo pojasniti točko~\ref{eq:š3}. Kaj pomeni, da sta zaporedji 
+V poglavju~\ref{stefan_zap} moramo razložiti besedišče, da je primerno za linearni kontinuum. Naj bo $L$ linearni kontinuum s topologijo, ki jo poraja linearna relacija $\leq$. Za točki $x$ in $y$ iz linearnega kontinuuma $L$ rečemo, da $x$ leži levo od $y$ natanko tedaj, ko velja $x<y$. Ekvivalentno rečemo, da $x$ leži desno od $y$, če velja $y<x$. Ker je $L$ linearni kontinuum, za vsaki točki $x, y \in L$ obstaja točka $z$, ki izpolnjuje pogoj $x<z<y$. Tako lahko za center cikla $\mathcal{O}$ v linearnem kontinuumu izberemo poljubno točko $c \in L$, ki izpolnjuje pogoj $p< c <q$. Pri definiciji~\ref{def:stef-zap}, kjer smo definirali Štefanovo zaporedje moramo pojasniti točko~\ref{eq:š3}. Kaj pomeni, da sta zaporedji 
 $\left \{ x_{2j} \right \}_{j=0}^{\left \lfloor \frac{n}{2} \right \rfloor}$ 
     in
 $\left \{ x_{2j+1} \right \}_{j=0}^{\left \lfloor \frac{n}{2} \right \rfloor}$
  strogo monotoni in se oddaljujeta od točke $c$?
-Povedati želimo, da vsak naslednji člen zaporedja, ki leži levo od točke $c$, leži levo od prejšnjega člena. Vsak naslednji člen zaporedja, ki leži desno od točke $c$ pa leži desno od prejšnjega člena. Preostanek poglavja~\ref{stefan_zap} in poglavji~\ref{konssz} in~\ref{sec:dokaz-izreka} veljajo tudi za funkcije in intervale definirane na linearnem kontinuumu, zato je linearni kontinuum tudi prostor Šarkovskega.
+Povedati želimo, da vsak naslednji člen zaporedja, ki leži levo od točke $c$, leži levo od prejšnjega člena. Vsak naslednji člen zaporedja, ki leži desno od točke $c$ pa leži desno od prejšnjega člena. Preostanek poglavja~\ref{stefan_zap} in poglavji~\ref{konssz} in~\ref{sec:dokaz-izreka} veljajo tudi za preslikave in intervale definirane na linearnem kontinuumu, zato je linearni kontinuum tudi prostor Šarkovskega.
 
 
 \end{document}

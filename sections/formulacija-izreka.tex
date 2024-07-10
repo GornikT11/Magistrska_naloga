@@ -66,7 +66,7 @@ Refleksivnost: če je število $m$ potenca števila $2$, točka~\ref{rel3} zagot
 
 Antisimetričnost: denimo, da za števili $m$ in $n$ veljata relaciji $m \triangleright n$ in $n \triangleright m$. Pogoja~\ref{rel1} in~\ref{rel4} za relacijo $m \triangleright n$ sta v protislovju z vsemi pogoji relacije $n \triangleright m$. Edina možnost, ki zadosti vsem potrebnim pogojem relacij je $k=l$ in $m_1 = n_1$. Torej je $m=n$.
 
-Tranzitivnost: obravnavamo števila $m$,  $n$ in $s$, ki zadoščajo relacijam $m \triangleright n$ in $n \triangleright s$. Radi bi videli, ali sta števili $m$ in $s$ v relaciji $m \triangleright s$. Ker imamo 4 pogoje za relacijo $m \triangleright n$ in 4 pogoje za relacijo $n \triangleright s$, moramo obravnavati 16 možnih kombinacij. Vse kombinacije pogojev za relacije so zapisane v tabeli~\ref{table:1}. V drugem stolpcu so zapisani pogoji, ki jih dobimo iz relacije $m \triangleright n$, v tretjem stoplcu so pogoji, ki jih preberemo iz relacije $n \triangleright s$. V četrtem stolpcu je zapisan pogoj, ki sledi iz pogojev v drugem in tretjem stolpcu. Opazimo, da v devetih primerih pogoja ne moreta biti izpolnjena istočasno, zato pridemo do protislovja. V ostalih primerih, pa dobimo enega od pogojev za relacijo $m \triangleright s$, zato sta števili $m$ in $s$ v relaciji $m \triangleright s$.
+Tranzitivnost: obravnavamo števila $m$,  $n$ in $s$, ki zadoščajo relacijam $m \triangleright n$ in $n \triangleright s$. Radi bi videli, ali sta števili $m$ in $s$ v relaciji $m \triangleright s$. Ker imamo 4 pogoje za relacijo $m \triangleright n$ in 4 pogoje za relacijo $n \triangleright s$, moramo obravnavati 16 možnih kombinacij. Vse kombinacije pogojev za relacije so zapisane v tabeli~\ref{table:1}. V drugem stolpcu so zapisani pogoji, ki jih dobimo iz relacije $m \triangleright n$, v tretjem stoplcu so pogoji, ki jih preberemo iz relacije $n \triangleright s$. V četrtem stolpcu je zapisan pogoj, ki sledi iz pogojev v drugem in tretjem stolpcu. Opazimo, da v devetih primerih pogoja ne moreta biti izpolnjena istočasno, zato pridemo do protislovja. V ostalih primerih pa dobimo enega od pogojev za relacijo $m \triangleright s$, zato sta števili $m$ in $s$ v relaciji $m \triangleright s$.
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h!]
 \centering
@@ -111,20 +111,20 @@ ali
 \item $l \geq k$ in $m_1 = n_1=0$ ali \label{sov7}
 \item $n_1>0$ in $m_1 =0$. \label{sov8}
 \end{enumerate}
-Denimo, da števili $m$ in $n$ nista v relaciji. Iz~\ref{sov4} in~\ref{sov8} ugotovimo, da mora biti $m_1 = n_1 = 0$ ali $m_1 \neq 0$ in $n \neq 0$. Ker števili ne ustrezata pogoju~\ref{sov3} niti pogoju~\ref{sov7} ugotovimo, da morata biti števili $m_1$ in $n_1$ različni od 0. Iz pogojev~\ref{sov1} in~\ref{sov5} sklepamo, da mora biti $k=l$. Sedaj pa števili zagotovo zadoščata enemu od pogojev~\ref{sov2} ali~\ref{sov6}. To je preotislovje s predpostavko, da števili $m$ in $n$ nista v relaciji. Torej res za vsaki dve naravni števili $m, n$ velja relacija $m \triangleright n$ ali relacija $n \triangleright m$. 
+Denimo, da števili $m$ in $n$ nista v relaciji. Iz~\ref{sov4} in~\ref{sov8} ugotovimo, da mora biti $m_1 = n_1 = 0$ ali $m_1 \neq 0$ in $n_1 \neq 0$. Ker števili ne ustrezata pogoju~\ref{sov3} niti pogoju~\ref{sov7}, ugotovimo, da morata biti števili $m_1$ in $n_1$ različni od 0. Iz pogojev~\ref{sov1} in~\ref{sov5} sklepamo, da mora biti $k=l$. Sedaj pa števili zagotovo zadoščata enemu od pogojev~\ref{sov2} ali~\ref{sov6}. To je preotislovje s predpostavko, da števili $m$ in $n$ nista v relaciji. Torej res za vsaki dve naravni števili $m, n$ velja relacija $m \triangleright n$ ali relacija $n \triangleright m$. 
 \end{proof}
 
 Relacija $\triangleright$ ima še eno zanimivo in za dokaz izreka Šarkovskega zelo pomembno lastnost.
 \begin{trditev}\label{trd:doubling}
 Števili $m$ in $n$ sta v relaciji $m \triangleright n$ natanko tedaj, ko velja relacija $2m \triangleright 2n$. Zapisano z matematičnimi simboli:
-$$\text{za } \forall m, n \in \N: m \triangleright n \Leftrightarrow 2m \triangleright 2n.$$
+$$\forall m, n \in \N: m \triangleright n \Leftrightarrow 2m \triangleright 2n.$$
 \end{trditev}
 \begin{dokaz}
 Zapišimo števili $m$ in $n$ kot produkt potence števila 2 in nekega lihega števila:
 $$m= 2^k(2m_1 +1)\text{ in } n= 2^l(2n_1 +1).$$
 Če števili pomnožimo z 2, dobimo:
 $$2m= 2^{k+1}(2m_1 +1)\text{ in } 2n= 2^{l+1}(2n_1 +1).$$
-Sedaj lahko preverimo, da so pogoji za relacijo $m \triangleright n$ in relacijo $2m \triangleright 2n$ ekvivalentni. To je očitno takoj, ko opazimo, da se števili $m_1$ in $n_1$ nista spremenili. Neenačbi $k<l$ in $k+1<l+1$ pa sta ekvivalentni. Podobno ugotovimo za neenačbi $k \geq l$ in $k+1 \geq l+1$ ter enačbi $k=l$ in $k+1 = l+1$.
+Preverimo, da so pogoji za relacijo $m \triangleright n$ in relacijo $2m \triangleright 2n$ ekvivalentni. To je očitno takoj, ko opazimo, da se števili $m_1$ in $n_1$ nista spremenili. Neenačbi $k<l$ in $k+1<l+1$ pa sta ekvivalentni. Podobno ugotovimo za neenačbi $k \geq l$ in $k+1 \geq l+1$ ter enačbi $k=l$ in $k+1 = l+1$.
 \end{dokaz}
 
 Sedaj smo definirali vse potrebne pojme in spoznali tudi ureditev Šarkovskega. Čas je, da si poglejdamo, na kakšen način ureditev Šarkovskega določa periode funkcije.
@@ -153,7 +153,7 @@ Funkcija $f$, ki je zvezna na intervalu $[a, b]$ in je na krajiščih intervala 
   \centering
   \includegraphics[]{intermediate.pdf}
 % \caption[caption za v kazalo]{Dolg caption pod sliko}
-  \caption[Primer vektorske slike.]{Zvezna funkcija, ki je definirana na intervalu in je na krajiščih intervala različno predznačena ima vsaj eno ničlo.}
+  \caption[Primer vektorske slike.]{Zvezna funkcija, ki je definirana na intervalu $[a,b]$ in je na krajiščih intervala različno predznačena ima vsaj eno ničlo.}
   \label{fig:bezje}
 \end{figure}
 
@@ -195,7 +195,7 @@ Zvezna funkcija $g$ je na krajiščih intervala $[a, b]$ različno predznačena.
 Pri iteracijah funkcije lahko opazujemo, kako se premika točka. To smo počeli na sliki~\ref{fig:iteracije}. Poglejmo, kako se s $f$ slikajo celi intervali. Lahko se zgodi, da nek interval $I_0$ pokrije interval $I_1$, interval $I_1$ pa pokrije interval $I_2$ itn. Na ta način dobimo zaporedje relacij pokritja npr. $I_0 \to I_1 \to I_2 \to \cdots $ Enako kot pri periodičnih točkah lahko pri zaporedju relacij pokritja po nekaj korakih zopet pridemo do prvotnega intervala. Dobimo naslednje zaporedje relacij pokritja: $I_0 \to I_1 \to \cdots \to I_n \to I_0$. Če je začetni interval enak končnemu intervalu, zaporedju intervalov in pripadajočim relacijam pokritja pravimo \emph{zanka intervalov} ali samo zanka. Od tu naprej bo, razen če ne povemo drugače, interval predstavljal zaprto, omejeno in povezano podmnožico realnih števil.
 
 \begin{lema}\label{lem:dovetail}
-Naj bosta $I, J$ zaprta intervala v realnih številih in naj bo $f:I \to J$ zvezna funkcija. Če je $J \subseteq f(I)$, obstaja zaprt interval $K \subseteq I$, za katerega je $f(K) = J$.
+Naj bosta $I, J$ zaprta intervala v množici realnih števil in naj bo $f:I \to J$ zvezna funkcija. Če je $J \subseteq f(I)$, obstaja zaprt interval $K \subseteq I$, za katerega je $f(K) = J$.
 \end{lema}
 \begin{proof}
 Interval $K$ poiščemo tako, da iz preseka funkcije $f$ s pravokotnikom $I \times J$ izberemo povezan del grafa, ki povezuje spodni in zgornji del pravokotnika. Funkcija z izbiro dela grafa je prikazana na sliki~\ref{fig:bezje}. Tak del zagotovo obstaja, saj je $J \subseteq f(I)$. Projekcijo tega dela na interval $I$ označimo s $K$.
@@ -245,7 +245,7 @@ Obravnavajmo zvezno funkcijo $f(x) = -\sqrt[3]{x}$ in 2-zanko intervalov $\left[
 \begin{primer}\label{prim:notranja}
 Funkcija $f(x) = x^2$ tvori $2$-zanko $\left[\frac{1}{4}, \frac{9}{4}\right] \leftrightarrows \left[\frac{1}{2}, 4\right]$. Tej zanki sledi zgolj točka $1$, ki je negibna točka, torej je njena perioda različna od dolžine zanke.
 \end{primer}
-Zanka v primeru~\ref{prim:robna} ni elementarna, saj ji sledi robna točka začetnega intervala. V primeru~\ref{prim:notranja} pa zanka ni elementarna, saj točka 1 leži v preseku notranjosti prvega intervala in drugega intervala. 
+Zanka v primeru~\ref{prim:robna} ne ustreza pogojem leme~\ref{lem:element}, saj ji sledi robna točka začetnega intervala. V primeru~\ref{prim:notranja} pa zanka ne ustreza pogojem leme~\ref{lem:element}, saj točka 1 leži v preseku notranjosti prvega intervala in drugega intervala. 
 
 \begin{definicija}
 Naj bo $\mathcal{O}$ cikel funkcije $f$. Zaprt in omejen interval, katerega krajišči pripadata ciklu $\mathcal{O}$ imenujemo $\mathcal{O}$-interval. 
