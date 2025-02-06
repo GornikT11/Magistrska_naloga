@@ -10,7 +10,7 @@ Naj bosta $m$ in $l$ naravni števili v relaciji $m \triangleright l$ in naj bo 
 
 \begin{proof}
 %Vemo že, da dokaz velja, če cikel $\mathcal{O}$ vsebuje Štefanovo zaporedje. To se zgodi vsakič, ko vsaj ena točka cikla $\mathcal{O}$ menja stran. Trditev moramo dokazati še v primeru, ko vsaka točka cikla $\mathcal{O}$ menja stran. Predpostavimo, da je cikel $\mathcal{O}$ tak, da vsaka točka iz cikla menja stran. 
-Izrek bomo dokazali s pomočjo indukcije na število $m$. 
+Trditev bomo dokazali s pomočjo indukcije na število $m$. 
 
 Če je $m=1$, je trditev avtomatično izpolnjena, saj je 1 zadnji člen zaporedja Šarkovskega in edino število $l$, za katerega velja $l \triangleleft 1$ je 1. 
 
@@ -19,9 +19,9 @@ Pri dokazovanju obstoja $2k$-zanke za vsako naravno število $k$, ki ustreza rel
 \begin{equation}\label{kloop}
 I_0 \xrightarrow{f^2} I_1 \xrightarrow{f^2} I_2 \xrightarrow{f^2} \cdots \xrightarrow{f^2} I_{k-1} \xrightarrow{f^2} I_0.
 \end{equation}
-Za vsako naravno število $0 \leq i < k$ označimo najkrajši zaprti interval, ki vsebuje množico $f(I_i \cap \mathcal{O}) \subseteq \mathcal{O}_L$, z $I_i'$. Intervali $I_i'$ so $\mathcal{O}$-intervali za katere veljajo relacije pokritja $I_i \xrightarrow{f} I_i'$. Če interval $I_0$ označimo z $I_k$ lahko naradimo naslednji razmislek. Za vsako naravno število $0 \leq i < k$ lahko zapišemo $\mathcal{O}_R$-vsiljene relacije pokritja $I_i \xrightarrow{f^2} I_{i+1}$, zato obstajata taki točki $a_i, b_i \in I_i \cap \mathcal{O}_R$, da interval $I_{i+1}$ leži v intervalu omejenim s točkama $f^2(a_i)$ in $f^2(b_i)$. Točki $a_i' := f(a_i)$ in $b_i' := f(b_i)$ ležita v množici $I_i' \cap \mathcal{O}$ in zaprt interval omejen s točkama $f(a_i') = f^2(a_i)$ in $f(b_i') = f^2(b_i)$ vsebuje interval $I_{i+1}$. Dobili smo $\mathcal{O}$ vsiljeno relacijo pokritja $I_i' \xrightarrow{f} I_{i+1}$. S pomočjo zgornjih relacij pokritja lahko zapišemo naslednjo $\mathcal{O}$-vsiljeno $l$-zanko:
+Za vsako naravno število $0 \leq i < k$ označimo najkrajši zaprti interval, ki vsebuje množico $f(I_i \cap \mathcal{O}) \subseteq \mathcal{O}_L$, z $I_i'$. Intervali $I_i'$ so $\mathcal{O}$-intervali za katere veljajo relacije pokritja $I_i \xrightarrow{f} I_i'$. Če interval $I_0$ označimo z $I_k$ lahko naradimo naslednji razmislek. Za vsako naravno število $0 \leq i < k$ lahko zapišemo $\mathcal{O}_R$-vsiljene relacije pokritja $I_i \xrightarrow{f^2} I_{i+1}$, zato obstajata taki točki $a_i, b_i \in I_i \cap \mathcal{O}_R$, da interval $I_{i+1}$ leži v intervalu omejenim s točkama $f^2(a_i)$ in $f^2(b_i)$. Točki $a_i' := f(a_i)$ in $b_i' := f(b_i)$ ležita v množici $I_i' \cap \mathcal{O}$ in zaprt interval omejen s točkama $f(a_i') = f^2(a_i)$ in $f(b_i') = f^2(b_i)$ vsebuje interval $I_{i+1}$. Dobili smo $\mathcal{O}$-vsiljeno relacijo pokritja $I_i' \xrightarrow{f} I_{i+1}$. S pomočjo zgornjih relacij pokritja lahko zapišemo naslednjo $\mathcal{O}$-vsiljeno $l$-zanko
 \begin{equation}\label{lloop}
-I_0 \xrightarrow{f} I'_0 \xrightarrow{f} I_1 \xrightarrow{f} I'_1 \xrightarrow{f} \cdots \xrightarrow{f} I_{k-1} \xrightarrow{f} I'_{k-1} \xrightarrow{f} I_0
+I_0 \xrightarrow{f} I'_0 \xrightarrow{f} I_1 \xrightarrow{f} I'_1 \xrightarrow{f} \cdots \xrightarrow{f} I_{k-1} \xrightarrow{f} I'_{k-1} \xrightarrow{f} I_0.
 \end{equation}
 Prepričajmo se, da je zanka~\eqref{lloop} elementarna. Naj bo točka $x$ periodična točka za funkcijo $f$, ki sledi zanki~\eqref{lloop}. Točka $x$ je periodična točka za funkcijo $f^2$, ki sledi zanki~\eqref{kloop}. Torej, točka $x$ ima periodo $k$ za funkcijo $f^2$, kar pomeni, da $k$ točk $f$-orbite leži v množici $\mathcal{O}_R$. Ker intervali v zanki~\eqref{lloop} ležijo izmenično na levi oziroma desni strani točke $c$, tudi iteracije točke $x$ ležijo izmenično na levi oziroma desni strani točke $c$. To pomeni, da $k$ točk, ki predstavljajo lihe iteracije točke $x$ ležijo v množici $\mathcal{O}_L$. Zato orbita točke $x$ vsebuje $2k = l$ različnih točk in je tudi perioda točke $x$ za funkcijo $f$ enaka $l$. Sklepamo, da je zanka~\eqref{lloop} elementarna, kar zakluči dokaz.
 \end{proof}

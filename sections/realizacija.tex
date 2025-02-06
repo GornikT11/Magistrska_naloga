@@ -4,14 +4,14 @@
 \begin{document}
 Daljši in bolj zapleten del dokaza izreka Šarkovskega je za nami. Sedaj moramo dokazati še drugi del, ki pravi:
 \begin{izrek}
-Vsak rep $\mathcal{T}$ ureditve Šarkovskega je množica period za neko zvezno funkcijo $f$, ki slika interval nazaj vase.
+Za vsak rep $\mathcal{T}$ ureditve Šarkovskega obstaja zvezna funkcija $f \colon I \to I$ katere množica period je natanko množica $\mathcal{T}$.
 \end{izrek}
 \begin{proof}
 Izrek bomo dokazali tako, da bomo za vsak rep $\mathcal{T}$ poiskali funkcijo, katere množica period je enaka repu $\mathcal{T}$. Pri iskanju primerne funkcije si bomo pomagali z družino odrezanih šotorskih funkcij:
 \begin{equation*} %\label{eq1}
 \begin{split}
-T_h &:  [0, 1] \to [0, 1] \\ 
-T_h &: x \mapsto \min \left(h, 1- 2 \left|x-\frac{1}{2} \right|\right)
+&T_h \colon  [0, 1] \to [0, 1], \\ 
+&T_h (x) = \min \left(h, 1- 2 \left|x-\frac{1}{2} \right|\right).
 \end{split}
 \end{equation*}
 Ekvivalentno in mogoče lažje predstavljivo lahko predpis funkcije $T_h$ zapišemo na naslednji način:
@@ -49,7 +49,7 @@ Za funkciji $T_1$, $T_h$ in njune cikle  veljata naslednji dve trditvi:
 \end{enumerate}
 \end{lema}
 \begin{proof}
-Funkciji $T_1$ in $T_h$ se razlikujeta samo v tistih točkah $x$, za katere je $T_1(x) > h$. V vseh ostalih točkah, sta funkciji enaki. Privzemimo, da je $\mathcal{O} \subseteq [0, h]$ cikel za funkcijo $T_1$. Ker je cikel $\mathcal{O}$ vsebovan v intervalu $[0, h]$, za vsako točko $x \in \mathcal{O}$ velja $T_1(x) \leq h$. Torej velja $T_1(x)=T_h(x)$, kar pomeni, da je $\mathcal{O}$ tudi cikel za funkcijo $T_h$. Dokazali smo trditev~\ref{trd:t1toth}
+Funkciji $T_1$ in $T_h$ se razlikujeta samo v tistih točkah $x$, za katere je $T_1(x) > h$. V vseh ostalih točkah, sta funkciji enaki. Privzemimo, da je $\mathcal{O} \subseteq [0, h]$ cikel za funkcijo $T_1$. Ker je cikel $\mathcal{O}$ vsebovan v intervalu $[0, h]$, za vsako točko $x \in \mathcal{O}$ velja $T_1(x) \leq h$. Torej velja $T_1(x)=T_h(x)$, kar pomeni, da je $\mathcal{O}$ tudi cikel za funkcijo $T_h$. Dokazali smo trditev~\ref{trd:t1toth}.
 
 Za dokaz trditve~\ref{trd:thtot1} prespostavimo, da je $\mathcal{O} \subseteq [0, h)$ cikel za funkcijo $T_h$. Torej je za vsako točko $x$ iz cikla $\mathcal{O}$ slika $T_h(x)$ manjša od $h$. Velja, da je tudi vrednost $T_1(x)$ manjša od $h$. To pomeni, da sta vrednosti funkcij $T_1$ in $T_h$ v $x$ enaki. Ker to velja za vsako točko cikla $\mathcal{O}$, je $\mathcal{O}$ tudi cikel za funkcijo $T_1$.
 \end{proof}
@@ -58,11 +58,11 @@ V trditvi~\ref{trd:thtot1} polodprtega intervala $[0, h)$ ne moremo zamenjati z 
 %Za primer preučimo funkcijo $T_{0.88}$. Presečišča funkcije $T_{0,88}^3$ s simetralo lihih kvadrantov predstavljajo kandidate za periodične funkcije. Iz slike razberemo presečišče $(\frac{6}{25}, \frac{6}{25})$, kar pomeni, da je točka $\frac{6}{25}$ periodična točka za funkcijo $T_{0,88}$. Z iteracijami funkcije $T_{0,88}$ na točki $\frac{6}{25}$ dobimo 3-cikel $\mathcal{O} = \left\{ \frac{6}{25}, \frac{12}{25}, \frac{22}{25} \right\}$. Iz grafa funkcije $T_1^3$ vidimo, da točka $\frac{6}{25}$ ni fiksna točka funkcije $T_1^3$ in zato ne more biti točka periode 3 za funkcijo $T_1$. Cikel $\mathcal{O}$ res ni cikel za funkcijo $T_1$.
 %\end{primer}
 
-Ključna ideja tega dokaza je, da definiramo funkcijo $h(\cdot)$:
+Ključna ideja dokaza leme~\ref{lem:t1th} je, da definiramo funkcijo $h(\cdot)$:
 \begin{equation*}
 \begin{split}
-&h: \N \to [0, 1],\\
-&h(m) := \min\{\max \mathcal{O}: \mathcal{O}\text{ je }m\text{-cikel funkcije }T_1 \}
+&h\colon \N \to [0, 1],\\
+&h(m):=  \min\{\max \mathcal{O}; \mathcal{O}\text{ je }m\text{-cikel funkcije }T_1 \}.
 \end{split}
 \end{equation*}
 Prepričati se moramo, da je definicija dobra. Očitno je, da maksimum $m$-cikla obstaja. Pokazati moramo še, da obstaja tudi minimum. Funkcija $T_1^n$ seka simatralo lihih kvadratov $2^n$-krat, kar pomeni, da ima funkcija $T_1^n$ natanko $2^n$ negibnih točk, funkcija $T_1$ pa ima $2^n$ periodičnih točk. Ker je nabor točk končen, minimum obstaja.
@@ -82,7 +82,7 @@ Za dokaz lastnosti~\ref{l2} opazimo, da je točka $h(m)$ največja točka $m$-ci
 
 Ker je $h(m)$ maksimum funkcije $T_{h(m)}$m vsi ostali cikli funkcije $T_{h(m)}$ ležijo v intervalu $[0, h)$. Pokazali smo lastnost~\ref{l3}
 
-S pomočjo lastnosti~\ref{l1},~\ref{l2},~\ref{l3} in izreka~\ref{izr:forcing} lahko dokažemo naslednjo lemo, s pomočjo katere zaključimo dokaz realizacijskega izreka Šarkovskega.
+S pomočjo lastnosti~\ref{l1},~\ref{l2},~\ref{l3} in izreka~\ref{izr:forcing} lahko dokažemo naslednjo lemo, s pomočjo katere zaključimo dokaz izreka Šarkovskega o realizaciji.
 
 \begin{lema}\label{lem:<rel}
 Za poljubni naravni števili $m$ in $n$ velja ekvivalenca:
@@ -93,12 +93,12 @@ Najprej pokažimo implikacijo v desno. Denimo, da sta števili $m$ in $n$ v rela
 
 Pri dokazu implikacije v levo stran uporabimo pravilo kontrapozicije in dokazujemo izjavo: $ m \triangleleft n \iff h(m) < h(n)$. Zaradi simetričnosti števil $n$ in $m$ je ta izjava ekvivalentna prejšnji.
 \end{proof}
-Poglejmo, katere periode ima funkcija $T_{h(m)}$. Iz definicije funkcije $h(m)$ sledi, da je m perioda za funkcijo $T_{h(m)}$. Radi bi videli, da ima funkcija $T_{h(m)}$ periodo $l$ natanko tedaj, ko velja $l \triangleleft m$. Najprej dokažimo implikacijo v levo smer. Naj bo $l$ naravno število, za katerega velja relacija $l \triangleleft m$. Lema~\ref{lem:<rel} zagotavlje, da velja neenakost $h(l) < h(m)$. Iz lastnosti~\ref{l1} funkcije $h$ sklepamo, da funkcija $T_{h(m)}$ vsebuje $l$-cikel. Za dokaz implikacije v desno smer predpostavimo, da funkcija $T_{h(m)}$ vsebuje $l$ cikel. Iz lastnosti~\ref{l1} funkcije $h$ sklepamo, da je $h(l) < h(m)$. Lema~\ref{lem:<rel} zagotavlja, da v tem primeru število $l$ zadošča relaciji $l \triangleleft m$. Torej je množica period za funkcijo $T_{h(m)}$ res množica $\{n \in \N; n \triangleleft m\}$.
+Poglejmo, katere periode ima funkcija $T_{h(m)}$. Iz definicije funkcije $h(m)$ sledi, da je $m$ perioda za funkcijo $T_{h(m)}$. Radi bi videli, da ima funkcija $T_{h(m)}$ periodo $l$ natanko tedaj, ko velja $l \triangleleft m$. Najprej dokažimo implikacijo v levo smer. Naj bo $l$ naravno število, za katerega velja relacija $l \triangleleft m$. Lema~\ref{lem:<rel} zagotavlja, da velja neenakost $h(l) < h(m)$. Iz lastnosti~\ref{l1} funkcije $h$ sklepamo, da funkcija $T_{h(m)}$ vsebuje $l$-cikel. Za dokaz implikacije v desno smer predpostavimo, da funkcija $T_{h(m)}$ vsebuje $l$-cikel. Iz lastnosti~\ref{l1} funkcije $h$ sklepamo, da je $h(l) < h(m)$. Lema~\ref{lem:<rel} zagotavlja, da v tem primeru število $l$ zadošča relaciji $l \triangleleft m$. Torej je množica period za funkcijo $T_{h(m)}$ res množica $\{n \in \N; n \triangleleft m\}$.
 
-Poiskati moramo še zvezno funkcijo ki ima za množico period množico vseh potenc števila 2. Definiramo $h(2^{\infty}) := \sup_k h(2^k)$. Za vsako naravno število $k$ velja $h(2^k) < h(2^{\infty})$. Zaradi lastnosti~\ref{l1} funkcija $T_{h(2^{\infty})}$ vsebuje $2^k$-cikel, za vsak $k \in \N$. 
+Poiskati moramo še zvezno funkcijo, ki ima za množico period množico vseh potenc števila 2. Definiramo $h(2^{\infty}) := \sup_k h(2^k)$. Za vsako naravno število $k$ velja $h(2^k) < h(2^{\infty})$. Zaradi lastnosti~\ref{l1} funkcija $T_{h(2^{\infty})}$ vsebuje $2^k$-cikel, za vsak $k \in \N$. 
 Denimo, da funkcija $T_{h(2^{\infty})}$ vsebuje nek $m$-cikel, kjer število $m$ ni potenca števila 2. Zaradi izreka~\ref{izr:forcing} funkcija $T_{h(2^{\infty})}$ vsebuje tudi $2m$-cikel. Ker sta $m$-cikel in $2m$-cikel disjunktna, lastnost~\ref{l3} zagotavlja, da vsaj en od teh dveh ciklov leži v intervalu $[0, h(2^{\infty}))$. Recimo, da je to $m$-cikel. Potem obstaja tako naravno število $l$, da velja $h(m) < h(2^l)$. S pomočjo leme~\ref{lem:<rel} ugotovimo, da velja $m \triangleleft 2^l$, torej je število $m$ potenca števila 2. To je protislovje. Če bi predpostavili, da $2m$-cikel leži v intervalu $[0, h(2^{\infty}))$, bi prišli do sklepa, da je število $2m$ potenca števila 2, kar pa tudi vodi v protislovje. Funkcija $T_{h(2^{\infty})}$ res vsebuje samo cikle, katerih dolžina je potenca števila 2.
 
-Za konec pokažimo, da obstaja funkcija, ki nima periodičnih točk. Za primer lahko vzamemo translacijo $f : \R \to \R$ s predpisom $f(x) = x + a$, kjer je $a$ katerokoli neničelno realno število.
+Za konec pokažimo, da obstaja funkcija, ki nima periodičnih točk. Za primer lahko vzamemo translacijo $f\colon \R \to \R$ s predpisom $f(x) = x + a$, kjer je $a$ katerokoli neničelno realno število.
 \end{proof}
 
 \end{document}
