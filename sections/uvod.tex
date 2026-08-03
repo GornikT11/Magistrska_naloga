@@ -4,20 +4,15 @@
 \usepackage{pgfplots}
 
 \begin{document}
-Ljudje so se začeli že zelo zgodaj ukvarjati z enačbami. Iz zapisov je razvidno, da so kvadratne enačbe reševali že babilonci okoli leta 1800 prnš. 
+Enačbe imajo v matematiki zelo pomembno vlogo. Z njimi opisujemo naravne pojave in rešujemo praktične probleme iz vsakdanjega življenja. Že v antičnih civilizacijah so se ukvarjali z reševanjem enačb. Iz glinenih tablic so zgodovinarji razbrali, da so Babilonci okoli leta 1800 pr. n. št. znali reševati kvadratne enačbe.
 
+Danes poznamo veliko vrst enačb, od najpreprostejših linearnih do izjemno zapletenih nelinearnih, pri katerih je pot do eksplicitne rešitve preveč zahtevna ali pa eksplicitna rešitev sploh ni mogoča. V takih primerih si pomagamo z drugimi pristopi, med katerimi so pomembne iteracijske metode. Pri teh rešitev iščemo z zaporednimi približki. Ena prvih znanih iteracijskih metod sega v prvo stoletje našega štetja, ko je grški matematik Heron iz Aleksandrije opisal postopek za izračun približkov kvadratnega korena. Čeprav so bile take metode znane že tisočletja, so svoj pravi razcvet doživele v 20. stoletju, z razvojem računalnikov in numerične analize. Pri reševanju enačb z iteracijskimi metodami določimo funkcijo $f$ in začetni približek $x_0$ za rešitev $x$. Da se izognemo problemu, ko grejo približki čez vse meje, se v tem razmisleku osredotočimo na funkcije, ki slikajo iz nekega intervala $[a, b] \subset \R$ v interval $[a, b]$. Naslednji približek izračunamo kot $x_1 = f(x_0)$. Postopek ponavljamo, in če smo izbrali ustrezno funkcijo $f$ in začetni približek, se lahko s približki poljubno približamo rešitvi $x$. Do težave pa lahko pride, če smo za začetni približek izbrali tako točko $x_0$, da velja $f(x_0) \neq x_0$ in $f(f(x_0)) = x_0$. V tem primeru bomo s tem postopkom dobili zgolj dva različna približka za rešitev, in sicer $x_0$ in $x_1$, zato nas opisan postopek ne bo pribeljal do rešitve. Problem pri iskanju rešitve predstavljajo tudi vsi taki približki $x_0$, ki se po končno mnogo korakih vrnejo nazaj v isto točko. Torej velja $f^i(x_0) \neq x_0$ za vsako naravno število $i \in \{1, \dots, n-1\}$ in $f^n(x_0) = x_0$. V tem primeru v iteraciji dobimo zgolj $n$ različnih vrednosti in se zato zopet ne približujemo k rešitvi. Prvi pomembnejši rezultat na področju obnašanja točk v iteraciji je leta 1955 objavil W. A. Coppel v članku \cite{conrad}. Ugotovil je, da približki zvezne funkcije $f : [0, 1] \to [0, 1]$ konvergirajo k rešitvi, natanko tedaj, ko funkcija $f$ nima take točke $x_0$, za katero bi veljalo $f(x_0) \neq x_0$ in $f(f(x_0)) = x_0$. To pomeni, da če ne obstaja taka točka $x_0$, za katero velja $f(x_0) \neq x_0$ in $f(f(x_0)) = x_0$, potem za nobeno točko $c \in [0, 1]$ in naravno število $n >2$ ne velja $f^n(c) = c$ in $f(c) \neq c$.
 
-Napišite kratek zgodovinski in matematični uvod.  Pojasnite motivacijo za problem, kje
-nastopa, kje vse je bil obravnavan. Na koncu opišite tudi organizacijo dela -- kaj je v
-katerem razdelku.
+Iteracije funkcij pa niso pomembne samo kot numerično orodje za reševanje enačb, ampak so tudi naraven okvir za opis dinamičnih sistemov. V enodimenzionalnem primeru opazujemo preslikave intervalov v same sebe in sledimo zaporedju točk, ki nastane z večkratno zaporedno uporabo preslikave. Tak sistem lahko kaže zelo različne dolgoročne oblike obnašanja, od preprostih negibnih točk do zapletenih kaotičnih vzorcev. Posebno pomembne so periodične točke, torej točke, ki se po končnem številu iteracij vrnejo nazaj vase.
 
-\subsection{Navajanje literature}
-Članke citiramo z uporabo \verb|\cite{label}|, \verb|\cite[text]{label}| ali pa več naenkrat s
-\verb|\cite\{label1, label2}|. Tudi tukaj predhodno besedo in citat povežemo z nedeljivim presledkom
-$\sim$. Na primer~\cite{burns2011}, ali pa \cite{conrad}, ali pa
-\cite[str.\ 12]{misiurewicz}, \cite[enačba (2.3)]{munkres}.
-Vnosi iz \verb|.bib| datoteke, ki niso citirani, se ne prikažejo v seznamu literature, zato jih
-tukaj citiram.~\cite{nonlocallyconnected}, \cite{schirmer1985}.
+Vprašanje, katere periode so pri zveznih preslikavah intervalov sploh možne, je leta 1964 rešil ukrajinski matematik Oleksandr Mikolajovič Šarkovski. Rezultat, danes znan kot izrek Šarkovskega, med naravnimi števili uvede presenetljivo ureditev, ki določa, katere periode implicirajo obstoj drugih. Znan poseben primer tega je izrek Li–Yorke, ki pravi, da perioda 3 implicira obstoj kaosa oziroma vseh period.
+
+V tej nalogi bomo podali celovit in razumljiv prikaz izreka Šarkovskega, od osnovnih definicij do obeh ključnih delov dokaza, izreka o prisili in izreka o realizaciji, ter predstavili orodja, kot je na primer Štefanovo zaporedje, ki so ključna pri razumevanju rezultata.
 
 
 \end{document}

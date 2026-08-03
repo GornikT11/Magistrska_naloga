@@ -26,14 +26,26 @@
 
 %  V povzetku na kratko opišite vsebinske rezultate dela. Sem ne sodi razlaga organizacije dela --
 %  v katerem poglavju/razdelku je kaj, pač pa le opis vsebine.
-\povzetek{tukaj je nakaj stvari, ki povzamejo delo}
+\povzetek{
+Magistrsko delo obravnava izrek Šarkovskega, enega temeljnih rezultatov teorije enodimenzionalnih diskretnih dinamičnih sistemov. Izrek podaja popolno karakterizacijo možnih period periodičnih točk zveznih preslikav intervala tako, da z uvedbo posebne ureditve naravnih števil določi, katere periode nujno implicirajo obstoj drugih. Posebna pozornost je namenjena razumevanju povezave med strukturo periodičnih orbit in dinamiko zveznih funkcij.
+
+V delu so predstavljeni osnovni pojmi iz teorije iteracij zveznih preslikav, kot so orbite, periodične točke, relacija pokritja intervalov in cikli. Na teh temeljih je razvit elementaren pristop k dokazu izreka Šarkovskega o prisili, pri katerem imajo osrednjo vlogo zanke intervalov in Štefanovo zaporedje. Prikazana je konstrukcija Štefanovega zaporedja ter pojasnjeno, kako njegova struktura omogoča dokaz obstoja periodičnih točk predpisanih period. Poleg izreka o prisili je obravnavan tudi izrek o realizaciji, ki pokaže, da je vsak rep Šarkovske ureditve mogoče realizirati kot množico period neke zvezne preslikave intervala. Delo se zaključi s predstavitvijo izbranih posplošitev izreka ter obravnavo prostora Šarkovskega in njegove povezave z linearnimi kontinuumi.
+
+Magistrsko delo tako ponuja celovit in matematično utemeljen prikaz izreka Šarkovskega, njegovih dokazov in širšega pomena pri proučevanju diskretnih dinamičnih sistemov.
+}
 
 %  Prevod slovenskega povzetka v angleščino.
-\abstract{tukaj je nakaj stvari, ki povzamejo delo-v ang}
+\abstract{
+This master's thesis presents Sharkovsky's theorem, one of the fundamental results in the theory of one-dimensional discrete dynamical systems. The theorem provides a complete characterization of the possible periods of periodic points of continuous interval maps by introducing a special ordering of the natural numbers that determines which periods necessarily imply the existence of others. Particular attention is devoted to the relationship between the structure of periodic orbits and the dynamics of continuous maps.
+
+The thesis introduces the basic concepts of iteration theory, including orbits, periodic points, interval covering relations, and cycles. Building on these notions, an elementary proof of Sharkovsky's forcing theorem is developed using interval loops and Štefan's sequence as the main tools. The construction of Štefan's sequence is presented, together with an explanation of how its properties lead to the existence of periodic points of prescribed periods. The realization theorem is also discussed, showing that every tail of the Sharkovsky ordering can be realized as the set of periods of a continuous interval map. Finally, the thesis presents selected generalizations of Sharkovsky's theorem and discusses Sharkovsky spaces together with the result that every linear continuum is a Sharkovsky space.
+
+The thesis provides a comprehensive and mathematically rigorous exposition of Sharkovsky's theorem, its proofs, and its significance in the study of discrete dynamical systems.
+}
 
 % navedite vsaj eno klasifikacijsko oznako --
 % dostopne so na www.ams.org/mathscinet/msc/msc2020.html
-\klasifikacija{112}
+\klasifikacija{26A18, 37E05, 37E15, 37C25, 54F05}
 \kljucnebesede{nekaj} % navedite nekaj ključnih pojmov, ki nastopajo v delu
 \keywords{something} % angleški prevod ključnih besed
 
@@ -45,7 +57,12 @@
 
 % - program dela, ki ga napiše mentor z osnovno literaturo
 \programdela{
-  Mentor naj napiše program dela skupaj z osnovno literaturo.
+Leta 1950 je W. A. Coppel dokazal, da za vsako funkcijo $f : [0 , 1] \to [0 , 1]$, ki nima točke periode 2 (torej za vse $x \in [0 , 1]$ velja $f^2 ( x ) = x$ ali $f ( x ) = x$), in vsako točko $x \in [0 , 1]$ zaporedje $(f^n ( x ))_{n \in \N}$ konvergira k negibni točki. Posledično funkcija, ki nima točke $c$ periode 2, nima točke periode $n in \N$ ; torej ne obstajata $x \in [0 , 1]$ in $n \in \N$ , da je $f ( x ) = x$ in $f^n ( x ) = x$.
+Šarkovski je v 60 letih posplošil zgornji rezultat. Naravna števila uredimo na sledeči način:
+$$3 \triangleright 5 \triangleright 7 \triangleright \cdots \triangleright 2 \cdot 3 \triangleright 2 \cdot 5 \triangleright 2 \cdot 7 \triangleright \cdots \triangleright 2^n \cdot 3 \triangleright 2^n \cdot 5 \triangleright 2^n \cdot 7 \triangleright \cdots \triangleright 2^n \triangleright 2^{n-1} \triangleright \cdots \triangleright 2^2 \triangleright 2 \triangleright 1
+$$
+
+Izrek Šarkovskega pravi, da ima vsaka zvezna funkcija $f : [0 , 1] \to [0 , 1]$, ki ima točko periode $n$, za vsak $m \triangleleft n$ tudi točko periode $m$. Velja tudi v nekem smislu obrat izreka: Za vsako naravno število $n$ obstaja $f : [0 , 1] \to [0 , 1]$, da ima $f$ točko peride $m$ natanko tedaj, ko je $m \triangleleft n$.
 }
 
 \osnovnaliteratura{
